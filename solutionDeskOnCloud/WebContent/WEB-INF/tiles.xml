@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition"
+		template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/MenuPage.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="rightMenu" value="/WEB-INF/jsp/RightMenu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+		
+	</definition>
+
+	<definition name="logonForm" extends="base.definition">
+		<put-attribute name="rightMenu" value="/WEB-INF/jsp/logonForm.jsp" />
+	</definition>
+	
+	<definition name="userRegistrationForm" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/UserRegistrationForm.jsp" />
+	</definition>
+	
+	<definition name="objectiveQAForm" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ObjectiveQAForm.jsp" />
+	</definition>
+	<definition name="objectiveQADisplay" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ObjectiveQADisplay.jsp" />
+	</definition>
+	
+	<definition name="menuPage" extends="base.definition">
+	</definition>
+	
+	<definition name="listingPage" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ListingPage.jsp" />
+	</definition>
+	<definition name="technologyForm" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/TechnologyForm.jsp" />
+	</definition>
+	<definition name="articleForm" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ArticleForm.jsp" />
+	</definition>
+	
+	<definition name="articleDisplay" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ArticleDisplay.jsp" />
+	</definition>
+	
+	<definition name="articleEditor" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ArticleEditor.jsp" />
+	</definition>
+
+	<definition name="file_upload_form" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/file_upload_form.jsp" />
+	</definition>
+
+	<definition name="file_upload_success" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/file_upload_success.jsp" />
+	</definition>
+	
+	<definition name="reSetPassword" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ReSetPasswordForm.jsp" />
+	</definition>
+		
+	<definition name="composeEmail" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ComposeEmailForm.jsp" />
+	</definition>
+	
+	
+	<definition name="attachment" extends="base.definition">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name="inboxPage" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/InboxPage.jsp" />
+	</definition>
+	
+	
+		
+	<definition name="errorPage" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/ErrorPage.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>
