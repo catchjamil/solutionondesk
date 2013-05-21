@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sd.web.model.bo.ObjectiveQABO"
+		dynamic-insert="true" dynamic-update="true" table="OBJECTIVE_QA">
+		<id name="id" column="ID">
+			<generator class="increment" />
+		</id>
+
+		<property name="technologyId" column="TECHNOLOGY_ID" />
+		<property name="question" column="QUESTION" />
+		<property name="option1" column="OPTION1" />
+		<property name="option2" column="OPTION2" />
+		<property name="option3" column="OPTION3" />
+		<property name="option4" column="OPTION4" />
+		<property name="answer" column="ANSWER" />
+
+		<property name="createdBy" column="CREATEDBY" />
+		<property name="createdOn" column="CREATEDON" />
+		<property name="modifiedBy" column="MODIFIEDBY" />
+		<property name="modifiedOn" column="MODIFIEDON" />
+		<property name="action" column="ACTION"/>
+
+
+	</class>
+
+</hibernate-mapping>
