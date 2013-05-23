@@ -47,32 +47,32 @@ function goBack()
 	<br/>
 	
 	<form method="post" name="reSetPassword">
-		<table width="75%" border="1">
+		<table width="100%" border="3">
 			<tr>
-				<td align="center" bgcolor="lightblue">Reset Password</td>
+				<td align="center" colspan="2"><b>Reset Password</b></td>
 			</tr>
 			<tr>
 				<td align="left">
-					<table border="0" width="100%">
+					<table border="0" width="100%" border="5">
 							<tr id="passwordRow">
-							<td width="20%" align="right">New Password </td>
-							<td width="80%" align="left">
+							<td width="30%" align="right">New Password </td>
+							<td width="20%" align="left">
 								<spring:bind path="UserRegistrationForm.password">
 								<input type="password" 
 								       name="password" id="password"
-								         maxlength="15" onchange="validatePwd('password')"/><span id ="password_spn"/>		
+								         maxlength="15" onchange="validatePwd('password')"/> <td><font color="red">*</font> </td><td><span id ="password_spn"/></td>		
 								</spring:bind>
-								<font color="red">*</font>
+								
 							</td>
 							
 						</tr>
 						<tr id="rePasswordRow">
-							<td width="20%" align="right">Re Password </td>
-							<td width="80%" align="left">
+							<td width="30%" align="right">Re Password </td>
+							<td width="20%" align="left">
 								<input type="password" 
 								       name="rePassword" id="rePassword"
-								        maxlength="15" onchange="confPwdCheck('password','rePassword')"/><span id ="rePassword_spn"/>		
-							<font color="red">*</font>	
+								        maxlength="15" onchange="confPwdCheck('password','rePassword')"/> <td><font color="red">*</font></td><td>	<span id ="rePassword_spn"/></td>		
+							
 							</td>
 							
 						</tr>
@@ -87,10 +87,10 @@ function goBack()
 						</tr>
 						
 						<tr>
-							<td align="center" colspan="2">
+							<td align="center" >
 								<input type="button" alignment="center"  id="actionButton" value="Submit" onclick ="frmSubmit()">
 							</td>
-							<td align="center" colspan="2">
+							<td align="center">
 							<input type="button" value="Back" onclick="goBack()">
 							</td>
 						</tr>

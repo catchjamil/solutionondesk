@@ -5,19 +5,27 @@ import java.util.Date;
 public class BaseDTO {
 
 	private Long id;
-	private String createdBy;
+	private Long createdBy;
+	
 	private Date createdOn;
 	private String modifiedBy;
 	private Date modifiedOn;
 	private String action;
+	public Long getCreatedBy() {
+		return createdBy;
+	}
+
+
+
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
 
 	public String getAction() {
 		return action;
 	}
 
-	public String getCreatedBy() {
-		return createdBy;
-	}
+
 
 	public Date getCreatedOn() {
 		return createdOn;
@@ -39,9 +47,6 @@ public class BaseDTO {
 		this.action = action;
 	}
 
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
 
 	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;

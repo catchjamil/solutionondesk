@@ -84,6 +84,7 @@ public class BaseDAOImpl implements BaseDAO {
 		try {
 			Session session = HibernateUtil.openSession();
 			Transaction t = session.beginTransaction();
+			
 			BaseBO baseBo = BODTOFiller.getBO(baseDTO);
 			baseBo.setCreatedBy(ticket.getId());
 			// baseBo.setId(2000l);

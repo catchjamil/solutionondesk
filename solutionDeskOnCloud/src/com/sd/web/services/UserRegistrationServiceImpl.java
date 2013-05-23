@@ -100,13 +100,17 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
 
 	public UserRegistrationDTO save(Ticket ticket, UserRegistrationDTO userRegistrationDTO) throws DatabaseException {
 
+		System.out.println("password : "+userRegistrationDTO.getPassword());
 		userRegistrationDTO = (UserRegistrationDTO) baseDAO.save(ticket, userRegistrationDTO);
 		return userRegistrationDTO;
 	}
 
 	public UserRegistrationDTO update(Ticket ticket, UserRegistrationDTO userRegistrationDTO) throws DatabaseException {
-
+		Session session = HibernateUtil.openSession();
+		UserRegistrationBO userRegistrationBO = (UserRegistrationBO) session.load(UserRegistrationBO.class, userRegistrationDTO.getId());
+		userRegistrationDTO.setPassword(userRegistrationBO.getPassword());
 		userRegistrationDTO = (UserRegistrationDTO) baseDAO.update(ticket, userRegistrationDTO, "");
+		session.close();
 		return userRegistrationDTO;
 	}
 

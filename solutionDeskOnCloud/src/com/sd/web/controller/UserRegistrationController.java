@@ -1,18 +1,16 @@
 package com.sd.web.controller;
 
-import java.text.Collator;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.Set;
 import java.util.TreeSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -39,6 +37,7 @@ import com.sd.web.util.Parameters;
 
 @Controller
 public class UserRegistrationController extends BaseController {
+	
 
 	private final UserRegistrationService userRegistrationService = getUserRegistrationService();
 	UserRegistrationDTO userRegistrationDTO = new UserRegistrationDTO();
@@ -322,6 +321,7 @@ public class UserRegistrationController extends BaseController {
 
 	    Locale[] locales = Locale.getAvailableLocales();
 	    for (Locale locale : locales) {
+	    	try{
 	      String iso = locale.getISO3Country();
 	      String code = locale.getCountry();
 	      String name = locale.getDisplayCountry();
@@ -329,6 +329,9 @@ public class UserRegistrationController extends BaseController {
 	      if (!"".equals(iso) && !"".equals(code) && !"".equals(name)) {
 	    	  countries.add(name);
 	      }
+	    	}catch(MissingResourceException e){
+	    		e.printStackTrace();
+	    	}
 	    }
 
 	   return countries;

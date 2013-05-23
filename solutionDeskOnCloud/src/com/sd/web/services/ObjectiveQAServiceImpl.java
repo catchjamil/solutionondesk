@@ -13,9 +13,11 @@ import com.sd.web.dao.BaseDAOImpl;
 import com.sd.web.dao.HibernateUtil;
 import com.sd.web.dto.BaseDTO;
 import com.sd.web.dto.ObjectiveQADTO;
+import com.sd.web.dto.UserRegistrationDTO;
 import com.sd.web.enums.Actions;
 import com.sd.web.exception.DatabaseException;
 import com.sd.web.model.bo.ObjectiveQABO;
+import com.sd.web.model.bo.UserRegistrationBO;
 import com.sd.web.security.Ticket;
 
 public class ObjectiveQAServiceImpl implements ObjectiveQAService {
@@ -66,7 +68,7 @@ System.out.println("Query : "+" from " + ObjectiveQABO.class.getName() + " where
 				ObjectiveQADTO.setOption4(objectiveQABO.getOption4());
 				ObjectiveQADTO.setAnswer(objectiveQABO.getAnswer());
 				ObjectiveQADTO.setTechnologyId(objectiveQABO.getTechnologyId());
-				ObjectiveQADTO.setCreatedBy(objectiveQABO.getCreatedBy().toString());
+				ObjectiveQADTO.setCreatedBy(objectiveQABO.getCreatedBy());
 				techList.add(ObjectiveQADTO);
 			}
 			session.close();
@@ -86,9 +88,17 @@ System.out.println("Query : "+" from " + ObjectiveQABO.class.getName() + " where
 		return ObjectiveQADTO;
 	}
 
-	public ObjectiveQADTO update(Ticket ticket, ObjectiveQADTO ObjectiveQADTO) throws DatabaseException {
+	public ObjectiveQADTO update(Ticket ticket, ObjectiveQADTO objectiveQADTO) throws DatabaseException {
 
-		ObjectiveQADTO = (ObjectiveQADTO) baseDAO.update(ticket, ObjectiveQADTO, "");
-		return ObjectiveQADTO;
+		
+		Session session = HibernateUtil.openSession();
+		ObjectiveQABO objectiveQABO = (ObjectiveQABO) session.load(ObjectiveQABO.class, objectiveQADTO.getId());
+		objectiveQADTO.setTechnologyId(objectiveQABO.getTechnologyId());
+		objectiveQADTO.setCreatedOn(objectiveQABO.getCreatedOn());
+		objectiveQADTO.setCreatedBy(objectiveQABO.getCreatedBy());
+		session.close();
+		
+		objectiveQADTO = (ObjectiveQADTO) baseDAO.update(ticket, objectiveQADTO, "");
+		return objectiveQADTO;
 	}
 }

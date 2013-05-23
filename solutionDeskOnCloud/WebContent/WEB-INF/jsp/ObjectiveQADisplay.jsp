@@ -89,16 +89,41 @@ function deleteData(Id){
 }	
     
 function checkAnswer(obj){
- var value = obj.value.split("_");
 
-	 var altValue = obj.alt;
- if(value[1] == altValue){
-	 
-	 $("#"+value[0]+"_answer_spn").html("<font color='green'>Congratulation, Correct Answer </font>");
-	 
-	 }else{
-	 $("#"+value[0]+"_answer_spn").html("<font color='red'>Oops, Wrong Answer </font><font color='green'>Correct Answer : "+value[1]+"</font>");
-	 }
+	var objValue = obj.value.split(",");
+	var ansList = document.getElementsByName(obj.name);
+	var checkValue = ""; 
+	for(var i = 0; i<ansList.length; i++ ){
+		if(ansList[i].checked){
+			checkValue = checkValue + ansList[i].alt+",";
+		}
+	}
+	
+	var checkValueArray = checkValue.split(",");
+	var checkValueArrayLen = checkValueArray.length - 1;
+
+	if(checkValueArrayLen == objValue.length ){
+	
+		for(var i = 0; i<checkValueArrayLen; i++ ){
+	
+			if (obj.value.indexOf(checkValueArray[i]) == -1){
+				
+				$("#"+obj.name+"_answer_spn").html("<font color='red'>Oops, Wrong Answer </font><font color='green'>Correct Answer : "+obj.value+"</font>");
+				
+				for(var k = 0; k<ansList.length; k++ ){
+					ansList[k].disabled = true;
+				}
+				
+				return;
+			}
+			
+		}
+		 $("#"+obj.name+"_answer_spn").html("<font color='green'>Congratulation, Correct Answer </font>");
+		 for(var j = 0; j<ansList.length; j++ ){
+			 
+			 ansList[j].disabled = true;	
+			}
+	}
 }    
 </script>
 
@@ -128,35 +153,32 @@ Ticket ticket = (Ticket)request.getSession().getAttribute("ticket");
 						<td>
 							<table border="0" width="100%">
 								<tr>
-									<td>
-										Question
+									<td >
+										<b>Question <%= objectiveQADTO.getId()%>: <%=objectiveQADTO.getQuestion() %> </b>
 									</td>
-									<td>
-                                    <%=objectiveQADTO.getQuestion() %>
-										
 
-									</td>
+									
 								</tr>
 
 
 								<tr>
 									<td width="33%" align="left" colspan="2">
 									
-										<input type="checkbox" name="answer" value="<%=objectiveQADTO.getId()+"_"+objectiveQADTO.getAnswer()%>" alt="1" onclick="checkAnswer(this)" />
+										<input type="checkbox" name="<%=objectiveQADTO.getId()%>" value="<%=objectiveQADTO.getAnswer()%>" alt="1" onclick="checkAnswer(this)" />
 										<%=objectiveQADTO.getOption1() %>
 										<span id ="<%=objectiveQADTO.getId()%>_answer_spn"></span>
 									</td>
 								</tr>
 								<tr>
 									<td width="33%" align="left"  colspan="2">
-											<input type="checkbox" name="answer" value="<%=objectiveQADTO.getId()+"_"+objectiveQADTO.getAnswer()%>" alt="2" onclick="checkAnswer(this)" /> 
+											<input type="checkbox" name="<%=objectiveQADTO.getId()%>" value="<%=objectiveQADTO.getAnswer()%>" alt="2" onclick="checkAnswer(this)" /> 
 										<%=objectiveQADTO.getOption2() %>
 									</td>
 								</tr>
 								<tr>
 
 									<td width="33%" align="left"  colspan="2">
-										<input type="checkbox" name="answer" value="<%=objectiveQADTO.getId()+"_"+objectiveQADTO.getAnswer()%>" alt="3" onclick="checkAnswer(this)"/> 
+										<input type="checkbox" name="<%=objectiveQADTO.getId()%>" value="<%=objectiveQADTO.getAnswer()%>" alt="3" onclick="checkAnswer(this)"/> 
 										<%=objectiveQADTO.getOption3() %>
 									</td>
 								</tr>
@@ -164,7 +186,7 @@ Ticket ticket = (Ticket)request.getSession().getAttribute("ticket");
 
 									<td width="33%" align="left"  colspan="2">
 
-										<input type="checkbox" name="answer" value="<%=objectiveQADTO.getId()+"_"+objectiveQADTO.getAnswer()%>" alt="4" onclick="checkAnswer(this)"/> 
+										<input type="checkbox" name="<%=objectiveQADTO.getId()%>" value="<%=objectiveQADTO.getAnswer()%>" alt="4" onclick="checkAnswer(this)"/> 
 										
 										<%=objectiveQADTO.getOption4() %>
 									</td>

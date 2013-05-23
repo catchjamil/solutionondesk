@@ -140,6 +140,7 @@ public class ObjectiveQAController extends BaseController {
 			Ticket ticket = getTicket(request);
 			if (ticket != null) {
 				ObjectiveQADTO objectiveQADTO = (ObjectiveQADTO) FormDTOFiller.getDTO(objectiveQAForm, new ObjectiveQADTO());
+				objectiveQADTO.setTechnologyId(Long.parseLong(objectiveQAForm.getTechnologyId()));
 				objectiveQAService.save(ticket, objectiveQADTO);
 
 				getDataList(request, objectiveQAForm.getTechnologyId());
@@ -182,6 +183,7 @@ public class ObjectiveQAController extends BaseController {
 			if (ticket != null) {
 				ObjectiveQADTO objectiveQADTO = objectiveQAService.findById(ticket, new ObjectiveQADTO(), request.getParameter("Id"));
 				ObjectiveQAForm objectiveQAForm = (ObjectiveQAForm) FormDTOFiller.getForm(objectiveQADTO);
+				objectiveQAForm.setTechnologyId(objectiveQADTO.getTechnologyId().toString());
 				objectiveQAForm.setId(request.getParameter("Id"));
 				request.setAttribute("mode", "edit");
 				model.addAttribute("objectiveQAForm", objectiveQAForm);

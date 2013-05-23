@@ -13,11 +13,8 @@
 		var contexPath = "<%=request.getContextPath()%>";
 </script>
 <script src="<%=request.getContextPath()%>/js/WebUtil.js"></script>
-<%List<ObjectiveQADTO> objectiveQADTOs = (List<ObjectiveQADTO>)request.getAttribute("ObjectiveQAList"); 
-ObjectiveQADTO ObjectiveQADTO = new ObjectiveQADTO();
-if(objectiveQADTOs != null && objectiveQADTOs.size() > 0){
-	ObjectiveQADTO = objectiveQADTOs.get(0);
-}
+<%ObjectiveQAForm objectiveQAForm = (ObjectiveQAForm)request.getAttribute("objectiveQAForm"); 
+
 
 %>
 
@@ -26,20 +23,19 @@ if(objectiveQADTOs != null && objectiveQADTOs.size() > 0){
 		var mode = '<%=request.getAttribute("mode")%>';
 	window.onload = function() {
 		
-		document.ObjectiveQAForm.id.value = '<%=ObjectiveQADTO.getId() != null ? ObjectiveQADTO.getId() : ""%>';
-		document.ObjectiveQAForm.technologyId.value = '<%=ObjectiveQADTO.getTechnologyId()  != null ? ObjectiveQADTO.getTechnologyId() : ((ObjectiveQAForm)request.getAttribute("objectiveQAForm")).getTechnologyId() %>';
-		document.ObjectiveQAForm.question.value = '<%=ObjectiveQADTO.getQuestion()  != null ? ObjectiveQADTO.getQuestion() : ""%>';
-		document.ObjectiveQAForm.answer.value = '<%=ObjectiveQADTO.getAnswer()  != null ? ObjectiveQADTO.getAnswer() : ""%>';
-		document.ObjectiveQAForm.option1.value = '<%=ObjectiveQADTO.getOption1()  != null ? ObjectiveQADTO.getOption1() : ""%>';
-		document.ObjectiveQAForm.option2.value = '<%=ObjectiveQADTO.getOption2()  != null ? ObjectiveQADTO.getOption2() : ""%>';
-		document.ObjectiveQAForm.option3.value = '<%=ObjectiveQADTO.getOption3()  != null ? ObjectiveQADTO.getOption3() : ""%>';
-		document.ObjectiveQAForm.option4.value = '<%=ObjectiveQADTO.getOption4()  != null ? ObjectiveQADTO.getOption4() : ""%>';
-		
-		
+		document.ObjectiveQAForm.id.value = '<%=objectiveQAForm.getId() != null ? objectiveQAForm.getId() : ""%>';
+		document.ObjectiveQAForm.technologyId.value = '<%=objectiveQAForm.getTechnologyId()  != null ? objectiveQAForm.getTechnologyId() : ((ObjectiveQAForm)request.getAttribute("objectiveQAForm")).getTechnologyId() %>';
+		document.ObjectiveQAForm.question.value = '<%=objectiveQAForm.getQuestion()  != null ? objectiveQAForm.getQuestion() : ""%>';
+		document.ObjectiveQAForm.option1.value = '<%=objectiveQAForm.getOption1()  != null ? objectiveQAForm.getOption1() : ""%>';
+		document.ObjectiveQAForm.option2.value = '<%=objectiveQAForm.getOption2()  != null ? objectiveQAForm.getOption2() : ""%>';
+		document.ObjectiveQAForm.option3.value = '<%=objectiveQAForm.getOption3()  != null ? objectiveQAForm.getOption3() : ""%>';
+		document.ObjectiveQAForm.option4.value = '<%=objectiveQAForm.getOption4()  != null ? objectiveQAForm.getOption4() : ""%>';
+	
 		if (mode == 'edit') {
-			var checkedVal = document.all.checkedAns.value.split(",");
-			for ( var i = 0; i < checkedVal.length; i++) {
-				document.all.answer[checkedVal[i] - 1].checked = "checked";
+			var checkedVal = '<%=objectiveQAForm.getAnswer()  != null ? objectiveQAForm.getAnswer() : ""%>';
+			var checkVarArr = checkedVal.split(",");
+			for ( var i = 0; i < checkVarArr.length; i++) {
+				document.all.answer[checkVarArr[i] - 1].checked = "checked";
 			}
 		}
 	}
@@ -127,7 +123,7 @@ if(objectiveQADTOs != null && objectiveQADTOs.size() > 0){
 						</spring:bind>
 					</td><td valign="top" width="500">
 					 <spring:bind path="objectiveQAForm.answer">
-							<input type="hidden" name="checkedAns" id="checketAns" />
+							
 						</spring:bind> Answer <input type="checkbox" name="answer" value="1" /> <span id="answer_spn" ></span>
 					
 			<spring:bind path="objectiveQAForm.id">
@@ -152,8 +148,8 @@ if(objectiveQADTOs != null && objectiveQADTOs.size() > 0){
 						</spring:bind>
 					</td><td valign="top" width="500">
 					 <spring:bind path="objectiveQAForm.answer">
-							<input type="hidden" name="checkedAns" id="checketAns" />
-						</spring:bind> Answer <input type="checkbox" name="answer" value="1" /> <span id="answer_spn" ></span>
+							
+						</spring:bind> Answer <input type="checkbox" name="answer" value="2" /> <span id="answer_spn" ></span>
 			</td></tr>
 			
 							<tr>
@@ -166,22 +162,22 @@ if(objectiveQADTOs != null && objectiveQADTOs.size() > 0){
 						</spring:bind>
 					</td><td valign="top" width="500">
 					 <spring:bind path="objectiveQAForm.answer">
-							<input type="hidden" name="checkedAns" id="checketAns" />
-						</spring:bind> Answer <input type="checkbox" name="answer" value="1" /> <span id="answer_spn" ></span>
+							
+						</spring:bind> Answer <input type="checkbox" name="answer" value="3" /> <span id="answer_spn" ></span>
 			</td></tr>
 			
 							<tr>
 					<td >Option 4</td><td>
 					 <spring:bind path="objectiveQAForm.option4">
 
-							<input type="text" name="option2" id="option4" alt="option4"
+							<input type="text" name="option4" id="option4" alt="option4"
 								maxlength="200" />
 							<span id="option4_spn"></span>
 						</spring:bind>
 					</td><td valign="top" width="500">
 					 <spring:bind path="objectiveQAForm.answer">
-							<input type="hidden" name="checkedAns" id="checketAns" />
-						</spring:bind> Answer <input type="checkbox" name="answer" value="1" /> <span id="answer_spn" ></span>
+							
+						</spring:bind> Answer <input type="checkbox" name="answer" value="4" /> <span id="answer_spn" ></span>
 			</td></tr>
 			
 			

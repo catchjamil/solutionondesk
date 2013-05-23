@@ -33,7 +33,6 @@ function userOnload(){
 	document.userRegistration.userCountry.value = '<%=userRegistrationForm.getCountry()  != null ? userRegistrationForm.getCountry() : ""%>';
 	document.userRegistration.state.value = '<%=userRegistrationForm.getState()  != null ? userRegistrationForm.getState() : ""%>';
 	document.userRegistration.city.value = '<%=userRegistrationForm.getCity()  != null ? userRegistrationForm.getCity() : ""%>';
-	document.userRegistration.password.value = '<%=userRegistrationForm.getPassword()  != null ? userRegistrationForm.getPassword() : ""%>';
 	
 	
 	doAjaxCall(url,"","userRole");
@@ -148,9 +147,9 @@ function frmSubmit(){
 	  }	
 }
 
-function goBack()  {
+function goBack(){
   window.history.back();
-  }
+ }
 
 </script>
 <body onload="userOnload()">
@@ -365,11 +364,11 @@ function goBack()  {
 			<input type="hidden" name="id" />
 
 		</spring:bind>
-				<spring:bind path="UserRegistrationForm.password">
+<%-- 				<spring:bind path="UserRegistrationForm.password">
 			<input type="hidden" name="password" />
 
 		</spring:bind>
-	</form>
+ --%>	</form>
 
 
 </body>
