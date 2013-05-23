@@ -11,13 +11,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/solutiondeskdb</value>
+			<value>jdbc:mysql://127.0.0.1:10100/d39b3c4fde2684b229cba151f1f40704b</value>
 		</property>
 		<property name="username">
-			<value>root</value>
+			<value>u8T98RcRSAvVN</value>
 		</property>
 		<property name="password">
-			<value>admin</value>
+			<value>pOrS27etd8zEL</value>
 		</property>
 
 
