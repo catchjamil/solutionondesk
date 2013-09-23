@@ -1,5 +1,4 @@
 <%@ taglib prefix="core" uri="http://java.sun.com/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html>
 <head><title>User Registration</title></head>

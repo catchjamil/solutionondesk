@@ -1,6 +1,5 @@
 <%@page import="com.sd.web.form.UserRegistrationForm"%>
 <%@ taglib prefix="core" uri="http://java.sun.com/jstl/core"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%UserRegistrationForm userRegistrationForm = (UserRegistrationForm)request.getAttribute("userRegistration"); 
 if(userRegistrationForm == null){
 	userRegistrationForm = new UserRegistrationForm();
