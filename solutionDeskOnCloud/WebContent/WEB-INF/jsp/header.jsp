@@ -2,7 +2,8 @@
 <%@page import="com.sd.web.security.Ticket"%>
 <table width="100%">
   <tr>
-    <td colspan="2"><img src="images/logo.png" alt="logo"/></td>
+    <td ><img src="images/logo.png" alt="logo"/></td>
+     <td align="right"><img src="images/pics.jpg" alt="logo" height="90" width="120"/></td>
   </tr>
   <tr>
     <td>
@@ -32,6 +33,7 @@ e.printStackTrace();
 	    
     
   </tr>
+  
 </table>
 
 
