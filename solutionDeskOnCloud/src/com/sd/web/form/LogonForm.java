@@ -1,8 +1,8 @@
 package com.sd.web.form;
 
 public class LogonForm extends BaseForm {
-	String userName;
-	String password;
+	private String userName;
+	private String password;
 
 	/**
 	 * @return Returns the password.
