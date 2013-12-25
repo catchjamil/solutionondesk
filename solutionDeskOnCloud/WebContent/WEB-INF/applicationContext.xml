@@ -11,13 +11,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://127.0.0.1:10100/d39b3c4fde2684b229cba151f1f40704b</value>
+			<value>jdbc:mysql://127.0.0.1:3306/swiftdb</value>
 		</property>
 		<property name="username">
-			<value>u8T98RcRSAvVN</value>
+			<value>root</value>
 		</property>
 		<property name="password">
-			<value>pOrS27etd8zEL</value>
+			<value>root</value>
 		</property>
 
 
@@ -31,7 +31,7 @@
 		<property name="hibernateProperties">
 			<props>
 			
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
 				 
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.dialect">
