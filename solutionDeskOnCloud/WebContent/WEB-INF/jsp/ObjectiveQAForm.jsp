@@ -104,7 +104,7 @@
 				<tr>
 					<td>Question</td>
 					<td colspan="2"><spring:bind path="objectiveQAForm.question">
-							<textarea name="question" rows="3" cols="80" id="question"
+							<textarea name="question" rows="25" cols="90" id="question"
 								 onkeypress="return imposeMaxLength(this, 500);"> </textarea>
 							<span id="question_spn"></span>
 						</spring:bind></td>

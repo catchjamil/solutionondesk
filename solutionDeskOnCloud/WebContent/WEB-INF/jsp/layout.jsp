@@ -5,29 +5,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
-<link rel="stylesheet" type="text/css" href="css/common.css"	media="screen">
+
+<link rel="stylesheet" type="text/css" href="css/style.css"
+	media="screen">
+	
+			<link rel="stylesheet" type="text/css" href="css/superfish.css"	media="screen">
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+		
 </head>
 <body>
-<table align="center">
-	<%try{ %>
-	<tr>
-		<td height="50" colspan="2"><tiles:insertAttribute name="header" />
-		</td>
-	</tr>
-	<tr ><td colspan="2"><tiles:insertAttribute name="menu" /></td></tr>
-	<tr valign="top">
+	<div id="page_wrapper">
+		<div id="header_wrapper">
+			<div id="header">
+				<tiles:insertAttribute name="header" />
+			</div>
+			
+			
+			
+		</div>
+		<div id="menu_wrapper">
+			<tiles:insertAttribute name="menu" />
+			
+		</div>	
 		
-		<td width="500" height="500"><tiles:insertAttribute name="body" /></td>
-		<td width="75" align="right" ><tiles:insertAttribute name="rightMenu" /></td>
-	</tr>
-	<tr>
-		<td height="30" colspan="2"><tiles:insertAttribute name="footer" />
-		</td>
-	</tr>
-	<%}catch(Exception e){
-		e.printStackTrace();
-	}
-	 %>
-</table>
+	<div id="right_side">
+     <tiles:insertAttribute name="rightMenu" /> 
+     </div>
+  
+		
+		<div id="content">
+		
+		
+      <div class="featurebox_center"> 
+      
+      <tiles:insertAttribute name="body" /> 
+     </div>
+		</div>
+		
+	
+<div id="footer"> <tiles:insertAttribute name="footer" />
+</div>
+
+	</div>
+
 </body>
 </html>
+
+

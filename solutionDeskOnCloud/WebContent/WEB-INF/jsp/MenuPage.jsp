@@ -1,25 +1,8 @@
 
 <%@page import="com.sd.web.security.Ticket"%>
 <%@page import="com.sd.web.enums.Roles"%><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-	<head>
-		<title></title>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8">
-		<link rel="stylesheet" type="text/css" href="css/superfish.css"	media="screen">
-		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-		<script type="text/javascript" src="js/hoverIntent.js"></script>
-		<script type="text/javascript" src="js/superfish.js"></script>
-		<script type="text/javascript">
+<div >
 
-		// initialise plugins
-		jQuery(function(){
-			jQuery('ul.sf-menu').superfish();
-		});
-
-		</script>
-	</head>
-	<body>
 		<ul class="sf-menu">
 			<li class="current">
 				<a href="articleDisplay.do?entityId=10">Home</a>
@@ -133,7 +116,7 @@
 					<li>
 						<a href="articleDisplay.do?entityId=703">CSS</a>
 					</li>
-			
+	
 				</ul>
 			</li>
 			
@@ -289,7 +272,9 @@
 			<li class="current">
 				<a href="#">Others</a>
 				<ul>
+				    <li class="current">
 						<a href="articleDisplay.do?entityId=800">Android</a>
+					</li>	
 					<li>
 						<a href="articleDisplay.do?entityId=801">JUnit</a>
 					</li>
@@ -326,5 +311,4 @@
 			
 			
 		</ul>
-	</body>
-</html>
+</div>	
