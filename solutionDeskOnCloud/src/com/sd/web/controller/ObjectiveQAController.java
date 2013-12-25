@@ -139,6 +139,7 @@ public class ObjectiveQAController extends BaseController {
 		try {
 			Ticket ticket = getTicket(request);
 			if (ticket != null) {
+				objectiveQAForm.setQuestion("<pre>"+objectiveQAForm.getQuestion()+"</pre>");
 				ObjectiveQADTO objectiveQADTO = (ObjectiveQADTO) FormDTOFiller.getDTO(objectiveQAForm, new ObjectiveQADTO());
 				objectiveQADTO.setTechnologyId(Long.parseLong(objectiveQAForm.getTechnologyId()));
 				objectiveQAService.save(ticket, objectiveQADTO);
