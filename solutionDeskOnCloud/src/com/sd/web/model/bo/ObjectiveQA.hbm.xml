@@ -10,7 +10,7 @@
 		</id>
 
 		<property name="technologyId" column="TECHNOLOGY_ID" />
-		<property name="question" column="QUESTION" />
+		<property name="question" column="QUESTION" length="1500"/>
 		<property name="option1" column="OPTION1" />
 		<property name="option2" column="OPTION2" />
 		<property name="option3" column="OPTION3" />
