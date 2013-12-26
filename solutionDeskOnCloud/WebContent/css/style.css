@@ -35,7 +35,7 @@ A:hover {
 }
 
 #header_wrapper {
-  background: #BDD2FF url('../img/menu_bg.gif') bottom left repeat-x;
+  background: #BDD2FF;
   margin:0px; padding:0px;
   width: 98%;
 }
@@ -43,7 +43,6 @@ A:hover {
 #header {
   height: 75px;
   padding:15px;
-  background: url('../image/header_bg.gif') top right no-repeat;
   margin:0px;
   width: 98%;
 }
@@ -68,14 +67,14 @@ A:hover {
   margin-top: 10px;
   float: left;
   width: 25%;
-  background: #F1F6FE url('../img/side_bg.gif') bottom left repeat-x;
+  background: #F1F6FE;
 }
 
 #right_side {
   margin-top: 47px;
   float: right;
   width: 25%;
-  background: #F1F6FE url('../img/side_bg.gif') bottom left repeat-x;
+  background: #F1F6FE;
 }
 
 #content {
