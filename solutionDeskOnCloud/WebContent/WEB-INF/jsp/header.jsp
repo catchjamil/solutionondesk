@@ -3,7 +3,7 @@
 <div  style="width:190px; height:90px;float: left;" >
 
 <img src="images/logo.png" alt="logo" width="150" height="70"/>
-
+<br>
 <%try{ 
 
 Ticket ticket = (Ticket)request.getSession().getAttribute("ticket");

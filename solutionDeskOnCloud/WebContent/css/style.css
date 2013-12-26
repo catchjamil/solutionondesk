@@ -37,6 +37,7 @@ A:hover {
 #header_wrapper {
   background: #BDD2FF url('../img/menu_bg.gif') bottom left repeat-x;
   margin:0px; padding:0px;
+  width: 98%;
 }
 
 #header {
@@ -44,6 +45,7 @@ A:hover {
   padding:15px;
   background: url('../image/header_bg.gif') top right no-repeat;
   margin:0px;
+  width: 98%;
 }
 
 #header h1 {
@@ -65,14 +67,14 @@ A:hover {
 #left_side {
   margin-top: 10px;
   float: left;
-  width: 160px;
+  width: 25%;
   background: #F1F6FE url('../img/side_bg.gif') bottom left repeat-x;
 }
 
 #right_side {
-  margin-top: 45px;
+  margin-top: 47px;
   float: right;
-  width: 280px;
+  width: 25%;
   background: #F1F6FE url('../img/side_bg.gif') bottom left repeat-x;
 }
 
@@ -80,7 +82,7 @@ A:hover {
   margin-top: -10px;
   margin-left: 10px;
   float: left;
-  width: 980px;
+  width: 74%;
 }
 
 #footer {
@@ -93,6 +95,7 @@ A:hover {
   font-family: verdana, arial, sans-serif;
   font-size: 11px;
   line-height: 18px;
+  width: 100%;
 }
 
 #footer A:link {
@@ -246,12 +249,14 @@ margin: 0 10px 0 0;
 border: 1px solid #DDD;
 padding: 4px;
 float: left;
+width: 15%;
 }
 .listing-content {
  font-family: verdana, arial, sans-serif;
   font-size: 14px;	
   text-align:left;
   margin-top: 10px;
+  margin-left: 10px;
   margin-bottom: 10px;
-margin-left: 130px;
+
 }

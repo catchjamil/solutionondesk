@@ -8,12 +8,13 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css"
 	media="screen">
-	
-			<link rel="stylesheet" type="text/css" href="css/superfish.css"	media="screen">
-		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-		<script type="text/javascript" src="js/hoverIntent.js"></script>
-		<script type="text/javascript" src="js/superfish.js"></script>
-		<script type="text/javascript">
+
+<link rel="stylesheet" type="text/css" href="css/superfish.css"
+	media="screen">
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/hoverIntent.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript">
 
 		// initialise plugins
 		jQuery(function(){
@@ -21,7 +22,7 @@
 		});
 
 		</script>
-		
+
 </head>
 <body>
 	<div id="page_wrapper">
@@ -29,32 +30,32 @@
 			<div id="header">
 				<tiles:insertAttribute name="header" />
 			</div>
-			
-			
-			
+
+
 		</div>
 		<div id="menu_wrapper">
 			<tiles:insertAttribute name="menu" />
-			
-		</div>	
-		
-	<div id="right_side">
-     <tiles:insertAttribute name="rightMenu" /> 
-     </div>
-  
-		
-		<div id="content">
-		
-		
-      <div class="featurebox_center"> 
-      
-      <tiles:insertAttribute name="body" /> 
-     </div>
+
 		</div>
-		
-	
-<div id="footer"> <tiles:insertAttribute name="footer" />
-</div>
+
+		<div id="right_side">
+			<tiles:insertAttribute name="rightMenu" />
+		</div>
+
+
+		<div id="content">
+
+
+			<div class="featurebox_center">
+
+				<tiles:insertAttribute name="body" />
+			</div>
+		</div>
+
+
+		<div id="footer">
+			<tiles:insertAttribute name="footer" />
+		</div>
 
 	</div>
 
