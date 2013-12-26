@@ -28,7 +28,10 @@
 							</li>
 						</ul>
 					</li>
-					
+					<li>
+						<a href="adminService.do">Admin</a>
+						
+					</li>
 					<li>
 						<a href="emailService.do">Gmail Service</a>
 						

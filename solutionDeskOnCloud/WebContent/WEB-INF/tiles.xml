@@ -76,6 +76,9 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/InboxPage.jsp" />
 	</definition>
 	
+	<definition name="adminPage" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/jsp/AdminPage.jsp" />
+	</definition>
 	
 		
 	<definition name="errorPage" extends="base.definition">
