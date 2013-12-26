@@ -1,6 +1,6 @@
 
 <%@page import="com.sd.web.security.Ticket"%>
-<div  style="width:190px; height:90px;float: left;" >
+<div  style="width:15%; height:90px;float: left;" >
 
 <img src="images/logo.png" alt="logo" width="150" height="70"/>
 <br>
@@ -24,7 +24,7 @@ e.printStackTrace();
 }%>
 
 </div>
-<div style="width:900px; height:90px;float: left;">
+<div style="width:78%; height:90px;float: left;">
 <center>
 <img src="images/javaCertification.gif" width="250" height="30"/>
 <img src="images/databaseCertification.gif" width="250" height="30"/>
@@ -34,6 +34,6 @@ e.printStackTrace();
 </div>
 
 
-<div  style="width:50px; height:62px;float: right;" >
+<div  style="width:5%; height:62px;float: right;" >
 <img src="images/pics.jpg" alt="logo" height="70" width="60" />
 </div>
