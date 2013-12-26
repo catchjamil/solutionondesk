@@ -14,6 +14,10 @@
 <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
 <script type="text/javascript" src="js/hoverIntent.js"></script>
 <script type="text/javascript" src="js/superfish.js"></script>
+
+<script src="js/jqueryFileTree.js" type="text/javascript"></script>
+<link href="css/jqueryFileTree.css" rel="stylesheet" type="text/css" media="screen" /> 
+
 <script type="text/javascript">
 
 		// initialise plugins
