@@ -31,7 +31,8 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
 	public List<UserRegistrationDTO> findAll(Ticket ticket, UserRegistrationDTO userRegistrationDTO) throws DatabaseException {
 		Session session = HibernateUtil.openSession();
 		// String className = baseDTO.getClass().getName().replace("DTO", "BO");
-		Criteria criteria = session.createCriteria("" + getClassName(userRegistrationDTO)).add(Restrictions.ne("role", Actions.DELETED.toString()));
+		//Criteria criteria = session.createCriteria("" + getClassName(userRegistrationDTO)).add(Restrictions.ne("role", Actions.DELETED.toString()));
+		Criteria criteria = session.createCriteria("" + getClassName(userRegistrationDTO));
 		List<UserRegistrationBO> list = criteria.list();
 		List<UserRegistrationDTO> techList = new ArrayList<UserRegistrationDTO>();
 
