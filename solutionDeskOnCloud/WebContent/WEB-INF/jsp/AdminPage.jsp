@@ -17,4 +17,6 @@ $("#filedelete").html("<a href='fileAction.do?action=delete&location="+file+"'>D
 <div id="filedownload" ></div>
 <div id="fileupload" ></div>
 <div id="filedelete" ></div>
-
+<div id="servicedata" >
+	<a href='writeDataInExcel.do?dataType=user'>Write User Data</a>
+</div>
