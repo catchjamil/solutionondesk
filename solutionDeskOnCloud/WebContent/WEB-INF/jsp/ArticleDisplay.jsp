@@ -48,6 +48,11 @@ if(null == totalFileList){
 			 }
 		
 		 function nextPage(){
+			 
+			 if(currentPage > (fileNames.length - 2)){
+					currentPage = (fileNames.length - 2);
+				}
+			 
 			 		currentPage = parseInt(currentPage) + 1;
 			 	 	document.all.pageFrm.src = fileNames[currentPage];
 		 		if(currentPage <(fileNames.length - 1) ){
@@ -63,8 +68,11 @@ if(null == totalFileList){
 		 		
 			 }
 		 function previousPage(){
-		 		currentPage = (parseInt(currentPage) - 1);
-		     	document.all.pageFrm.src = fileNames[currentPage];
+				if(currentPage < 1){
+					currentPage = 1
+				}
+				currentPage = (parseInt(currentPage) - 1);
+		 	 	document.all.pageFrm.src = fileNames[currentPage];
 		 		if(currentPage >0 ){
 		     		document.all.previous.disabled = false;
 		     	}else{
@@ -94,7 +102,7 @@ Ticket ticket = (Ticket)request.getSession().getAttribute("ticket");
 %>
 <Div id="pagination" align="right"></Div>
 <iframe src="<%=request.getAttribute("fileURL")%>" seamless
-	height="1500" width="800" id="pageFrm"  frameBorder="0" scrolling="no"></iframe>
+	height="100%" width="800" id="pageFrm"  frameBorder="0" scrolling="no"></iframe>
 <%
 	}
 %>
