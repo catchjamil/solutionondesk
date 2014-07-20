@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="welcome" template="/WEB-INF/views/baseLayout.jsp">   
+      <put-attribute name="header" value="/WEB-INF/views/head.jsp"/>   
+      <put-attribute name="body"   value="/WEB-INF/views/body.jsp"/>
+      <put-attribute name="mainMenu"   value="/WEB-INF/views/MainMenu.jsp"/>
+      <put-attribute name="footer"   value="/WEB-INF/views/footer.jsp"/>
+  </definition>  
+ 
+ <definition name="hello" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/hello.jsp"/>      
+  </definition>
+ 
+ <definition name="head" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/index.jsp"/>      
+  </definition>
+ 
+ <definition name="employeesList" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/employeesList.jsp"/>      
+  </definition>
+ 
+ <definition name="addEmployee" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/addEmployee.jsp"/>      
+  </definition>
+ 
+ <definition name="itemsList" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/ItemsList.jsp"/>      
+  </definition>
+ 
+ <definition name="addItem" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/AddItem.jsp"/>      
+  </definition>
+
+  <definition name="sellItem" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/SellItem.jsp"/>      
+  </definition>
+ 
+ 
+ 
+</tiles-definitions>
