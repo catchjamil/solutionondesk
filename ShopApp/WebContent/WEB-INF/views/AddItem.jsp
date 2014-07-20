@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<h2>Add Item Data</h2>
-		<form:form method="POST" action="/sdnext/saveItem.html">
+		<form:form method="POST" action="/ShopApp/saveItem.html">
 	   		<table>
 			    <tr>
 			        <td><form:label path="id" onclick="validatePhoneNumber()">Item ID:</form:label></td>

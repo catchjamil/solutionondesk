@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<h2>Add Employee Data</h2>
-		<form:form method="POST" action="/sdnext/save.html">
+		<form:form method="POST" action="/ShopApp/save.html">
 	   		<table>
 			    <tr>
 			        <td><form:label path="id" >Employee ID:</form:label></td>

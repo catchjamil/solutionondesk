@@ -76,9 +76,21 @@ public class SellItemController {
 				}else if("quantity".equalsIgnoreCase(nextElement)){
 					item.setQuantity(parameterValues[i]);
 				}else if("price".equalsIgnoreCase(nextElement)){
-					item.setPrice(Double.parseDouble(parameterValues[i]));
+					try{
+						item.setPrice(Double.parseDouble(parameterValues[i]));
+					}catch(NumberFormatException n){
+						n.printStackTrace();
+					}
+					
+					
 				}else if("subTotal".equalsIgnoreCase(nextElement)){
-					item.setSubTotal(Double.parseDouble(parameterValues[i]));
+					try{
+						item.setSubTotal(Double.parseDouble(parameterValues[i]));
+					}catch(NumberFormatException n){
+						n.printStackTrace();
+					}
+					
+					
 				}
 			}
 			items.add(item);
@@ -89,7 +101,7 @@ public class SellItemController {
 		itemMaster.setCustomerName(request.getParameter("custName"));
 		itemMaster.setContactNo(request.getParameter("contactNo"));
 		itemMaster.setItemAction(ItemAction.SELL.toString());
-		itemMaster.setTotalAmount(Double.parseDouble(request.getParameter("subTotal")));
+		//itemMaster.setTotalAmount(Double.parseDouble(request.getParameter("subTotal")));
 		itemMaster.setItems(items);
 		
 		ModelAndView model = new ModelAndView();

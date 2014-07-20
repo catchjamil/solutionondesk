@@ -89,7 +89,7 @@
     </SCRIPT>
 </HEAD>
 <BODY>
- <form:form method="POST" action="/sdnext/sellSaveItem.html">
+ <form:form method="POST" action="/ShopApp/sellSaveItem.html">
  
  	<table><tr><TD>Customer Name <INPUT type="text" name="custName" /> </TD> <TD>Contact No <INPUT type="text" name="contactNo" /></tr></table>   
     <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
