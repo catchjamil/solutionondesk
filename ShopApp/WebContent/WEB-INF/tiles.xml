@@ -40,6 +40,10 @@
   <definition name="sellItem" extends="welcome">
       <put-attribute name="body"  value="/WEB-INF/views/SellItem.jsp"/>      
   </definition>
+  
+   <definition name="sellItemList" extends="welcome">
+      <put-attribute name="body"  value="/WEB-INF/views/SellItemList.jsp"/>      
+  </definition>
  
  
  
