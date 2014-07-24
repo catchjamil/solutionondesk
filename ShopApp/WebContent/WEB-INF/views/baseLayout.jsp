@@ -8,14 +8,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Bootstrap -->
       
-      <script src="<%=request.getContextPath()%>/js/Webutils.js"></script>
-      <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <script src="<%=request.getContextPath()%>/resources/js/Webutils.js"></script>
+      <link href="<%=request.getContextPath()%>/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <!-- <link rel="stylesheet" type="text/css" media="all" href="style.css" /> -->
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="<%=request.getContextPath()%>/js/jquery-2.1.0.min.js"></script>
+      <script src="<%=request.getContextPath()%>/resources/js/jquery-2.1.0.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files 
             as needed -->
-      <script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
+      <script src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap.min.js"></script>
       
            <style>
 .label {
