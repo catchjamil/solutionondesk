@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Quatation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd38012e-7e13-44ef-9965-6ce19ab3c57a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\mohammad.ahmed\\Desktop\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="items" class="java.util.List"/>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="203" y="0" width="170" height="23" forecolor="#990000" uuid="cfd90494-8d17-4015-8886-1496f340a202"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FERRUM-N-GLASS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="80" width="100" height="20" uuid="a2cf1be4-4b3e-4445-8870-4bea649e85ac"/>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="80" width="16" height="20" uuid="3138f3aa-56eb-4af4-95a1-ff3f66ff91f3"/>
+				<text><![CDATA[To,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="60" width="27" height="20" uuid="b42ee06b-b66c-46c2-9ccf-a292008082ff"/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="60" width="100" height="20" uuid="54c4533e-8191-4d67-b009-d9d1d7968ea4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="143" y="19" width="285" height="46" uuid="c20d8b28-742a-4969-ac37-c67b030171d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mfrs. of Ornamental Metal Products
+569, Maidan Garhi Near IGNOU New Delhi-110068
+Mob:9718483771,9540149111.
+Phone:011-32082006, E-mail:contact@ferrum-n-glass.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="65" width="89" height="15" uuid="e2b54373-6223-41cf-993b-96440cd5a827"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[QUOTATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="528" height="20" uuid="7241ffdd-fb11-4f3a-b0f4-770d73ac1046"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[We are obliged for your confidence with us and we hereby enclose our best price for your below requirements.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="150" height="40" uuid="ec698c2b-41e9-4cb3-8d89-a95c5d4794f1"/>
+				<imageExpression><![CDATA["reports\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<subreport>
+				<reportElement x="11" y="0" width="544" height="24" uuid="3727acf9-d5c2-4575-8844-e2c16ec7f6e5"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{items})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports\\Quatation_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="11" width="531" height="50" uuid="8db6e46b-55ff-4293-96e0-6cb1b53b0de7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provided by you at the time or order.
+by comp]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
