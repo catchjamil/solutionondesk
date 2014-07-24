@@ -1,10 +1,11 @@
 package com.sd.app.controller;
 
+import java.io.File;
+
 import java.io.FileInputStream;
-
-
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-/*import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -20,7 +21,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
-*/
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,8 @@ import com.sd.app.constraint.ItemAction;
 import com.sd.app.model.Item;
 import com.sd.app.model.ItemMaster;
 import com.sd.app.service.ItemService;
+
+
 
 @Controller
 public class SellItemController {
@@ -101,15 +104,20 @@ public class SellItemController {
 		itemMaster.setCustomerName(request.getParameter("custName"));
 		itemMaster.setContactNo(request.getParameter("contactNo"));
 		itemMaster.setItemAction(ItemAction.SELL.toString());
-		//itemMaster.setTotalAmount(Double.parseDouble(request.getParameter("subTotal")));
 		itemMaster.setItems(items);
 		
 		ModelAndView model = new ModelAndView();
-		model.addObject("items",  prepareListofBean(itemService.listItems()));
+		String quationSlipPath = quatationDetails(itemMaster,request);
+		String[] split = quationSlipPath.split("/");
+		itemMaster.setQuationSlipPath(quationSlipPath);
 		itemService.saveSellItems(itemMaster);
 		List<ItemMaster> listSellItems = itemService.listSellItems();
 		model.addObject("listSellItems",listSellItems);
-		model.setViewName("sellItem");
+		model.addObject("fileName",split[split.length-1]);
+		model.setViewName("sellItemList");
+		
+		
+		
 		return model;
 
 	}
@@ -136,51 +144,19 @@ public class SellItemController {
 		}
 		return beans;
 	}
-/*
-	public static void main(String[] args) throws Exception {
-		new SellItemController().printPDF();
-	}
-	
-	void printPDF(){
-		
-try{
-		InputStream inputStream = new FileInputStream("C:/Users/mohammad.ahmed/Desktop/Quatation.jrxml");
-		ItemMaster itemMaster = new ItemMaster();
-		itemMaster.setContactNo("9999999999999");
-		itemMaster.setCustomerName("test this name");
-		itemMaster.setItemAction("Sell");
-		itemMaster.setTotalAmount(50000.0);
-		ArrayList<Item> item = new ArrayList<Item>();
-		Item item1 = new Item();
-		item1.setId(1);
-		item1.setPrice(700.0);
-		item1.setQuantity("3");
-		item1.setSubTotal(400.00);
-		item1.setName("metal");
-		
-		Item item2 = new Item();
-		item2.setId(1);
-		item2.setPrice(700.0);
-		item2.setQuantity("3");
-		item2.setSubTotal(400.00);
-		item2.setName("metal");
 
+	private String quatationDetails(ItemMaster itemMaster,HttpServletRequest request){
+		String contextPath = request.getRealPath("reports");
+		String path = contextPath;
+try{
+	
+		File createReports = new File(contextPath);
+		if(!createReports.exists())
+			createReports.mkdirs();
+		System.out.println("File is created At: "+createReports.getAbsolutePath());
+		//InputStream inputStream = new FileInputStream("reports/Quatation.jrxml");
+		InputStream inputStream = getClass().getClassLoader().getResourceAsStream("reports/Quatation.jrxml");
 		
-		Item item3 = new Item();
-		
-		item3.setId(1);
-		item3.setPrice(700.0);
-		item3.setQuantity("3");
-		item3.setSubTotal(400.00);
-		item3.setName("metal");
-		for(int i=0; i<5; i++){
-		item.add(item1);
-		item.add(item2);
-		item.add(item3);
-		}
-		itemMaster.setItems(item);
-		
-		List<Item> items = itemMaster.getItems();
 		ArrayList<ItemMaster> itemMasters = new ArrayList<ItemMaster>();
 		itemMasters.add(itemMaster);
 		JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(itemMasters);
@@ -189,14 +165,15 @@ try{
 		JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
 		JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
 		JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, beanColDataSource);
-		JasperExportManager.exportReportToPdfFile(jasperPrint,	"c:/TestApp/test_jasper"+System.currentTimeMillis()+".pdf");
+		 path = createReports.getAbsolutePath()+"/Quatation_"+System.currentTimeMillis()+".pdf";
+		JasperExportManager.exportReportToPdfFile(jasperPrint,	path);
 }catch(Exception e){
 	e.printStackTrace();
 }
-	
+	return path;
 		
 	}
 	
-	*/
+
 
 }

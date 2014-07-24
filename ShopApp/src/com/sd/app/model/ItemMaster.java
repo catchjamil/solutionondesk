@@ -32,6 +32,25 @@ public class ItemMaster implements Serializable{
 	@Column
 	private String itemAction;
 	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getQuationSlipPath() {
+		return quationSlipPath;
+	}
+	public void setQuationSlipPath(String quationSlipPath) {
+		this.quationSlipPath = quationSlipPath;
+	}
+	@Column
+	private String address;
+	
+	@Column
+	private String quationSlipPath;
+
+	
 	public String getItemAction() {
 		return itemAction;
 	}
