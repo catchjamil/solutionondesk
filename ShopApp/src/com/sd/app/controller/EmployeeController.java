@@ -79,7 +79,7 @@ public class EmployeeController {
 		employee.setEmpAge(employeeBean.getAge());
 		employee.setEmpName(employeeBean.getName());
 		employee.setSalary(employeeBean.getSalary());
-		employee.setEmpId(employeeBean.getId());
+		employee.setId(employeeBean.getId());
 		employeeBean.setId(null);
 		return employee;
 	}
@@ -92,7 +92,7 @@ public class EmployeeController {
 			for(Employee employee : employees){
 				bean = new EmployeeBean();
 				bean.setName(employee.getEmpName());
-				bean.setId(employee.getEmpId());
+				bean.setId(employee.getId());
 				bean.setAddress(employee.getEmpAddress());
 				bean.setSalary(employee.getSalary());
 				bean.setAge(employee.getEmpAge());
@@ -108,7 +108,7 @@ public class EmployeeController {
 		bean.setAge(employee.getEmpAge());
 		bean.setName(employee.getEmpName());
 		bean.setSalary(employee.getSalary());
-		bean.setId(employee.getEmpId());
+		bean.setId(employee.getId());
 		return bean;
 	}
 }

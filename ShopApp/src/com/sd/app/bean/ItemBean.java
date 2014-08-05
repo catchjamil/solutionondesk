@@ -4,14 +4,18 @@ package com.sd.app.bean;
 public class ItemBean {
 	private Integer id;
 	private String name ;
-	private String height;
-	private String width;
-	private String thikness;
+	private String size;
 	private String buyFrom;
 	private String quantity;
 	private String price;
 	private String description;
 
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
 	public String getPrice() {
 		return price;
 	}
@@ -31,25 +35,7 @@ public class ItemBean {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getHeight() {
-		return height;
-	}
-	public void setHeight(String height) {
-		this.height = height;
-	}
 	
-	public String getWidth() {
-		return width;
-	}
-	public void setWidth(String width) {
-		this.width = width;
-	}
-	public String getThikness() {
-		return thikness;
-	}
-	public void setThikness(String thikness) {
-		this.thikness = thikness;
-	}
 	public String getBuyFrom() {
 		return buyFrom;
 	}

@@ -8,10 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.sd.app.model.Employee;
 
-/**
- * @author Dinesh Rajput
- *
- */
+
 @Repository("employeeDao")
 public class EmployeeDaoImpl implements EmployeeDao {
 
@@ -32,7 +29,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	public void deleteEmployee(Employee employee) {
-		sessionFactory.getCurrentSession().createQuery("DELETE FROM Employee WHERE empid = "+employee.getEmpId()).executeUpdate();
+		sessionFactory.getCurrentSession().createQuery("DELETE FROM Employee WHERE empid = "+employee.getId()).executeUpdate();
 	}
 
 }

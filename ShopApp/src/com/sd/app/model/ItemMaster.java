@@ -1,16 +1,20 @@
 package com.sd.app.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.springframework.context.annotation.Lazy;
 
 @Entity
 @Table(name="ItemMaster")
@@ -21,16 +25,73 @@ public class ItemMaster implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id")
-	private Integer Id;
+	@Column
+	protected Integer id;
+	@Column
+	protected String createdBy;
+	@Column
+	protected Date createdOn = new Date();
+	@Column
+	protected String modifiedBy;
+	@Column
+	protected Date modifiedOn = new Date();
+	@Column
+	protected String status;
+	
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+	
+	
 	@Column
 	private String customerName ;
-	
-	@Column
-	private Double totalAmount;
-	
 	@Column
 	private String itemAction;
+	@Column
+	private String address;
+	@Column
+	private String quationSlipPath;
+	@Column
+	private String contactNo;
+	@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER )
+	private List<Item> items;
 	
 	public String getAddress() {
 		return address;
@@ -44,12 +105,6 @@ public class ItemMaster implements Serializable{
 	public void setQuationSlipPath(String quationSlipPath) {
 		this.quationSlipPath = quationSlipPath;
 	}
-	@Column
-	private String address;
-	
-	@Column
-	private String quationSlipPath;
-
 	
 	public String getItemAction() {
 		return itemAction;
@@ -57,24 +112,7 @@ public class ItemMaster implements Serializable{
 	public void setItemAction(String itemAction) {
 		this.itemAction = itemAction;
 	}
-	@Column
-	private String contactNo;
-	@OneToMany(cascade={CascadeType.ALL})
-	private List<Item> items;
-	
-	public Double getTotalAmount() {
-		return totalAmount;
-	}
-	public void setTotalAmount(Double totalAmount) {
-		this.totalAmount = totalAmount;
-	}
-	
-	public Integer getId() {
-		return Id;
-	}
-	public void setId(Integer id) {
-		Id = id;
-	}
+
 	public String getCustomerName() {
 		return customerName;
 	}

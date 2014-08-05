@@ -1,6 +1,7 @@
 package com.sd.app.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,14 +12,66 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Employee")
-public class Employee implements Serializable{
+public class Employee  implements Serializable{
 
 	private static final long serialVersionUID = -723583058586873479L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "empid")
-	private Integer empId;
+	@Column
+	protected Integer id;
+	@Column
+	protected String createdBy;
+	@Column
+	protected Date createdOn = new Date();
+	@Column
+	protected String modifiedBy;
+	@Column
+	protected Date modifiedOn = new Date();
+	@Column
+	protected String status;
+	
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+	
 	
 	@Column(name="empname")
 	private String empName;
@@ -32,13 +85,6 @@ public class Employee implements Serializable{
 	@Column(name="empAge")
 	private Integer empAge;
 
-	public Integer getEmpId() {
-		return empId;
-	}
-
-	public void setEmpId(Integer empId) {
-		this.empId = empId;
-	}
 
 	public String getEmpName() {
 		return empName;

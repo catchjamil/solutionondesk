@@ -1,6 +1,7 @@
 package com.sd.app.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,86 +12,103 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Items")
-public class Item implements Serializable{
+public class Item  implements Serializable{
 
 	private static final long serialVersionUID = -723583058586873479L;
 	
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id")
-	private Integer Id;
+	@Column
+	protected Integer id;
+	@Column
+	protected String createdBy;
+	@Column
+	protected Date createdOn = new Date();
+	@Column
+	protected String modifiedBy;
+	@Column
+	protected Date modifiedOn = new Date();
+	@Column
+	protected String status;
 	@Column
 	private String name ;
 	@Column
-	private String height;
-	@Column
-	private String width;
-	@Column
-	private String thikness;
-	@Column
-	private String buyFrom;
+	private String size;
 	@Column
 	private String quantity;
+	@Column
+	private String soldQuantity;
 	
 	@Column
 	private Double price;
-	
 	@Column
-	private Double subTotal;
+	private String description;
 	
-	public Double getSubTotal() {
-		return subTotal;
+	public String getSoldQuantity() {
+		return soldQuantity;
 	}
-	public void setSubTotal(Double subTotal) {
-		this.subTotal = subTotal;
+	public void setSoldQuantity(String soldQuantity) {
+		this.soldQuantity = soldQuantity;
 	}
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
 	public Double getPrice() {
 		return price;
 	}
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	@Column
-	private String description;
-	
-	
-	public Integer getId() {
-		return Id;
-	}
-	public void setId(Integer id) {
-		Id = id;
-	}
+
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getHeight() {
-		return height;
-	}
-	public void setHeight(String height) {
-		this.height = height;
-	}
-	public String getWidth() {
-		return width;
-	}
-	public void setWidth(String width) {
-		this.width = width;
-	}
-	public String getThikness() {
-		return thikness;
-	}
-	public void setThikness(String thikness) {
-		this.thikness = thikness;
-	}
-	public String getBuyFrom() {
-		return buyFrom;
-	}
-	public void setBuyFrom(String buyFrom) {
-		this.buyFrom = buyFrom;
-	}
+	
 	public String getQuantity() {
 		return quantity;
 	}
@@ -104,10 +122,4 @@ public class Item implements Serializable{
 		this.description = description;
 	}
 	
-	
-	
-	
-	
-	
-
 }

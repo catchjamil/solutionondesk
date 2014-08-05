@@ -1,11 +1,11 @@
 package com.sd.app.controller;
 
 import java.util.ArrayList;
-
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sd.app.bean.ItemBean;
+import com.sd.app.constraint.ItemAction;
 import com.sd.app.model.Item;
+import com.sd.app.model.ItemMaster;
 import com.sd.app.service.ItemService;
 
 
@@ -27,25 +29,30 @@ public class ItemController {
 	private ItemService itemService;
 	
 	@RequestMapping(value = "/saveItem", method = RequestMethod.POST)
-	public ModelAndView saveItem(@ModelAttribute("command") ItemBean ItemBean, 
+	public ModelAndView saveItem(@ModelAttribute("command") ItemMaster itemMaster, 
 			BindingResult result) {
-		Item item = prepareModel(ItemBean);
-		itemService.addItem(item);
-		return new ModelAndView("redirect:/addItem.html");
+		// Item item = prepareModel(ItemBean);
+		// itemService.addItem(item);
+		itemMaster.setItemAction(ItemAction.BUY.toString());
+		itemService.saveItem(itemMaster);
+		Map<String, Object> model = new HashMap<String, Object>();
+		model.put("items",  itemService.listBuyItems());
+		return new ModelAndView("itemsList", model);
 	}
 
 	@RequestMapping(value="/items", method = RequestMethod.GET)
 	public ModelAndView listItems() {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("items",  prepareListofBean(itemService.listItems()));
+		model.put("items",  itemService.listBuyItems());
 		return new ModelAndView("itemsList", model);
 	}
 
 	@RequestMapping(value = "/addItem", method = RequestMethod.GET)
-	public ModelAndView addItem(@ModelAttribute("command")  ItemBean itemBean,
+	public ModelAndView addItem(@ModelAttribute("command")  ItemMaster itemMaster,
 			BindingResult result) {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("items",  prepareListofBean(itemService.listItems()));
+		//itemService.saveSellItems(itemMaster);
+		//model.put("items",  prepareListofBean(itemService.listItems()));
 		return new ModelAndView("addItem", model);
 	}
 	
@@ -55,21 +62,24 @@ public class ItemController {
 	}*/
 	
 	@RequestMapping(value = "/deleteItem", method = RequestMethod.GET)
-	public ModelAndView editItem(@ModelAttribute("command")  ItemBean itemBean,
-			BindingResult result) {
-		itemService.deleteItem(prepareModel(itemBean));
+	public ModelAndView deleteItem(@ModelAttribute("command")  ItemMaster itemMaster,
+			BindingResult result,HttpServletRequest request) {
+		int parseInt = Integer.parseInt(request.getParameter("id"));
+		
+		itemService.deleteItem(parseInt);
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("item", null);
-		model.put("items",  prepareListofBean(itemService.listItems()));
-		return new ModelAndView("addItem", model);
+		model.put("items",  itemService.listBuyItems());
+		return new ModelAndView("itemsList", model);
 	}
 	
 	@RequestMapping(value = "/editItem", method = RequestMethod.GET)
-	public ModelAndView deleteItem(@ModelAttribute("command")  ItemBean itemBean,
-			BindingResult result) {
+	public ModelAndView editItem(@ModelAttribute("command")  ItemMaster itemMaster,
+			BindingResult result, HttpServletRequest request) {
+		
+		int parseInt = Integer.parseInt(request.getParameter("id"));
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("item", prepareItemBean(itemService.getItem(itemBean.getId())));
-		model.put("items",  prepareListofBean(itemService.listItems()));
+		model.put("item", itemService.getItem(parseInt));
+		///model.put("items",  prepareListofBean(itemService.listItems()));
 		return new ModelAndView("addItem", model);
 	}
 	
@@ -77,10 +87,7 @@ public class ItemController {
 		Item item = new Item();
 		item.setId(itemBean.getId());
 		item.setName(itemBean.getName());
-		item.setHeight(itemBean.getHeight());
-		item.setWidth(itemBean.getWidth());
-		item.setThikness(itemBean.getThikness());
-		item.setBuyFrom(itemBean.getBuyFrom());
+		item.setSize(itemBean.getSize());
 		item.setQuantity(itemBean.getQuantity());
 		try{
 			Double price = new Double(itemBean.getPrice());
@@ -93,7 +100,8 @@ public class ItemController {
 		return item;
 	}
 	
-	private List<ItemBean> prepareListofBean(List<Item> items){
+	private List<ItemBean> prepareListofBean(List<ItemMaster> items){/*
+		ItemMaster itemMaster = new ItemMaster();
 		List<ItemBean> beans = null;
 		if(items != null && !items.isEmpty()){
 			beans = new ArrayList<ItemBean>();
@@ -103,11 +111,10 @@ public class ItemController {
 				
 				bean.setId(item.getId());
 				bean.setName(item.getName());
-				bean.setHeight(item.getHeight());
-				bean.setWidth(item.getWidth());
-				bean.setThikness(item.getThikness());
+				bean.setSize(item.getSize());
 				bean.setBuyFrom(item.getBuyFrom());
 				bean.setQuantity(item.getQuantity());
+				
 				bean.setPrice(item.getPrice() != null?item.getPrice()+"":"0.0");
 				bean.setDescription(item.getDescription());
 
@@ -115,6 +122,8 @@ public class ItemController {
 			}
 		}
 		return beans;
+	*/
+	return null;	
 	}
 	
 	private ItemBean prepareItemBean(Item item){
@@ -122,9 +131,7 @@ public class ItemController {
 
 		bean.setId(item.getId());
 		bean.setName(item.getName());
-		bean.setHeight(item.getHeight());
-		bean.setWidth(item.getWidth());
-		bean.setThikness(item.getThikness());
+		bean.setSize(item.getSize());
 		bean.setQuantity(item.getQuantity());
 		bean.setPrice(item.getPrice()+"");
 		bean.setDescription(item.getDescription());
