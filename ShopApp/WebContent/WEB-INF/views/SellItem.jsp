@@ -52,12 +52,12 @@
         	
         	var pValue = obj.options[obj.selectedIndex].title;
         	var v= pValue.split(",");
-        	document.getElementsByName("height")[currentRow-2].value =v[0];
-        	document.getElementsByName("width")[currentRow-2].value =v[1];
-        	document.getElementsByName("thikness")[currentRow-2].value =v[2];
-        	document.getElementsByName("quantity")[currentRow-2].value =v[3];
-        	document.getElementsByName("price")[currentRow-2].value =v[4];
-        	document.getElementsByName("subTotal")[currentRow-2].value = v[3] * v[4];
+        	document.getElementsByName("size")[currentRow-2].value =v[0];
+        	var temp = v[1] - v[2]; 
+        	document.getElementsByName("quantity")[currentRow-2].value =temp;
+        	document.getElementsByName("price")[currentRow-2].value =v[3];
+        	document.getElementsByName("subTotal")[currentRow-2].value = v[3] * temp;
+        	totalAmount();
         	
         }
  
@@ -69,11 +69,13 @@
         		t = 0.0;
         	}
         	document.getElementsByName("subTotal")[currentRow-2].value = t;
+        	
         	totalAmount();
         }
         
         
         function totalAmount(){
+        	
         	var stotal =document.getElementsByName("subTotal");	
         	var calc = 0.0;
         	for(var i =0; i<stotal.length; i++){
@@ -91,7 +93,7 @@
 <BODY>
  <form:form method="POST" action="/ShopApp/sellSaveItem.html">
  
- 	<table><tr><TD>Customer Name <INPUT type="text" name="custName" /> </TD> <TD>Contact No <INPUT type="text" name="contactNo" /></tr></table>   
+ 	<table><tr><TD>Customer Name <INPUT type="text" name="custName" /> </TD> <TD>Contact No <INPUT type="text" name="contactNo" /> <TD>Address <INPUT type="text" name="address" /></tr></table>   
     <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
     <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
  
@@ -100,10 +102,9 @@
       <TR>
       		<TH>Select</TH>
       		<TH>Sr.No</TH>
-			<TH>Name  ddd</TH>
-			<TH>Height</TH>
-			<TH>Width</TH>
-			<TH>Thikness</TH>
+			<TH>Name</TH>
+			
+			<TH>Size</TH>
 			<TH>Quantity</TH>
 			<TH>Price</TH>
 			<TH>Sub Total</TH>
@@ -117,18 +118,19 @@
             
             <SELECT name="items" onchange="onchangeItem(this)" >
             
-            <c:forEach items="${items}" varStatus="stat">
-   			<OPTION value="${items[stat.index].id}" title="${items[stat.index].height},${items[stat.index].width}, ${items[stat.index].thikness},${items[stat.index].quantity},${items[stat.index].price}">${items[stat.index].name}</OPTION>
+            
+            <c:forEach items="${itemMasters}"  var="itemMaster" varStatus="stat">
+            <option selected="selected" disabled="disabled">-Select-</option>
+   			<OPTION value="${itemMaster.items[0].id}" title="${itemMaster.items[0].size},${itemMaster.items[0].quantity},${itemMaster.items[0].soldQuantity},${itemMaster.items[0].price}">${itemMaster.items[0].name}</OPTION>
  
 			</c:forEach>
-
+            
             </SELECT>
             
             
              </TD>
-			<TD> <INPUT type="text" name="height" readonly="readonly"/> </TD>
-            <TD> <INPUT type="text" name="width" readonly="readonly"/> </TD>
-            <TD> <INPUT type="text" name="thikness" readonly="readonly"/> </TD>
+			
+            <TD> <INPUT type="text" name="size" /> </TD>
             <TD> <INPUT type="text" name="quantity" onchange="onChangeValue()"/> </TD>
             <TD> <INPUT type="text" name="price" onchange="onChangeValue()"/> </TD>
             <TD> <INPUT type="text" name="subTotal" readonly="readonly"/> </TD>
@@ -139,68 +141,6 @@
  <input type="submit" value="Save" />
      
 </form:form>
- 
- 
- 
- 
- 
- 
- <c:if test="${!empty listSellItems}">
-		<h2>List Items</h2>
-	<table align="left" border="1">
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Height</th>
-			<th>Width</th>
-			<th>Thikness</th>
-			<th>Buy From</th>
-			<th>Quantity</th>
-			<th>Price</th>
-			<th>Description</th>
-			<th>Actions on Row</th>
-		</tr>
-
-		<c:forEach items="${listSellItems}" var="sellItems">
-			<tr>
-				<td><c:out value="${sellItems.id}"/></td>
-				<td><c:out value="${sellItems.customerName}"/></td>
-				<td><c:out value="${sellItems.contactNo}"/></td>
-			</tr>	
-			<!--  
-			<c:forEach items="${listSellItems.items}" var="item">
-			
-			<tr>	
-				<td><c:out value="${item.id}"/></td>
-				<td><c:out value="${item.name}"/></td>
-				<td><c:out value="${item.height}"/></td>
-				<td><c:out value="${item.width}"/></td>
-				<td><c:out value="${item.thikness}"/></td>
-				<td><c:out value="${item.buyFrom}"/></td>
-				<td><c:out value="${item.quantity}"/></td>
-				<td><c:out value="${item.price}"/></td>
-				<td><c:out value="${item.subTotal}"/></td>
-				
-			</tr>
-			</c:forEach>
-			-->
-			
-			
-			<tr>
-				<td><c:out value="${sellItems.totalAmount}"/></td>
-			</tr>	
-			
-			
-			
-		</c:forEach>
-	</table>
-</c:if>
- 
- 
- 
- 
- 
- 
  
  
  

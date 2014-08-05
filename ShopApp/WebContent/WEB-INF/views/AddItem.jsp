@@ -14,44 +14,47 @@
 	   		<table>
 			    <tr>
 			        <td><form:label path="id" onclick="validatePhoneNumber()">Item ID:</form:label></td>
-			        <td><form:input path="id" value="${item.id}" readonly="true"/></td>
+			        <td><form:input path="id" value="${id}" readonly="true"/></td>
+			    </tr>
+			     <tr>
+			        <td><form:label path="customerName">Customer Name:</form:label></td>
+                    <td><form:input path="customerName" value="${customerName}"/></td>
 			    </tr>
 			    <tr>
 			    					    
-			        <td><form:label path="name"> Name:</form:label></td>
-			        <td><form:input path="name" value="${item.name}"/></td>
+			        <td><form:label path="contactNo"> Contact No:</form:label></td>
+			        <td><form:input path="contactNo" value="${contactNo}"/></td>
 			    </tr>
 			    <tr>
-			        <td><form:label path="height">Height:</form:label></td>
-			        <td><form:input path="height" value="${item.height}"/></td>
-			    </tr>
-			    <tr>
-			        <td><form:label path="width">Width:</form:label></td>
-			        <td><form:input path="width" value="${item.width}"/></td>
+			    					    
+			        <td><form:label path="address"> Address:</form:label></td>
+			        <td><form:input path="address" value="${address}"/></td>
 			    </tr>
 			    
 			    <tr>
-			        <td><form:label path="thikness">Thikness:</form:label></td>
-                    <td><form:input path="thikness" value="${item.thikness}"/></td>
+			        <td><form:label path="items[0].name">Item Name:</form:label></td>
+			        <td><form:input path="items[0].name" value="${items[0].name}"/></td>
 			    </tr>
 			    
 			    <tr>
-			        <td><form:label path="buyFrom">Buy From:</form:label></td>
-                    <td><form:input path="buyFrom" value="${item.buyFrom}"/></td>
+			        <td><form:label path="items[0].size">Size:</form:label></td>
+			        <td><form:input path="items[0].size" value="${items[0].size}"/></td>
+			    </tr>
+			    
+			   
+			    
+			    <tr>
+			        <td><form:label path="items[0].quantity">Quantity:</form:label></td>
+                    <td><form:input path="items[0].quantity" value="${items[0].quantity}"/></td>
 			    </tr>
 			    
 			    <tr>
-			        <td><form:label path="quantity">Quantity:</form:label></td>
-                    <td><form:input path="quantity" value="${item.quantity}"/></td>
-			    </tr>
-			    
-			    <tr>
-			        <td><form:label path="price">Price:</form:label></td>
-                    <td><form:input path="price" value="${item.price}"/></td>
+			        <td><form:label path="items[0].price">Price:</form:label></td>
+                    <td><form:input path="items[0].price" value="${items[0].price}"/></td>
 			    </tr>
 			    <tr>
-			        <td><form:label path="description">Description:</form:label></td>
-                    <td><form:input path="description" value="${item.description}"/></td>
+			        <td><form:label path="items[0].description">Description:</form:label></td>
+                    <td><form:input path="items[0].description" value="${items[0].description}"/></td>
 			    </tr>
 			    
 			    <tr>
@@ -66,23 +69,19 @@
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
-			<th>Height</th>
-			<th>Width</th>
-			<th>Thikness</th>
+			<th>Size</th>
 			<th>Buy From</th>
 			<th>Quantity</th>
 			<th>Price</th>
 			<th>Description</th>
 			<th>Actions on Row</th>
 		</tr>
-
+<!--  
 		<c:forEach items="${items}" var="item">
 			<tr>
 				<td><c:out value="${item.id}"/></td>
 				<td><c:out value="${item.name}"/></td>
-				<td><c:out value="${item.height}"/></td>
-				<td><c:out value="${item.width}"/></td>
-				<td><c:out value="${item.thikness}"/></td>
+				<td><c:out value="${item.size}"/></td>
 				<td><c:out value="${item.buyFrom}"/></td>
 				<td><c:out value="${item.quantity}"/></td>
 				<td><c:out value="${item.price}"/></td>
@@ -91,6 +90,8 @@
 				<td align="center"><a href="editItem.html?id=${item.id}">Edit</a> | <a href="deleteItem.html?id=${item.id}">Delete</a></td>
 			</tr>
 		</c:forEach>
+		
+	-->	
 	</table>
 </c:if>
 	</body>

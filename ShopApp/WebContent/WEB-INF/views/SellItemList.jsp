@@ -31,7 +31,7 @@
 				<td><c:out value="${sellItems.customerName}"/></td>
 				<td><c:out value="${sellItems.contactNo}"/></td>
 				<td><c:out value="${sellItems.address}"/></td>
-				<td><a href="${sellItems.quationSlipPath}" target="_blank"><c:out value="${fileName}"/> </a></td>
+				<td><a href="<%=request.getContextPath()%>${sellItems.quationSlipPath}" target="_blank"><c:out value="${sellItems.quationSlipPath}"/> </a></td>
 			</tr>	
 			
 			

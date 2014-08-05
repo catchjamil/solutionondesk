@@ -14,27 +14,31 @@
 	<table align="left" border="1">
 		<tr>
 			<th>ID</th>
+			<th>Customer Name</th>
+			<th>Contact No</th>
+			<th>Address</th>
 			<th>Name</th>
-			<th>Height</th>
-			<th>Width</th>
-			<th>Thikness</th>
-			<th>Buy From</th>
+			<th>Size</th>
 			<th>Quantity</th>
 			<th>Price</th>
+			<th>Total</th>
 			<th>Description</th>
+			<th>Actions</th>
 		</tr>
 
 		<c:forEach items="${items}" var="item">
 			<tr>
 				<td><c:out value="${item.id}"/></td>
-				<td><c:out value="${item.name}"/></td>
-				<td><c:out value="${item.height}"/></td>
-				<td><c:out value="${item.width}"/></td>
-				<td><c:out value="${item.thikness}"/></td>
-				<td><c:out value="${item.buyFrom}"/></td>
-				<td><c:out value="${item.quantity}"/></td>
-				<td><c:out value="${item.price}"/></td>
-				<td><c:out value="${item.description}"/></td>
+				<td><c:out value="${item.customerName}"/></td>
+				<td><c:out value="${item.contactNo}"/></td>
+				<td><c:out value="${item.address}"/></td>
+				<td><c:out value="${item.items[0].name}"/></td>
+				<td><c:out value="${item.items[0].size}"/></td>
+				<td><c:out value="${item.items[0].quantity}"/></td>
+				<td><c:out value="${item.items[0].price}"/></td>
+				<td><c:out value="${item.items[0].price * item.items[0].quantity}"/></td>
+				<td><c:out value="${item.items[0].description}"/></td>
+				<td align="center"> <a href="deleteItem.html?id=${item.id}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>
