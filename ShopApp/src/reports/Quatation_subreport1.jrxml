@@ -6,6 +6,7 @@
 	<field name="name" class="java.lang.String"/>
 	<field name="quantity" class="java.lang.String"/>
 	<field name="price" class="java.lang.Double"/>
+	<field name="size" class="java.lang.String"/>
 	<variable name="subTotal" class="java.lang.Double" resetType="None">
 		<variableExpression><![CDATA[Double.parseDouble($F{quantity})* $F{price}]]></variableExpression>
 		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
@@ -24,21 +25,21 @@
 				<text><![CDATA[SubTotal]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="296" y="10" width="128" height="15" uuid="be22c79c-cc64-4c83-86a9-b3f10d4e932c"/>
+				<reportElement x="336" y="10" width="88" height="15" uuid="be22c79c-cc64-4c83-86a9-b3f10d4e932c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Price]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="10" width="158" height="15" uuid="1e579e18-3878-4ad0-bbf3-baac2d15a3f1"/>
+				<reportElement x="10" y="10" width="195" height="15" uuid="1e579e18-3878-4ad0-bbf3-baac2d15a3f1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Particular]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="168" y="10" width="128" height="15" uuid="3594ad61-a8e7-415d-b793-9ffab9987998"/>
+				<reportElement x="279" y="10" width="57" height="15" uuid="3594ad61-a8e7-415d-b793-9ffab9987998"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isItalic="false"/>
 				</textElement>
@@ -50,22 +51,29 @@
 			<line>
 				<reportElement x="15" y="26" width="504" height="1" uuid="9b6f605d-eae7-4145-b711-fd95d1c91534"/>
 			</line>
+			<staticText>
+				<reportElement x="205" y="12" width="74" height="15" uuid="ad0f14b1-02dd-47c1-a0e5-3980cd4ad507"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="18" splitType="Stretch">
 			<textField>
-				<reportElement x="10" y="0" width="158" height="15" uuid="17f36288-46c5-49f8-afc8-7ed9b0cf7f8b"/>
+				<reportElement x="10" y="0" width="195" height="15" uuid="17f36288-46c5-49f8-afc8-7ed9b0cf7f8b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="296" y="0" width="128" height="15" uuid="0e299588-e894-4c63-a363-3d5f741987c1"/>
+				<reportElement x="336" y="0" width="88" height="15" uuid="0e299588-e894-4c63-a363-3d5f741987c1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="168" y="-1" width="128" height="15" uuid="bc6c8ad5-a470-49e4-adb2-1e38d9960a22"/>
+				<reportElement x="279" y="1" width="57" height="15" uuid="bc6c8ad5-a470-49e4-adb2-1e38d9960a22"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
 			</textField>
@@ -76,6 +84,11 @@
 			<line>
 				<reportElement x="423" y="-15" width="1" height="33" uuid="2e1976fb-d813-4d5e-a396-2541cf4d9d1c"/>
 			</line>
+			<textField>
+				<reportElement x="205" y="1" width="74" height="15" uuid="71596b40-1047-444d-8654-764a0a6a8d3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{size}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
