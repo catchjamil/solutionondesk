@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sd.app.dao.ItemDao;
+import com.sd.app.model.Item;
 import com.sd.app.model.ItemMaster;
 
 @Service("itemService")
@@ -47,6 +48,11 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<ItemMaster> listOfAvailableItems() {
 		return itemDao.listOfAvailableItems();
+	}
+
+	@Override
+	public Item getChildItem(int id) {
+		return itemDao.getChildItem(id);
 	}
 
 

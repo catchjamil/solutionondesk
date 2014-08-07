@@ -8,6 +8,13 @@ public class EmployeeBean {
 	private Long salary;
 	private String address;
 	
+	private Long contactNo;
+	public Long getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(Long contactNo) {
+		this.contactNo = contactNo;
+	}
 	public Long getSalary() {
 		return salary;
 	}

@@ -3,7 +3,10 @@ package com.sd.app.controller;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
 import java.util.Enumeration;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -38,7 +41,8 @@ public class SellItemController {
 	String fileSeprator = java.io.File.separator;
 	@Autowired
 	private ItemService itemService;
-
+	private String billNumber;
+	private int sequenceNo;
 	@RequestMapping(value = { "/sellItem" }, method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
 		System.out.println("Sell page..");
@@ -70,6 +74,7 @@ public class SellItemController {
 				iterator2.remove();
 			}
 		}
+		Collections.reverse(listSellItems);
 		model.addObject("itemMasters", listSellItems);
 		model.setViewName("sellItem");
 		return model;
@@ -81,6 +86,8 @@ public class SellItemController {
 		System.out.println("Sell page..");
 		ModelAndView model = new ModelAndView();
 		List<ItemMaster> listSellItems = itemService.listSellItems();
+		sequenceNo = listSellItems.size();
+		Collections.reverse(listSellItems);
 		model.addObject("listSellItems", listSellItems);
 		//model.addObject("fileName", split[split.length - 1]);
 		model.setViewName("sellItemList");
@@ -118,11 +125,14 @@ public class SellItemController {
 					}
 					if ("items".equalsIgnoreCase(nextElement)) {
 						item.setId(Integer.parseInt(parameterValues[i]));
+						Item childItem = itemService.getChildItem(Integer.parseInt(parameterValues[i]));
+						item.setName(childItem.getName()); 
 					} else if ("size".equalsIgnoreCase(nextElement)) {
 						item.setSize(parameterValues[i]);
 					} else if ("quantity".equalsIgnoreCase(nextElement)) {
 						item.setQuantity(parameterValues[i]);
-					} else if ("price".equalsIgnoreCase(nextElement)) {
+					
+					}else if ("price".equalsIgnoreCase(nextElement)) {
 						try {
 							item.setPrice(Double.parseDouble(parameterValues[i]));
 						} catch (NumberFormatException n) {
@@ -142,6 +152,7 @@ public class SellItemController {
 		itemMaster.setItems(items);
 
 		ModelAndView model = new ModelAndView();
+		billNumber = createBillNumber(sequenceNo);
 		String quationSlipPath = quatationDetails(itemMaster, request);
 		quationSlipPath = quationSlipPath.contains("\\")? quationSlipPath.replace("\\", "/") : quationSlipPath;
 		String[] split = quationSlipPath.split("/");
@@ -150,6 +161,7 @@ public class SellItemController {
 
 		itemService.saveSellItem(itemMaster);
 		List<ItemMaster> listSellItems = itemService.listSellItems();
+		Collections.reverse(listSellItems);
 		model.addObject("listSellItems", listSellItems);
 		//model.addObject("fileName", split[split.length - 1]);
 		model.setViewName("sellItemList");
@@ -196,6 +208,7 @@ public class SellItemController {
 			itemMasters.add(itemMaster);
 			JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(itemMasters);
 			Map parameters = new HashMap();
+			parameters.put("billNumber", billNumber);
 
 			JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
 			JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
@@ -208,5 +221,26 @@ public class SellItemController {
 		return path;
 
 	}
+	
+	private String createBillNumber(int sequenceNumber){
+		
+		int day, month, year;
+	      int second, minute, hour;
+	      GregorianCalendar date = new GregorianCalendar();
+	 
+	      day = date.get(Calendar.DAY_OF_MONTH);
+	      month = date.get(Calendar.MONTH);
+	      year = date.get(Calendar.YEAR);
+	 
+	      second = date.get(Calendar.SECOND);
+	      minute = date.get(Calendar.MINUTE);
+	      hour = date.get(Calendar.HOUR);
+	 
+	      System.out.println("Current date is  "+day+"/"+(month+1)+"/"+year);
+	      System.out.println("Current time is  "+hour+" : "+minute+" : "+second);
+	      return "FG-"+day+(month+1)+year+hour+minute+second+"-"+sequenceNumber;
+	}
+	
+	
 
 }

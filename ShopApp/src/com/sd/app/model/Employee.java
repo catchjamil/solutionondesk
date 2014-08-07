@@ -30,8 +30,15 @@ public class Employee  implements Serializable{
 	protected Date modifiedOn = new Date();
 	@Column
 	protected String status;
-	
-	
+	@Column
+	private Long contactNo;
+	public Long getContactNo() {
+		return contactNo;
+	}
+	public void setContactNo(Long contactNo) {
+		this.contactNo = contactNo;
+	}
+
 	
 	public Integer getId() {
 		return id;

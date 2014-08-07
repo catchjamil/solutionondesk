@@ -82,6 +82,11 @@ public class ItemDaoImpl implements ItemDao {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Item getChildItem(int id) {
+		return (Item) sessionFactory.getCurrentSession().get(Item.class, id);
+	}
 	
 
 	

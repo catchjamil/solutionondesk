@@ -3,6 +3,7 @@ package com.sd.app.dao;
 import java.util.List;
 
 
+import com.sd.app.model.Item;
 import com.sd.app.model.ItemMaster;
 
 
@@ -14,6 +15,7 @@ public interface ItemDao {
 	public List<ItemMaster> listOfAvailableItems();
 	public List<ItemMaster> listBuyItems();
 	public ItemMaster getItem(int id);
+	public Item getChildItem(int id);
 	public void deleteItem(int id);
 	
 }

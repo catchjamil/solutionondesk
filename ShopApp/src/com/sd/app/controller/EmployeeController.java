@@ -31,7 +31,10 @@ public class EmployeeController {
 			BindingResult result) {
 		Employee employee = prepareModel(employeeBean);
 		employeeService.addEmployee(employee);
-		return new ModelAndView("redirect:/add.html");
+		Map<String, Object> model = new HashMap<String, Object>();
+		model.put("employees",  prepareListofBean(employeeService.listEmployeess()));
+		return new ModelAndView("employeesList", model);
+	
 	}
 
 	@RequestMapping(value="/employees", method = RequestMethod.GET)
@@ -59,9 +62,8 @@ public class EmployeeController {
 			BindingResult result) {
 		employeeService.deleteEmployee(prepareModel(employeeBean));
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("employee", null);
 		model.put("employees",  prepareListofBean(employeeService.listEmployeess()));
-		return new ModelAndView("addEmployee", model);
+		return new ModelAndView("employeesList", model);
 	}
 	
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
@@ -79,6 +81,7 @@ public class EmployeeController {
 		employee.setEmpAge(employeeBean.getAge());
 		employee.setEmpName(employeeBean.getName());
 		employee.setSalary(employeeBean.getSalary());
+		employee.setContactNo(employeeBean.getContactNo());
 		employee.setId(employeeBean.getId());
 		employeeBean.setId(null);
 		return employee;
@@ -95,6 +98,7 @@ public class EmployeeController {
 				bean.setId(employee.getId());
 				bean.setAddress(employee.getEmpAddress());
 				bean.setSalary(employee.getSalary());
+				bean.setContactNo(employee.getContactNo());
 				bean.setAge(employee.getEmpAge());
 				beans.add(bean);
 			}
@@ -108,6 +112,7 @@ public class EmployeeController {
 		bean.setAge(employee.getEmpAge());
 		bean.setName(employee.getEmpName());
 		bean.setSalary(employee.getSalary());
+		bean.setContactNo(employee.getContactNo());
 		bean.setId(employee.getId());
 		return bean;
 	}
