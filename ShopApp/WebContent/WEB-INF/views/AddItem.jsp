@@ -7,15 +7,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Add Items</title>
+
+           <style>
+	.table {
+width: 25%;
+margin-bottom: 20px;
+}
+
+ </style>
+
+
 	</head>
+
 	<body>
-		<h2>Add Item Data</h2>
 		<form:form method="POST" action="/ShopApp/saveItem.html">
-	   		<table>
-			    <tr>
-			        <td><form:label path="id" onclick="validatePhoneNumber()">Item ID:</form:label></td>
-			        <td><form:input path="id" value="${id}" readonly="true"/></td>
-			    </tr>
+	   		<table class="table table-bordered " align="center">
+	   		<caption><h3><b>Add Item Data</b></h3></caption>
+			    
 			     <tr>
 			        <td><form:label path="customerName">Customer Name:</form:label></td>
                     <td><form:input path="customerName" value="${customerName}"/></td>
@@ -58,7 +66,7 @@
 			    </tr>
 			    
 			    <tr>
-			      <td colspan="2"><input type="submit" value="Submit"/></td>
+			      <td colspan="2" align="center"><input type="submit" value="Submit"/></td>
 		      </tr>
 			</table> 
 		</form:form>

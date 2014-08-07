@@ -7,14 +7,20 @@
 <HEAD>
     <TITLE> Sell Items</TITLE>
  
+ <style type="text/css">
+ 	.table {
+width: 75%;
+margin-bottom: 20px;
+}
+
+ </style>
 </HEAD>
 <BODY>
 
- <a href="sellItem.html">Sell Item</a></h4>
- 
+ <h3><a class="btn btn-info" href="sellItem.html">Sell Item</a></h3>
  <c:if test="${!empty listSellItems}">
-		<h2>List Items</h2>
-	<table align="left" border="1">
+	<table  class="table table-striped table-bordered" align="center">
+	<caption><h3><b>Sold List Items</b></h3></caption>
 		<tr>
 			
 			<th>Name</th>

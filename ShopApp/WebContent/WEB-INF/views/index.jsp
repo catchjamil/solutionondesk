@@ -8,8 +8,8 @@
   </head>
   <body>
     
-    <h4>1. <a href="employees.html">List of Employees</a></h4>
-    <h4>2. <a href="add.html">Add Employee</a></h4>
+    <h4>1. <a href="employees.html">List of Expense</a></h4>
+    <h4>2. <a href="add.html">Add Expense</a></h4>
     <h4>3. <a href="items.html">List of Items</a></h4>
     <h4>4. <a href="addItem.html">Buy Item</a></h4>
     <h4>5. <a href="sellItem.html">Sell Item</a></h4>

@@ -64,7 +64,7 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="active"><a href="welcome">Home</a></li>
-      <li><a href="employees.html">Employees</a></li>
+      <li><a href="employees.html">Expenses</a></li>
       <li><a href="items.html">Buy Items</a></li>
       <li><a href="sellItemList.html">Sell Items</a></li>
 		<%

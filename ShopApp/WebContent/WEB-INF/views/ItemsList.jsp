@@ -5,13 +5,21 @@
 <html>
 <head>
 <title>All Items</title>
+           <style>
+	.table {
+width: 75%;
+margin-bottom: 20px;
+}
+
+ </style>
+
 </head>
 <body>
-<h1>List Items</h1>
-<h3><a href="addItem.html">Add More Item</a></h3>
+<h3><a class="btn btn-info" href="addItem.html">Add More Item</a></h3>
 
 <c:if test="${!empty items}">
-	<table align="left" border="1">
+	<table class="table table-striped table-bordered" align="center">
+	<caption><h3><b>List Items</b></h3></caption>
 		<tr>
 			<th>ID</th>
 			<th>Customer Name</th>

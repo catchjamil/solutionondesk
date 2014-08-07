@@ -89,17 +89,29 @@
         }
         
     </SCRIPT>
+               <style>
+	.table {
+width: 60%;
+margin-bottom: 2px;
+}
+
+ </style>
+
+    
+    
 </HEAD>
 <BODY>
  <form:form method="POST" action="/ShopApp/sellSaveItem.html">
- 
- 	<table><tr><TD>Customer Name <INPUT type="text" name="custName" /> </TD> <TD>Contact No <INPUT type="text" name="contactNo" /> <TD>Address <INPUT type="text" name="address" /></tr></table>   
-    <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
-    <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
- 
-    <TABLE id="dataTable" width="350px" border="1">
+ <table class="table table-bordered">
+ <caption><h3><b>Sell Items</b></h3></caption>
+ <tr>
+ 	<TD> Customer Name <INPUT type="text" name="custName" /> </TD> <TD> Contact No <INPUT type="text" name="contactNo" /> <TD> Address <INPUT type="text" name="address" /></TD></tr>   
+    <tr><td colspan="3">    <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" /> 
+    <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" /></tr>
+ <tr><td colspan="3">
+    <TABLE id="dataTable" class="table table-bordered" >
       
-      <TR>
+      <TR >
       		<TH>Select</TH>
       		<TH>Sr.No</TH>
 			<TH>Name</TH>
@@ -118,11 +130,9 @@
             
             <SELECT name="items" onchange="onchangeItem(this)" >
             
-            
+            <option selected="selected" disabled="disabled">-Select-</option> 
             <c:forEach items="${itemMasters}"  var="itemMaster" varStatus="stat">
-            <option selected="selected" disabled="disabled">-Select-</option>
    			<OPTION value="${itemMaster.items[0].id}" title="${itemMaster.items[0].size},${itemMaster.items[0].quantity},${itemMaster.items[0].soldQuantity},${itemMaster.items[0].price}">${itemMaster.items[0].name}</OPTION>
- 
 			</c:forEach>
             
             </SELECT>
@@ -135,11 +145,16 @@
             <TD> <INPUT type="text" name="price" onchange="onChangeValue()"/> </TD>
             <TD> <INPUT type="text" name="subTotal" readonly="readonly"/> </TD>
         </TR>
-        
     </TABLE>
-    <table><tr><TD align="right">Total<INPUT type="text" name="totalAmount" readonly="readonly"/></TD></tr></table>
+    </td></tr>
+    <tr><td align="right" colspan="3">
+    Total&nbsp;&nbsp;<INPUT type="text" name="totalAmount" readonly="readonly"/>&nbsp;&nbsp;
+    </td>
+    </tr>
+    <tr><td colspan="3" align="center">
  <input type="submit" value="Save" />
-     
+ </td></tr>
+    </table> 
 </form:form>
  
  

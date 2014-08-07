@@ -94,7 +94,7 @@
 	<columnFooter>
 		<band height="24" splitType="Stretch">
 			<line>
-				<reportElement x="15" y="0" width="530" height="1" uuid="bd793290-1b6b-49dd-b499-5adfee8d4874"/>
+				<reportElement x="15" y="0" width="504" height="1" uuid="bd793290-1b6b-49dd-b499-5adfee8d4874"/>
 			</line>
 			<textField>
 				<reportElement x="442" y="1" width="77" height="20" uuid="e1403323-76bd-490f-b3f2-2004af1d361e"/>
