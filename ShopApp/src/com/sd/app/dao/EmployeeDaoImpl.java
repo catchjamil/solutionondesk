@@ -27,8 +27,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public List<Employee> listEmployeess() {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
-		
-		List<Employee> listEmp = (List<Employee>)currentSession.createCriteria(Employee.class).add(Restrictions.ne("status", Status.DELETE.toString())).list();
+		List<Employee> listEmp = null;
+		try{
+		System.out.println("currentSession : "+currentSession);
+		 listEmp = (List<Employee>)currentSession.createCriteria(Employee.class).add(Restrictions.ne("status", Status.DELETE.toString())).list();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		return listEmp;
 		//return (List<Employee>) currentSession.createQuery("FROM Employee WHERE status!='"+Status.DELETE+"'").list();
 		

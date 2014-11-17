@@ -11,7 +11,6 @@
 		<h3>Welcome : ${pageContext.request.userPrincipal.name} | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>  
 	</c:if>
       
-      
       </div>      
    </div>
 </div>
