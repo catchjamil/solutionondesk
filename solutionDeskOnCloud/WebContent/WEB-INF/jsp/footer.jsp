@@ -1,1 +1,0 @@
-<center>Copyright &copy; SolutionDesk.net</center>
