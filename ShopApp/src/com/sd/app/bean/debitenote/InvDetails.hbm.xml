@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:51:53 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.debitenote.InvDetails" table="InvDetails">
+        <comment>InvDetails</comment>
+        <composite-id name="id" class="com.sd.app.bean.debitenote.InvDetailsId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="invNo" type="java.lang.Integer">
+                <column name="InvNo" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="5" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="width" type="java.lang.Float">
+                <column name="Width" precision="4" scale="0" />
+            </key-property>
+            <key-property name="height" type="java.lang.Float">
+                <column name="Height" precision="4" scale="0" />
+            </key-property>
+            <key-property name="actSqMs" type="java.lang.Float">
+                <column name="ActSqMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billWidth" type="java.lang.Float">
+                <column name="BillWidth" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billHeight" type="java.lang.Float">
+                <column name="BillHeight" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billSqMs" type="java.lang.Float">
+                <column name="BillSqMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="totalAmount" type="java.lang.Float">
+                <column name="TotalAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rtable" type="string">
+                <column name="RTable" length="3" />
+            </key-property>
+            <key-property name="stable" type="string">
+                <column name="STable" length="4" />
+            </key-property>
+            <key-property name="exTable" type="string">
+                <column name="ExTable" length="3" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="grinding" type="string">
+                <column name="Grinding" length="4" />
+            </key-property>
+            <key-property name="grindingRate" type="java.lang.Float">
+                <column name="GrindingRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="grindingAmount" type="java.lang.Float">
+                <column name="GrindingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discPer" type="java.lang.Float">
+                <column name="DiscPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discAmount" type="java.lang.Float">
+                <column name="DiscAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="holeType" type="java.lang.Short">
+                <column name="HoleType" />
+            </key-property>
+            <key-property name="holeNos" type="java.lang.Short">
+                <column name="HoleNos" />
+            </key-property>
+            <key-property name="holeDia" type="java.lang.Short">
+                <column name="HoleDia" />
+            </key-property>
+            <key-property name="holeRate" type="java.lang.Float">
+                <column name="HoleRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="holeAmount" type="java.lang.Float">
+                <column name="HoleAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cutOutType" type="java.lang.Short">
+                <column name="CutOutType" />
+            </key-property>
+            <key-property name="cutOutRate" type="java.lang.Float">
+                <column name="CutOutRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cutOutAmount" type="java.lang.Float">
+                <column name="CutOutAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="frosting" type="java.lang.Short">
+                <column name="Frosting" />
+            </key-property>
+            <key-property name="frostingRate" type="java.lang.Float">
+                <column name="FrostingRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="frostingAmount" type="java.lang.Float">
+                <column name="FrostingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="beveling" type="java.lang.Short">
+                <column name="Beveling" />
+            </key-property>
+            <key-property name="bevelingRate" type="java.lang.Float">
+                <column name="BevelingRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="bevelingAmount" type="java.lang.Float">
+                <column name="BevelingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="largeSize" type="java.lang.Float">
+                <column name="LargeSize" precision="4" scale="0" />
+            </key-property>
+            <key-property name="largeSizeRate" type="java.lang.Float">
+                <column name="LargeSizeRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="largeSizeAmount" type="java.lang.Float">
+                <column name="LargeSizeAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="oddShape" type="java.lang.Short">
+                <column name="OddShape" />
+            </key-property>
+            <key-property name="oddShapeRate" type="java.lang.Float">
+                <column name="OddShapeRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="oddShapeAmount" type="java.lang.Float">
+                <column name="OddShapeAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printing" type="java.lang.Short">
+                <column name="Printing" />
+            </key-property>
+            <key-property name="printingRate" type="java.lang.Float">
+                <column name="PrintingRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printingAmount" type="java.lang.Float">
+                <column name="PrintingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Float">
+                <column name="Pcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cutoutNos" type="java.lang.Short">
+                <column name="CutoutNos" />
+            </key-property>
+            <key-property name="itCode" type="string">
+                <column name="ItCode" length="8" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

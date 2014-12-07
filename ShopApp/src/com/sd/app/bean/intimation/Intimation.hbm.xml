@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:59:41 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.intimation.Intimation" table="Intimation">
+        <comment>Intimation</comment>
+        <composite-id name="id" class="com.sd.app.bean.intimation.IntimationId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="docNo" type="java.lang.Integer">
+                <column name="DocNo" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="transporter" type="string">
+                <column name="Transporter" length="25" />
+            </key-property>
+            <key-property name="vehicleNo" type="string">
+                <column name="VehicleNo" length="15" />
+            </key-property>
+            <key-property name="grNo" type="string">
+                <column name="GrNo" length="5" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="Uom" length="5" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Float">
+                <column name="Qty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sizes" type="string">
+                <column name="Sizes" length="0" />
+            </key-property>
+            <key-property name="docType" type="string">
+                <column name="DocType" length="10" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="Notes" length="0" />
+            </key-property>
+            <key-property name="user" type="string">
+                <column name="User" length="15" />
+            </key-property>
+            <key-property name="docDate" type="string">
+                <column name="DocDate" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

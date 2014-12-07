@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.ToughPlant" table="ToughPlant">
+        <comment>ToughPlant</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.ToughPlantId">
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+            <key-property name="switchOn" type="string">
+                <column name="SwitchOn" length="8" />
+            </key-property>
+            <key-property name="tempAt" type="string">
+                <column name="TempAt" length="8" />
+            </key-property>
+            <key-property name="temp" type="string">
+                <column name="Temp" length="10" />
+            </key-property>
+            <key-property name="prodStartAt" type="string">
+                <column name="ProdStartAt" length="8" />
+            </key-property>
+            <key-property name="holdUpFrom1" type="string">
+                <column name="HoldUpFrom1" length="8" />
+            </key-property>
+            <key-property name="holdUpTo1" type="string">
+                <column name="HoldUpTo1" length="8" />
+            </key-property>
+            <key-property name="holdUpReason1" type="string">
+                <column name="HoldUpReason1" length="0" />
+            </key-property>
+            <key-property name="holdupFrom2" type="string">
+                <column name="HoldupFrom2" length="8" />
+            </key-property>
+            <key-property name="holdUpTo2" type="string">
+                <column name="HoldUpTo2" length="8" />
+            </key-property>
+            <key-property name="holdUpReason2" type="string">
+                <column name="HoldUpReason2" length="0" />
+            </key-property>
+            <key-property name="totHrs" type="java.lang.Short">
+                <column name="TotHrs" />
+            </key-property>
+            <key-property name="prodHrs" type="java.lang.Short">
+                <column name="ProdHrs" />
+            </key-property>
+            <key-property name="nonProdHrs" type="java.lang.Short">
+                <column name="NonProdHrs" />
+            </key-property>
+            <key-property name="totMin" type="java.lang.Short">
+                <column name="TotMin" />
+            </key-property>
+            <key-property name="prodMin" type="java.lang.Short">
+                <column name="ProdMin" />
+            </key-property>
+            <key-property name="nonProdMin" type="java.lang.Short">
+                <column name="NonProdMin" />
+            </key-property>
+            <key-property name="dieselused" type="java.lang.Float">
+                <column name="Dieselused" precision="4" scale="0" />
+            </key-property>
+            <key-property name="balDiesel" type="java.lang.Float">
+                <column name="BalDiesel" precision="4" scale="0" />
+            </key-property>
+            <key-property name="shift" type="string">
+                <column name="Shift" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

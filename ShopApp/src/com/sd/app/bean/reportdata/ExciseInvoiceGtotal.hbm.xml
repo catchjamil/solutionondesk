@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.ExciseInvoiceGtotal" table="ExciseInvoiceGtotal">
+        <comment>ExciseInvoiceGtotal</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.ExciseInvoiceGtotalId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="sqMt" type="java.lang.Float">
+                <column name="SqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="basicForExcise" type="java.lang.Double">
+                <column name="BasicForExcise" precision="20" scale="0" />
+            </key-property>
+            <key-property name="exciseAmount" type="java.lang.Float">
+                <column name="ExciseAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ecessOnDuty" type="java.lang.Float">
+                <column name="ECessOnDuty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxAmount" type="java.lang.Float">
+                <column name="STaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="freightAmount" type="java.lang.Float">
+                <column name="FreightAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="serviceTaxAmount" type="java.lang.Float">
+                <column name="ServiceTaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ecessOnServiceTax" type="java.lang.Float">
+                <column name="ECessOnServiceTax" precision="4" scale="0" />
+            </key-property>
+            <key-property name="insuranceAmount" type="java.lang.Float">
+                <column name="InsuranceAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rawMaterialAmount" type="java.lang.Float">
+                <column name="RawMaterialAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billAmount" type="java.lang.Double">
+                <column name="BillAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="billAmountExport" type="java.lang.Double">
+                <column name="BillAmountExport" precision="20" scale="0" />
+            </key-property>
+            <key-property name="handlingAmount" type="java.lang.Float">
+                <column name="HandlingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="totAmount" type="java.lang.Float">
+                <column name="TotAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="vatamount" type="java.lang.Double">
+                <column name="VATAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="otherdetails3" type="string">
+                <column name="Otherdetails3" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

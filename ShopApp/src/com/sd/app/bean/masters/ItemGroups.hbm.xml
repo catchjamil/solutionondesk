@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.ItemGroups" table="ItemGroups">
+        <comment>ItemGroups</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.ItemGroupsId">
+            <key-property name="groupIdNo" type="java.lang.Integer">
+                <column name="GroupIdNo" />
+            </key-property>
+            <key-property name="group" type="java.lang.Boolean">
+                <column name="Group" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="100" />
+            </key-property>
+            <key-property name="staxForm" type="string">
+                <column name="STaxForm" length="3" />
+            </key-property>
+            <key-property name="staxPer" type="java.lang.Float">
+                <column name="STaxPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="excPer" type="java.lang.Float">
+                <column name="ExcPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="insuPer" type="java.lang.Float">
+                <column name="InsuPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="glass" type="java.lang.Boolean">
+                <column name="Glass" />
+            </key-property>
+            <key-property name="staxSurPer" type="java.lang.Float">
+                <column name="STaxSurPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="addForTran" type="java.lang.Float">
+                <column name="AddForTran" precision="4" scale="0" />
+            </key-property>
+            <key-property name="tot" type="java.lang.Float">
+                <column name="TOT" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxOnFreight" type="java.lang.Boolean">
+                <column name="STaxOnFreight" />
+            </key-property>
+            <key-property name="cessPer" type="java.lang.Float">
+                <column name="CessPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="scessPer" type="java.lang.Float">
+                <column name="ScessPer" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

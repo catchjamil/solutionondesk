@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.Rg23airegister" table="RG23AIRegister">
+        <comment>RG23AIRegister</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.Rg23airegisterId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" length="50" />
+            </key-property>
+            <key-property name="opSqMs" type="java.lang.Double">
+                <column name="OpSqMs" precision="20" scale="0" />
+            </key-property>
+            <key-property name="rvno" type="java.lang.Integer">
+                <column name="RVNo" />
+            </key-property>
+            <key-property name="billNo" type="string">
+                <column name="BillNo" length="20" />
+            </key-property>
+            <key-property name="billDate" type="timestamp">
+                <column name="BillDate" length="20" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="40" />
+            </key-property>
+            <key-property name="range" type="string">
+                <column name="Range" length="40" />
+            </key-property>
+            <key-property name="issueNo" type="java.lang.Integer">
+                <column name="IssueNo" />
+            </key-property>
+            <key-property name="issueSqMs" type="java.lang.Double">
+                <column name="IssueSqMs" precision="20" scale="0" />
+            </key-property>
+            <key-property name="closingSqMs" type="java.lang.Double">
+                <column name="ClosingSqMs" precision="20" scale="0" />
+            </key-property>
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="edate" type="timestamp">
+                <column name="EDate" length="20" />
+            </key-property>
+            <key-property name="recSqms" type="java.lang.Double">
+                <column name="RecSqms" precision="20" scale="0" />
+            </key-property>
+            <key-property name="type" type="java.lang.Short">
+                <column name="Type" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

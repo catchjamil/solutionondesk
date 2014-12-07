@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.DefaultDirs" table="DefaultDirs">
+        <comment>DefaultDirs</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.DefaultDirsId">
+            <key-property name="xopt" type="string">
+                <column name="XOPT" length="0" />
+            </key-property>
+            <key-property name="dbdocument" type="string">
+                <column name="DBDOCUMENT" length="0" />
+            </key-property>
+            <key-property name="dbexport" type="string">
+                <column name="DBEXPORT" length="0" />
+            </key-property>
+            <key-property name="dbimport" type="string">
+                <column name="DBIMPORT" length="0" />
+            </key-property>
+            <key-property name="crmfrom" type="java.lang.Float">
+                <column name="crmfrom" precision="4" scale="0" />
+            </key-property>
+            <key-property name="crmto" type="java.lang.Float">
+                <column name="crmto" precision="4" scale="0" />
+            </key-property>
+            <key-property name="yy" type="string">
+                <column name="YY" length="4" />
+            </key-property>
+            <key-property name="optpath" type="string">
+                <column name="Optpath" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

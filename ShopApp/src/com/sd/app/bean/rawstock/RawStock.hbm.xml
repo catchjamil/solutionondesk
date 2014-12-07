@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:16:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.rawstock.RawStock" table="RawStock">
+        <comment>RawStock</comment>
+        <composite-id name="id" class="com.sd.app.bean.rawstock.RawStockId">
+            <key-property name="stockIdNo" type="java.lang.Integer">
+                <column name="StockIdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Short">
+                <column name="Sheets" />
+            </key-property>
+            <key-property name="sqms" type="java.lang.Float">
+                <column name="Sqms" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="ordered" type="java.lang.Short">
+                <column name="Ordered" />
+            </key-property>
+            <key-property name="reserved" type="java.lang.Short">
+                <column name="Reserved" />
+            </key-property>
+            <key-property name="damaged" type="java.lang.Short">
+                <column name="Damaged" />
+            </key-property>
+            <key-property name="opening" type="java.lang.Short">
+                <column name="Opening" />
+            </key-property>
+            <key-property name="openRate" type="java.lang.Float">
+                <column name="OpenRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="reservedNote" type="string">
+                <column name="ReservedNote" length="50" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Double">
+                <column name="Amount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="booked" type="java.lang.Integer">
+                <column name="Booked" />
+            </key-property>
+            <key-property name="minStock" type="java.lang.Short">
+                <column name="MinStock" />
+            </key-property>
+            <key-property name="maxStock" type="java.lang.Short">
+                <column name="MaxStock" />
+            </key-property>
+            <key-property name="reOrder" type="java.lang.Short">
+                <column name="ReOrder" />
+            </key-property>
+            <key-property name="oboffCuts" type="java.lang.Float">
+                <column name="OBOffCuts" precision="4" scale="0" />
+            </key-property>
+            <key-property name="offCuts" type="java.lang.Float">
+                <column name="OffCuts" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

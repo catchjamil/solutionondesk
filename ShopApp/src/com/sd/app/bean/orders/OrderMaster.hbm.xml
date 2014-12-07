@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:10:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.orders.OrderMaster" table="OrderMaster">
+        <comment>OrderMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.orders.OrderMasterId">
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="sizeIn" type="string">
+                <column name="SizeIn" length="1" />
+            </key-property>
+            <key-property name="staxForm" type="string">
+                <column name="STaxForm" length="3" />
+            </key-property>
+            <key-property name="rtable" type="string">
+                <column name="RTable" length="3" />
+            </key-property>
+            <key-property name="stable" type="string">
+                <column name="STable" length="4" />
+            </key-property>
+            <key-property name="exTable" type="string">
+                <column name="ExTable" length="3" />
+            </key-property>
+            <key-property name="discount" type="java.lang.Float">
+                <column name="Discount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jobWork" type="java.lang.Boolean">
+                <column name="JobWork" />
+            </key-property>
+            <key-property name="packing" type="string">
+                <column name="Packing" length="0" />
+            </key-property>
+            <key-property name="prodInst" type="string">
+                <column name="ProdInst" length="0" />
+            </key-property>
+            <key-property name="documInst" type="string">
+                <column name="DocumInst" length="0" />
+            </key-property>
+            <key-property name="pending" type="java.lang.Boolean">
+                <column name="Pending" />
+            </key-property>
+            <key-property name="printed" type="java.lang.Boolean">
+                <column name="Printed" />
+            </key-property>
+            <key-property name="prepBy" type="java.lang.Short">
+                <column name="PrepBy" />
+            </key-property>
+            <key-property name="application" type="java.lang.Short">
+                <column name="Application" />
+            </key-property>
+            <key-property name="decorative" type="java.lang.Boolean">
+                <column name="Decorative" />
+            </key-property>
+            <key-property name="tariff" type="string">
+                <column name="Tariff" length="10" />
+            </key-property>
+            <key-property name="tag" type="java.lang.Boolean">
+                <column name="Tag" />
+            </key-property>
+            <key-property name="chlNo" type="string">
+                <column name="ChlNo" length="20" />
+            </key-property>
+            <key-property name="chlType" type="string">
+                <column name="ChlType" length="1" />
+            </key-property>
+            <key-property name="logo" type="string">
+                <column name="Logo" length="1" />
+            </key-property>
+            <key-property name="delMode" type="java.lang.Short">
+                <column name="DelMode" />
+            </key-property>
+            <key-property name="despEncloser" type="java.lang.Short">
+                <column name="DespEncloser" />
+            </key-property>
+            <key-property name="approvedBy" type="string">
+                <column name="ApprovedBy" length="18" />
+            </key-property>
+            <key-property name="custRefNo" type="string">
+                <column name="CustRefNo" length="20" />
+            </key-property>
+            <key-property name="despatchAddress" type="string">
+                <column name="DespatchAddress" length="0" />
+            </key-property>
+            <key-property name="quotno" type="string">
+                <column name="Quotno" length="7" />
+            </key-property>
+            <key-property name="preparedBy" type="string">
+                <column name="PreparedBy" length="20" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

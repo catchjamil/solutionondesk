@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.PrintGatePass" table="PrintGatePass">
+        <comment>PrintGatePass</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.PrintGatePassId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="gpNo" type="java.lang.Integer">
+                <column name="GpNo" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="40" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="partyName" type="string">
+                <column name="PartyName" length="30" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="Uom" length="5" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Integer">
+                <column name="Qty" />
+            </key-property>
+            <key-property name="pkgs" type="java.lang.Integer">
+                <column name="Pkgs" />
+            </key-property>
+            <key-property name="packing" type="string">
+                <column name="Packing" length="1" />
+            </key-property>
+            <key-property name="docType" type="string">
+                <column name="DocType" length="10" />
+            </key-property>
+            <key-property name="docNo" type="java.lang.Integer">
+                <column name="DocNo" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="30" />
+            </key-property>
+            <key-property name="glass" type="java.lang.Boolean">
+                <column name="Glass" />
+            </key-property>
+            <key-property name="sale" type="java.lang.Boolean">
+                <column name="Sale" />
+            </key-property>
+            <key-property name="title" type="string">
+                <column name="Title" length="100" />
+            </key-property>
+            <key-property name="time" type="string">
+                <column name="Time" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

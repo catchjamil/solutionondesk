@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:18:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.samples.Stock" table="Stock">
+        <comment>Stock</comment>
+        <composite-id name="id" class="com.sd.app.bean.samples.StockId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="flat" type="string">
+                <column name="Flat" length="2" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description" length="0" />
+            </key-property>
+            <key-property name="width" type="java.lang.Float">
+                <column name="Width" precision="4" scale="0" />
+            </key-property>
+            <key-property name="height" type="java.lang.Float">
+                <column name="Height" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Float">
+                <column name="Pcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sqMtr" type="java.lang.Double">
+                <column name="SqMtr" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

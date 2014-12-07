@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.CheapterWiseSales" table="CheapterWiseSales">
+        <comment>CheapterWiseSales</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.CheapterWiseSalesId">
+            <key-property name="tariff" type="string">
+                <column name="Tariff" length="20" />
+            </key-property>
+            <key-property name="invNo" type="java.lang.Integer">
+                <column name="InvNo" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="sqMs" type="java.lang.Double">
+                <column name="SqMs" precision="20" scale="0" />
+            </key-property>
+            <key-property name="assValue" type="java.lang.Double">
+                <column name="AssValue" precision="20" scale="0" />
+            </key-property>
+            <key-property name="ecess" type="java.lang.Double">
+                <column name="ECess" precision="20" scale="0" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="jobWork" type="java.lang.Boolean">
+                <column name="JobWork" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description" length="100" />
+            </key-property>
+            <key-property name="exciseDuty" type="java.lang.Double">
+                <column name="ExciseDuty" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

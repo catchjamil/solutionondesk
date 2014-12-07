@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:53:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.feedbackfactory.FeedBack" table="FeedBack">
+        <comment>FeedBack</comment>
+        <composite-id name="id" class="com.sd.app.bean.feedbackfactory.FeedBackId">
+            <key-property name="entryNo" type="java.lang.Float">
+                <column name="EntryNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="time" type="string">
+                <column name="Time" length="5" />
+            </key-property>
+            <key-property name="cocode" type="string">
+                <column name="Cocode" length="2" />
+            </key-property>
+            <key-property name="docType" type="string">
+                <column name="DocType" length="1" />
+            </key-property>
+            <key-property name="feedBack" type="string">
+                <column name="FeedBack" length="0" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="50" />
+            </key-property>
+            <key-property name="docNo" type="java.lang.Float">
+                <column name="DocNo" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

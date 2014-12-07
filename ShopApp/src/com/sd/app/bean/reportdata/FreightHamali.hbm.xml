@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.FreightHamali" table="FreightHamali">
+        <comment>FreightHamali</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.FreightHamaliId">
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="edate" type="timestamp">
+                <column name="EDate" length="20" />
+            </key-property>
+            <key-property name="totFreight" type="java.lang.Float">
+                <column name="TotFreight" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cashFreight" type="java.lang.Float">
+                <column name="CashFreight" precision="4" scale="0" />
+            </key-property>
+            <key-property name="chqFreight" type="java.lang.Float">
+                <column name="ChqFreight" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cashHamali" type="java.lang.Float">
+                <column name="CashHamali" precision="4" scale="0" />
+            </key-property>
+            <key-property name="chqHamali" type="java.lang.Float">
+                <column name="ChqHamali" precision="4" scale="0" />
+            </key-property>
+            <key-property name="frgType" type="string">
+                <column name="FrgType" length="1" />
+            </key-property>
+            <key-property name="weight" type="string">
+                <column name="Weight" length="20" />
+            </key-property>
+            <key-property name="invNo" type="java.lang.Float">
+                <column name="InvNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="invType" type="string">
+                <column name="InvType" length="1" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="30" />
+            </key-property>
+            <key-property name="freight" type="string">
+                <column name="Freight" length="15" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Float">
+                <column name="Pcode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="vehNo" type="string">
+                <column name="VehNo" length="60" />
+            </key-property>
+            <key-property name="unit" type="string">
+                <column name="Unit" length="2" />
+            </key-property>
+            <key-property name="transporter" type="string">
+                <column name="Transporter" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

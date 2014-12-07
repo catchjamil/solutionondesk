@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:04:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.menumaster.MenuMaster" table="MenuMaster">
+        <comment>MenuMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.menumaster.MenuMasterId">
+            <key-property name="codeid" type="java.lang.Integer">
+                <column name="Codeid" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="50" />
+            </key-property>
+            <key-property name="srNo" type="java.lang.Short">
+                <column name="SrNo" />
+            </key-property>
+            <key-property name="level" type="java.lang.Short">
+                <column name="Level" />
+            </key-property>
+            <key-property name="level2" type="java.lang.Short">
+                <column name="level2" />
+            </key-property>
+            <key-property name="level3" type="java.lang.Short">
+                <column name="level3" />
+            </key-property>
+            <key-property name="level4" type="java.lang.Short">
+                <column name="level4" />
+            </key-property>
+            <key-property name="groupId" type="java.lang.Integer">
+                <column name="GroupId" />
+            </key-property>
+            <key-property name="sort" type="java.lang.Short">
+                <column name="Sort" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.Shape" table="Shape">
+        <comment>Shape</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.ShapeId">
+            <key-property name="sno" type="java.lang.Short">
+                <column name="SNo" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="4" />
+            </key-property>
+            <key-property name="shape" type="string">
+                <column name="Shape" length="0" />
+            </key-property>
+            <key-property name="ndim" type="java.lang.Short">
+                <column name="NDim" />
+            </key-property>
+            <key-property name="segTyp" type="java.lang.Short">
+                <column name="SegTyp" />
+            </key-property>
+            <key-property name="hole" type="java.lang.Short">
+                <column name="Hole" />
+            </key-property>
+            <key-property name="seg" type="string">
+                <column name="Seg" length="40" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

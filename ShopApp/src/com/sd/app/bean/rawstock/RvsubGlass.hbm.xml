@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:16:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.rawstock.RvsubGlass" table="RVSubGlass">
+        <comment>RVSubGlass</comment>
+        <composite-id name="id" class="com.sd.app.bean.rawstock.RvsubGlassId">
+            <key-property name="rvSubIdNo" type="java.lang.Integer">
+                <column name="RvSubIdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="rvNo" type="java.lang.Short">
+                <column name="RvNo" />
+            </key-property>
+            <key-property name="poNo" type="java.lang.Short">
+                <column name="PoNo" />
+            </key-property>
+            <key-property name="poIdNo" type="java.lang.Integer">
+                <column name="PoIdNo" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="crates" type="java.lang.Short">
+                <column name="Crates" />
+            </key-property>
+            <key-property name="billSheets" type="java.lang.Short">
+                <column name="BillSheets" />
+            </key-property>
+            <key-property name="short_" type="java.lang.Short">
+                <column name="Short" />
+            </key-property>
+            <key-property name="breakage" type="java.lang.Short">
+                <column name="Breakage" />
+            </key-property>
+            <key-property name="damage" type="java.lang.Short">
+                <column name="Damage" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Short">
+                <column name="Sheets" />
+            </key-property>
+            <key-property name="sqMt" type="java.lang.Float">
+                <column name="SqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="30" />
+            </key-property>
+            <key-property name="excAmt" type="java.lang.Float">
+                <column name="ExcAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="actRate" type="java.lang.Float">
+                <column name="ActRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billRate" type="java.lang.Float">
+                <column name="BillRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discAmt" type="java.lang.Float">
+                <column name="DiscAmt" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

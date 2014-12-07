@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.Users" table="Users">
+        <comment>Users</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.UsersId">
+            <key-property name="userIdNo" type="java.lang.Integer">
+                <column name="UserIdNo" />
+            </key-property>
+            <key-property name="shortName" type="string">
+                <column name="ShortName" length="3" />
+            </key-property>
+            <key-property name="password" type="string">
+                <column name="Password" length="0" />
+            </key-property>
+            <key-property name="groupId" type="java.lang.Integer">
+                <column name="GroupId" />
+            </key-property>
+            <key-property name="login" type="java.lang.Boolean">
+                <column name="Login" />
+            </key-property>
+            <key-property name="authBy" type="java.lang.Boolean">
+                <column name="AuthBy" />
+            </key-property>
+            <key-property name="dealby" type="java.lang.Boolean">
+                <column name="Dealby" />
+            </key-property>
+            <key-property name="controller" type="java.lang.Boolean">
+                <column name="Controller" />
+            </key-property>
+            <key-property name="preparedBy" type="java.lang.Boolean">
+                <column name="PreparedBy" />
+            </key-property>
+            <key-property name="supervisor" type="java.lang.Boolean">
+                <column name="Supervisor" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="15" />
+            </key-property>
+            <key-property name="dbsupervisor" type="java.lang.Boolean">
+                <column name="DBSupervisor" />
+            </key-property>
+            <key-property name="prodSupervisor" type="java.lang.Boolean">
+                <column name="ProdSupervisor" />
+            </key-property>
+            <key-property name="showSales" type="java.lang.Boolean">
+                <column name="ShowSales" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

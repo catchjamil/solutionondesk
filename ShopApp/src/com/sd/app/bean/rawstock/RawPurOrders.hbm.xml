@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:16:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.rawstock.RawPurOrders" table="RawPurOrders">
+        <comment>RawPurOrders</comment>
+        <id name="poIdNo" type="java.lang.Integer">
+            <column name="PoIdNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="coCode" type="string">
+            <column name="CoCode" length="2">
+                <comment>CoCode</comment>
+            </column>
+        </property>
+        <property name="poNo" type="java.lang.Short">
+            <column name="PoNo">
+                <comment>PoNo</comment>
+            </column>
+        </property>
+        <property name="poDate" type="timestamp">
+            <column name="PoDate" length="20">
+                <comment>PoDate</comment>
+            </column>
+        </property>
+        <property name="pcode" type="java.lang.Integer">
+            <column name="PCode">
+                <comment>PCode</comment>
+            </column>
+        </property>
+        <property name="thick" type="java.lang.Float">
+            <column name="Thick" precision="4" scale="0">
+                <comment>Thick</comment>
+            </column>
+        </property>
+        <property name="icode" type="string">
+            <column name="Icode" length="8">
+                <comment>Icode</comment>
+            </column>
+        </property>
+        <property name="width" type="java.lang.Short">
+            <column name="Width">
+                <comment>Width</comment>
+            </column>
+        </property>
+        <property name="height" type="java.lang.Short">
+            <column name="Height">
+                <comment>Height</comment>
+            </column>
+        </property>
+        <property name="crates" type="java.lang.Short">
+            <column name="Crates">
+                <comment>Crates</comment>
+            </column>
+        </property>
+        <property name="sheets" type="java.lang.Short">
+            <column name="Sheets">
+                <comment>Sheets</comment>
+            </column>
+        </property>
+        <property name="balSheets" type="java.lang.Short">
+            <column name="BalSheets">
+                <comment>BalSheets</comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="Remarks" length="50">
+                <comment>Remarks</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="40">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="expDate" type="timestamp">
+            <column name="ExpDate" length="20">
+                <comment>ExpDate</comment>
+            </column>
+        </property>
+        <property name="conditions" type="string">
+            <column name="Conditions" length="0">
+                <comment>Conditions</comment>
+            </column>
+        </property>
+        <property name="entryDate" type="timestamp">
+            <column name="EntryDate" length="20">
+                <comment>EntryDate</comment>
+            </column>
+        </property>
+        <property name="entryTime" type="timestamp">
+            <column name="EntryTime" length="20">
+                <comment>EntryTime</comment>
+            </column>
+        </property>
+        <property name="orderBy" type="string">
+            <column name="OrderBy" length="12">
+                <comment>OrderBy</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

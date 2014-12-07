@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.BrokenMaster" table="BrokenMaster">
+        <comment>BrokenMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.BrokenMasterId">
+            <key-property name="icode" type="java.lang.Float">
+                <column name="ICode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description" length="100" />
+            </key-property>
+            <key-property name="srNo" type="java.lang.Float">
+                <column name="SrNo" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

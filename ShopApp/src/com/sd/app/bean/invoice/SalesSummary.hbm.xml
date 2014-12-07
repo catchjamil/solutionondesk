@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:01:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.invoice.SalesSummary" table="SalesSummary">
+        <comment>SalesSummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.invoice.SalesSummaryId">
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="30" />
+            </key-property>
+            <key-property name="april" type="java.lang.Double">
+                <column name="April" precision="20" scale="0" />
+            </key-property>
+            <key-property name="may" type="java.lang.Double">
+                <column name="May" precision="20" scale="0" />
+            </key-property>
+            <key-property name="june" type="java.lang.Double">
+                <column name="June" precision="20" scale="0" />
+            </key-property>
+            <key-property name="july" type="java.lang.Double">
+                <column name="July" precision="20" scale="0" />
+            </key-property>
+            <key-property name="august" type="java.lang.Double">
+                <column name="August" precision="20" scale="0" />
+            </key-property>
+            <key-property name="september" type="java.lang.Double">
+                <column name="September" precision="20" scale="0" />
+            </key-property>
+            <key-property name="october" type="java.lang.Double">
+                <column name="October" precision="20" scale="0" />
+            </key-property>
+            <key-property name="november" type="java.lang.Double">
+                <column name="November" precision="20" scale="0" />
+            </key-property>
+            <key-property name="december" type="java.lang.Float">
+                <column name="December" precision="4" scale="0" />
+            </key-property>
+            <key-property name="january" type="java.lang.Double">
+                <column name="January" precision="20" scale="0" />
+            </key-property>
+            <key-property name="february" type="java.lang.Double">
+                <column name="February" precision="20" scale="0" />
+            </key-property>
+            <key-property name="march" type="java.lang.Double">
+                <column name="March" precision="20" scale="0" />
+            </key-property>
+            <key-property name="total" type="java.lang.Double">
+                <column name="Total" precision="20" scale="0" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

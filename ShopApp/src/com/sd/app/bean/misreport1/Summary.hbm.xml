@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:07:53 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.misreport1.Summary" table="Summary">
+        <comment>Summary</comment>
+        <composite-id name="id" class="com.sd.app.bean.misreport1.SummaryId">
+            <key-property name="totalOrders" type="java.lang.Float">
+                <column name="TotalOrders" precision="4" scale="0" />
+            </key-property>
+            <key-property name="orderInTime" type="java.lang.Float">
+                <column name="OrderInTime" precision="4" scale="0" />
+            </key-property>
+            <key-property name="delayOrders" type="java.lang.Float">
+                <column name="DelayOrders" precision="4" scale="0" />
+            </key-property>
+            <key-property name="delayPer" type="java.lang.Float">
+                <column name="DelayPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jworders" type="java.lang.Float">
+                <column name="JWOrders" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jwordersInTime" type="java.lang.Float">
+                <column name="JWOrdersInTime" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jwdelayOrders" type="java.lang.Float">
+                <column name="JWDelayOrders" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jwdelayPer" type="java.lang.Float">
+                <column name="JWDelayPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="noDue" type="java.lang.Float">
+                <column name="NoDue" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jwnoDue" type="java.lang.Float">
+                <column name="JWNoDue" precision="4" scale="0" />
+            </key-property>
+            <key-property name="totalSo" type="java.lang.Float">
+                <column name="TotalSO" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sointime" type="java.lang.Float">
+                <column name="SOINTime" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sodelay" type="java.lang.Float">
+                <column name="SODelay" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sodelayPer" type="java.lang.Float">
+                <column name="SODelayPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="soNoDue" type="java.lang.Float">
+                <column name="SoNoDue" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ordersDespatch" type="java.lang.Float">
+                <column name="OrdersDespatch" precision="4" scale="0" />
+            </key-property>
+            <key-property name="inOneLot" type="java.lang.Float">
+                <column name="InOneLot" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

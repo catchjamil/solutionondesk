@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:19:44 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.sfa.Sfasummary" table="SFASummary">
+        <comment>SFASummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.sfa.SfasummaryId">
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="edate" type="string">
+                <column name="Edate" length="50" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="clentType" type="string">
+                <column name="ClentType" length="20" />
+            </key-property>
+            <key-property name="activity" type="string">
+                <column name="Activity" length="20" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="3" />
+            </key-property>
+            <key-property name="grade" type="string">
+                <column name="Grade" length="1" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="nclients" type="java.lang.Float">
+                <column name="NClients" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rclients" type="java.lang.Float">
+                <column name="Rclients" precision="4" scale="0" />
+            </key-property>
+            <key-property name="target" type="java.lang.Double">
+                <column name="Target" precision="20" scale="0" />
+            </key-property>
+            <key-property name="collection" type="java.lang.Double">
+                <column name="Collection" precision="20" scale="0" />
+            </key-property>
+            <key-property name="newSale" type="java.lang.Double">
+                <column name="NewSale" precision="20" scale="0" />
+            </key-property>
+            <key-property name="newQuote" type="java.lang.Double">
+                <column name="NewQuote" precision="20" scale="0" />
+            </key-property>
+            <key-property name="newProforma" type="java.lang.Double">
+                <column name="NewProforma" precision="20" scale="0" />
+            </key-property>
+            <key-property name="salary" type="java.lang.Double">
+                <column name="salary" precision="20" scale="0" />
+            </key-property>
+            <key-property name="phone" type="java.lang.Double">
+                <column name="Phone" precision="20" scale="0" />
+            </key-property>
+            <key-property name="conveyance" type="java.lang.Double">
+                <column name="Conveyance" precision="20" scale="0" />
+            </key-property>
+            <key-property name="newEnquiry" type="java.lang.Double">
+                <column name="NewEnquiry" precision="20" scale="0" />
+            </key-property>
+            <key-property name="oldEnquiry" type="java.lang.Double">
+                <column name="OldEnquiry" precision="20" scale="0" />
+            </key-property>
+            <key-property name="dealByname" type="string">
+                <column name="DealByname" length="50" />
+            </key-property>
+            <key-property name="oldSale" type="java.lang.Double">
+                <column name="OldSale" precision="20" scale="0" />
+            </key-property>
+            <key-property name="oldProforma" type="java.lang.Double">
+                <column name="OldProforma" precision="20" scale="0" />
+            </key-property>
+            <key-property name="oldQuote" type="java.lang.Double">
+                <column name="OldQuote" precision="20" scale="0" />
+            </key-property>
+            <key-property name="totalSale" type="java.lang.Double">
+                <column name="TotalSale" precision="20" scale="0" />
+            </key-property>
+            <key-property name="oldvisit" type="java.lang.Float">
+                <column name="Oldvisit" precision="4" scale="0" />
+            </key-property>
+            <key-property name="newVisit" type="java.lang.Float">
+                <column name="NewVisit" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

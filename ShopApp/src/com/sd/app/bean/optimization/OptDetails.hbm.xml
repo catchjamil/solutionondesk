@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:09:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.optimization.OptDetails" table="OptDetails">
+        <comment>OptDetails</comment>
+        <composite-id name="id" class="com.sd.app.bean.optimization.OptDetailsId">
+            <key-property name="matCode" type="string">
+                <column name="MatCode" length="16" />
+            </key-property>
+            <key-property name="position" type="java.lang.Short">
+                <column name="Position" />
+            </key-property>
+            <key-property name="customer" type="string">
+                <column name="Customer" length="12" />
+            </key-property>
+            <key-property name="order" type="string">
+                <column name="Order" length="12" />
+            </key-property>
+            <key-property name="shapeId" type="string">
+                <column name="ShapeId" length="8" />
+            </key-property>
+            <key-property name="grindingValue" type="string">
+                <column name="GrindingValue" length="8" />
+            </key-property>
+            <key-property name="priPiece" type="java.lang.Short">
+                <column name="PriPiece" />
+            </key-property>
+            <key-property name="rotFlag" type="string">
+                <column name="RotFlag" length="1" />
+            </key-property>
+            <key-property name="noOfCutPcs" type="java.lang.Float">
+                <column name="NoOfCutPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="toolThick" type="string">
+                <column name="ToolThick" length="8" />
+            </key-property>
+            <key-property name="xsize" type="string">
+                <column name="xsize" length="8" />
+            </key-property>
+            <key-property name="ysize" type="string">
+                <column name="YSize" length="8" />
+            </key-property>
+            <key-property name="spacer" type="string">
+                <column name="Spacer" length="8" />
+            </key-property>
+            <key-property name="addNotes1" type="string">
+                <column name="AddNotes1" length="32" />
+            </key-property>
+            <key-property name="noLabels" type="java.lang.Float">
+                <column name="NoLabels" precision="4" scale="0" />
+            </key-property>
+            <key-property name="excededPcs" type="java.lang.Float">
+                <column name="ExcededPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="prValue" type="java.lang.Float">
+                <column name="PrValue" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rack" type="string">
+                <column name="Rack" length="6" />
+            </key-property>
+            <key-property name="deliveryDate" type="timestamp">
+                <column name="DeliveryDate" length="20" />
+            </key-property>
+            <key-property name="fixTextCode" type="java.lang.Float">
+                <column name="FixTextCode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="spacerDist" type="string">
+                <column name="SpacerDist" length="8" />
+            </key-property>
+            <key-property name="addText1" type="string">
+                <column name="AddText1" length="32" />
+            </key-property>
+            <key-property name="addText2" type="string">
+                <column name="AddText2" length="32" />
+            </key-property>
+            <key-property name="addText3" type="string">
+                <column name="AddText3" length="32" />
+            </key-property>
+            <key-property name="addText4" type="string">
+                <column name="AddText4" length="32" />
+            </key-property>
+            <key-property name="addText5" type="string">
+                <column name="AddText5" length="32" />
+            </key-property>
+            <key-property name="addText6" type="string">
+                <column name="AddText6" length="32" />
+            </key-property>
+            <key-property name="addText7" type="string">
+                <column name="AddText7" length="32" />
+            </key-property>
+            <key-property name="addText8" type="string">
+                <column name="AddText8" length="32" />
+            </key-property>
+            <key-property name="addText9" type="string">
+                <column name="AddText9" length="32" />
+            </key-property>
+            <key-property name="addText10" type="string">
+                <column name="AddText10" length="32" />
+            </key-property>
+            <key-property name="space2" type="string">
+                <column name="Space2" length="8" />
+            </key-property>
+            <key-property name="bottomX1" type="string">
+                <column name="BottomX1" length="8" />
+            </key-property>
+            <key-property name="leftY1" type="string">
+                <column name="LeftY1" length="8" />
+            </key-property>
+            <key-property name="topX2" type="string">
+                <column name="TopX2" length="8" />
+            </key-property>
+            <key-property name="rightY2" type="string">
+                <column name="RightY2" length="8" />
+            </key-property>
+            <key-property name="addText11" type="string">
+                <column name="AddText11" length="32" />
+            </key-property>
+            <key-property name="addText12" type="string">
+                <column name="AddText12" length="32" />
+            </key-property>
+            <key-property name="addText13" type="string">
+                <column name="AddText13" length="32" />
+            </key-property>
+            <key-property name="addText14" type="string">
+                <column name="AddText14" length="32" />
+            </key-property>
+            <key-property name="addText15" type="string">
+                <column name="AddText15" length="32" />
+            </key-property>
+            <key-property name="addText16" type="string">
+                <column name="AddText16" length="32" />
+            </key-property>
+            <key-property name="addText17" type="string">
+                <column name="AddText17" length="32" />
+            </key-property>
+            <key-property name="addText18" type="string">
+                <column name="AddText18" length="32" />
+            </key-property>
+            <key-property name="addText19" type="string">
+                <column name="AddText19" length="32" />
+            </key-property>
+            <key-property name="addText20" type="string">
+                <column name="AddText20" length="32" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="48" />
+            </key-property>
+            <key-property name="orderDate" type="timestamp">
+                <column name="OrderDate" length="20" />
+            </key-property>
+            <key-property name="orderLine" type="java.lang.Float">
+                <column name="OrderLine" precision="4" scale="0" />
+            </key-property>
+            <key-property name="customerTrade" type="string">
+                <column name="CustomerTrade" length="40" />
+            </key-property>
+            <key-property name="customerAdd1" type="string">
+                <column name="CustomerAdd1" length="40" />
+            </key-property>
+            <key-property name="customerCity" type="string">
+                <column name="CustomerCity" length="30" />
+            </key-property>
+            <key-property name="customerAdd2" type="string">
+                <column name="CustomerAdd2" length="6" />
+            </key-property>
+            <key-property name="customerAdd3" type="string">
+                <column name="CustomerAdd3" length="4" />
+            </key-property>
+            <key-property name="customerZip" type="string">
+                <column name="CustomerZip" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

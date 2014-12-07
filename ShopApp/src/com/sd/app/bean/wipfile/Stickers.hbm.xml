@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.Stickers" table="Stickers">
+        <comment>Stickers</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.StickersId">
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Integer">
+                <column name="ItNo" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="taper" type="java.lang.Short">
+                <column name="Taper" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="PCS" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="50" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="50" />
+            </key-property>
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

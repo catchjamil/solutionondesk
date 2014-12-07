@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:12:39 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.production.Production" table="Production">
+        <comment>Production</comment>
+        <composite-id name="id" class="com.sd.app.bean.production.ProductionId">
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="controlNo" type="java.lang.Integer">
+                <column name="ControlNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="contIdNo" type="java.lang.Integer">
+                <column name="ContIdNo" />
+            </key-property>
+            <key-property name="standItNo" type="java.lang.Integer">
+                <column name="StandItNo" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="jobWork" type="java.lang.Boolean">
+                <column name="JobWork" />
+            </key-property>
+            <key-property name="decorative" type="java.lang.Boolean">
+                <column name="Decorative" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

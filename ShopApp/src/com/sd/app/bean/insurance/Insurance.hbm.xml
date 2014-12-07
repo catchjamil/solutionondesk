@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:58:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.insurance.Insurance" table="Insurance">
+        <comment>Insurance</comment>
+        <composite-id name="id" class="com.sd.app.bean.insurance.InsuranceId">
+            <key-property name="policy" type="java.lang.Short">
+                <column name="Policy" />
+            </key-property>
+            <key-property name="declNo" type="java.lang.Integer">
+                <column name="DeclNo" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="transporter" type="string">
+                <column name="Transporter" length="30" />
+            </key-property>
+            <key-property name="vehNo" type="string">
+                <column name="VehNo" length="20" />
+            </key-property>
+            <key-property name="grNo" type="string">
+                <column name="GrNo" length="10" />
+            </key-property>
+            <key-property name="docType" type="java.lang.Short">
+                <column name="DocType" />
+            </key-property>
+            <key-property name="docNo" type="string">
+                <column name="DocNo" length="20" />
+            </key-property>
+            <key-property name="docDate" type="timestamp">
+                <column name="DocDate" length="20" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="0" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="Uom" length="5" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Float">
+                <column name="Qty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Double">
+                <column name="Amount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="billAmount" type="java.lang.Double">
+                <column name="BillAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="declAmount" type="java.lang.Double">
+                <column name="DeclAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="opAmount" type="java.lang.Double">
+                <column name="OpAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="creditAmount" type="java.lang.Double">
+                <column name="CreditAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="Note" length="0" />
+            </key-property>
+            <key-property name="consignee" type="string">
+                <column name="Consignee" length="40" />
+            </key-property>
+            <key-property name="conAddress" type="string">
+                <column name="ConAddress" length="0" />
+            </key-property>
+            <key-property name="conCity" type="string">
+                <column name="ConCity" length="30" />
+            </key-property>
+            <key-property name="conPin" type="string">
+                <column name="ConPin" length="8" />
+            </key-property>
+            <key-property name="consigner" type="string">
+                <column name="Consigner" length="40" />
+            </key-property>
+            <key-property name="conrAddress" type="string">
+                <column name="ConrAddress" length="0" />
+            </key-property>
+            <key-property name="conrCity" type="string">
+                <column name="ConrCity" length="30" />
+            </key-property>
+            <key-property name="conrPin" type="string">
+                <column name="ConrPin" length="8" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="pkgs" type="string">
+                <column name="Pkgs" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

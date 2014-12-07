@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:18:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.samples.Receipts" table="Receipts">
+        <comment>Receipts</comment>
+        <composite-id name="id" class="com.sd.app.bean.samples.ReceiptsId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="receiptsNo" type="java.lang.Integer">
+                <column name="ReceiptsNo" />
+            </key-property>
+            <key-property name="data" type="timestamp">
+                <column name="Data" length="20" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="flat" type="string">
+                <column name="Flat" length="2" />
+            </key-property>
+            <key-property name="width" type="java.lang.Float">
+                <column name="Width" precision="4" scale="0" />
+            </key-property>
+            <key-property name="height" type="java.lang.Float">
+                <column name="Height" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Integer">
+                <column name="PCs" />
+            </key-property>
+            <key-property name="sqMtr" type="java.lang.Float">
+                <column name="SqMtr" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

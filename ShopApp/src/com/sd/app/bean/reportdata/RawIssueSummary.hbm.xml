@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.RawIssueSummary" table="RawIssueSummary">
+        <comment>RawIssueSummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.RawIssueSummaryId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Short">
+                <column name="Sheets" />
+            </key-property>
+            <key-property name="offcuts" type="java.lang.Short">
+                <column name="Offcuts" />
+            </key-property>
+            <key-property name="sqMtr" type="java.lang.Float">
+                <column name="SqMtr" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

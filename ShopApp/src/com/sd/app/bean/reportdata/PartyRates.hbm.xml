@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.PartyRates" table="PartyRates">
+        <comment>PartyRates</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.PartyRatesId">
+            <key-property name="name" type="string">
+                <column name="Name" length="50" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="Address" length="0" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="City" length="20" />
+            </key-property>
+            <key-property name="rtable" type="string">
+                <column name="RTable" length="3" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="100" />
+            </key-property>
+            <key-property name="size" type="string">
+                <column name="Size" length="12" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="excise" type="string">
+                <column name="Excise" length="20" />
+            </key-property>
+            <key-property name="arate" type="java.lang.Float">
+                <column name="ARate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="brate" type="java.lang.Float">
+                <column name="BRate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="aper" type="string">
+                <column name="APER" length="8" />
+            </key-property>
+            <key-property name="bper" type="string">
+                <column name="BPER" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

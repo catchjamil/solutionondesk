@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:19:44 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.sfa.Targets" table="Targets">
+        <comment>Targets</comment>
+        <composite-id name="id" class="com.sd.app.bean.sfa.TargetsId">
+            <key-property name="target" type="java.lang.Double">
+                <column name="Target" precision="20" scale="0" />
+            </key-property>
+            <key-property name="collection" type="java.lang.Double">
+                <column name="Collection" precision="20" scale="0" />
+            </key-property>
+            <key-property name="salary" type="java.lang.Double">
+                <column name="Salary" precision="20" scale="0" />
+            </key-property>
+            <key-property name="phone" type="java.lang.Double">
+                <column name="Phone" precision="20" scale="0" />
+            </key-property>
+            <key-property name="conveyance" type="java.lang.Double">
+                <column name="Conveyance" precision="20" scale="0" />
+            </key-property>
+            <key-property name="month" type="java.lang.Short">
+                <column name="month" />
+            </key-property>
+            <key-property name="year" type="java.lang.Short">
+                <column name="year" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="Notes" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

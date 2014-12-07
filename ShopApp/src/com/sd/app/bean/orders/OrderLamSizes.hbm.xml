@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:10:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.orders.OrderLamSizes" table="OrderLamSizes">
+        <comment>OrderLamSizes</comment>
+        <composite-id name="id" class="com.sd.app.bean.orders.OrderLamSizesId">
+            <key-property name="orderIdNo" type="java.lang.Integer">
+                <column name="OrderIdNo" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="width" type="java.lang.Float">
+                <column name="Width" precision="4" scale="0" />
+            </key-property>
+            <key-property name="widths1" type="java.lang.Short">
+                <column name="Widths1" />
+            </key-property>
+            <key-property name="widths2" type="java.lang.Short">
+                <column name="Widths2" />
+            </key-property>
+            <key-property name="height" type="java.lang.Float">
+                <column name="Height" precision="4" scale="0" />
+            </key-property>
+            <key-property name="heights1" type="java.lang.Short">
+                <column name="Heights1" />
+            </key-property>
+            <key-property name="heights2" type="java.lang.Short">
+                <column name="Heights2" />
+            </key-property>
+            <key-property name="taper" type="java.lang.Float">
+                <column name="Taper" precision="4" scale="0" />
+            </key-property>
+            <key-property name="tapers1" type="java.lang.Short">
+                <column name="Tapers1" />
+            </key-property>
+            <key-property name="tapers2" type="java.lang.Short">
+                <column name="Tapers2" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="bpcs" type="java.lang.Short">
+                <column name="BPcs" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+            <key-property name="refNo" type="string">
+                <column name="RefNo" length="15" />
+            </key-property>
+            <key-property name="tsd" type="string">
+                <column name="TSD" length="3" />
+            </key-property>
+            <key-property name="cpcs" type="java.lang.Short">
+                <column name="CPcs" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

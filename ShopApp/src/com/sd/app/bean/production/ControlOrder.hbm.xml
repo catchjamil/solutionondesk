@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:12:39 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.production.ControlOrder" table="ControlOrder">
+        <comment>ControlOrder</comment>
+        <id name="contIdNo" type="java.lang.Integer">
+            <column name="ContIdNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="coCode" type="string">
+            <column name="CoCode" length="2">
+                <comment>CoCode</comment>
+            </column>
+        </property>
+        <property name="controlNo" type="java.lang.Short">
+            <column name="ControlNo">
+                <comment>ControlNo</comment>
+            </column>
+        </property>
+        <property name="date" type="timestamp">
+            <column name="Date" length="20">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="pcode" type="java.lang.Integer">
+            <column name="Pcode">
+                <comment>Pcode</comment>
+            </column>
+        </property>
+        <property name="orderNo" type="string">
+            <column name="OrderNo" length="5">
+                <comment>OrderNo</comment>
+            </column>
+        </property>
+        <property name="orderIdNo" type="java.lang.Integer">
+            <column name="OrderIdNo">
+                <comment>OrderIdNo</comment>
+            </column>
+        </property>
+        <property name="icode" type="string">
+            <column name="Icode" length="8">
+                <comment>Icode</comment>
+            </column>
+        </property>
+        <property name="tough" type="string">
+            <column name="Tough" length="1">
+                <comment>Tough</comment>
+            </column>
+        </property>
+        <property name="thick" type="java.lang.Float">
+            <column name="Thick" precision="4" scale="0">
+                <comment>Thick</comment>
+            </column>
+        </property>
+        <property name="height" type="java.lang.Short">
+            <column name="Height">
+                <comment>Height</comment>
+            </column>
+        </property>
+        <property name="width" type="java.lang.Short">
+            <column name="Width">
+                <comment>Width</comment>
+            </column>
+        </property>
+        <property name="pcs" type="java.lang.Short">
+            <column name="Pcs">
+                <comment>Pcs</comment>
+            </column>
+        </property>
+        <property name="standItNo" type="java.lang.Integer">
+            <column name="StandItNo">
+                <comment>StandItNo</comment>
+            </column>
+        </property>
+        <property name="jobWork" type="java.lang.Boolean">
+            <column name="JobWork">
+                <comment>JobWork</comment>
+            </column>
+        </property>
+        <property name="decorative" type="java.lang.Boolean">
+            <column name="Decorative">
+                <comment>Decorative</comment>
+            </column>
+        </property>
+        <property name="bpcs" type="java.lang.Short">
+            <column name="BPcs">
+                <comment>BPcs</comment>
+            </column>
+        </property>
+        <property name="bend" type="string">
+            <column name="Bend" length="2">
+                <comment>Bend</comment>
+            </column>
+        </property>
+        <property name="particulars" type="string">
+            <column name="Particulars">
+                <comment>Particulars</comment>
+            </column>
+        </property>
+        <property name="controlBy" type="java.lang.Integer">
+            <column name="ControlBy">
+                <comment>ControlBy</comment>
+            </column>
+        </property>
+        <property name="prodPcs" type="java.lang.Float">
+            <column name="ProdPcs" precision="4" scale="0">
+                <comment>ProdPcs</comment>
+            </column>
+        </property>
+        <property name="itNo" type="java.lang.Short">
+            <column name="ItNo">
+                <comment>ItNo</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

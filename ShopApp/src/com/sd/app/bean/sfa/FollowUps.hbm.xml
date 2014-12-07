@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:19:44 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.sfa.FollowUps" table="FollowUps">
+        <comment>FollowUps</comment>
+        <composite-id name="id" class="com.sd.app.bean.sfa.FollowUpsId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="yy" type="string">
+                <column name="YY" length="4" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="enquiryNo" type="java.lang.Float">
+                <column name="EnquiryNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Float">
+                <column name="PCode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description" length="0" />
+            </key-property>
+            <key-property name="media" type="string">
+                <column name="Media" length="2" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="3" />
+            </key-property>
+            <key-property name="fno" type="java.lang.Float">
+                <column name="FNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ftime" type="string">
+                <column name="FTime" length="5" />
+            </key-property>
+            <key-property name="remDate" type="timestamp">
+                <column name="RemDate" length="20" />
+            </key-property>
+            <key-property name="remNote" type="string">
+                <column name="RemNote" />
+            </key-property>
+            <key-property name="remTime" type="timestamp">
+                <column name="RemTime" length="20" />
+            </key-property>
+            <key-property name="tag" type="java.lang.Boolean">
+                <column name="tag" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

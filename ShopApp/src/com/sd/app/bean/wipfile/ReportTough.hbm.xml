@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.ReportTough" table="ReportTough">
+        <comment>ReportTough</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.ReportToughId">
+            <key-property name="date" type="timestamp">
+                <column name="DATE" length="20" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Float">
+                <column name="pcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sqMs" type="java.lang.Float">
+                <column name="SqMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="100" />
+            </key-property>
+            <key-property name="breakage" type="java.lang.Short">
+                <column name="Breakage" />
+            </key-property>
+            <key-property name="breakSqMt" type="java.lang.Float">
+                <column name="BreakSqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="reportType" type="string">
+                <column name="ReportType" length="1" />
+            </key-property>
+            <key-property name="reportId" type="string">
+                <column name="ReportId" length="10" />
+            </key-property>
+            <key-property name="monthProd" type="java.lang.Double">
+                <column name="MonthProd" precision="20" scale="0" />
+            </key-property>
+            <key-property name="monthBreakage" type="java.lang.Double">
+                <column name="MonthBreakage" precision="20" scale="0" />
+            </key-property>
+            <key-property name="monthNet" type="java.lang.Double">
+                <column name="MonthNet" precision="20" scale="0" />
+            </key-property>
+            <key-property name="monthDiesel" type="java.lang.Double">
+                <column name="MonthDiesel" precision="20" scale="0" />
+            </key-property>
+            <key-property name="monthHrs" type="java.lang.Float">
+                <column name="MonthHrs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="monthNonProdHrs" type="java.lang.Float">
+                <column name="MonthNonProdHrs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="grinding" type="string">
+                <column name="Grinding" length="20" />
+            </key-property>
+            <key-property name="rmtbreakage" type="java.lang.Float">
+                <column name="RMTBreakage" precision="4" scale="0" />
+            </key-property>
+            <key-property name="prodrmt" type="java.lang.Float">
+                <column name="PRODRMT" precision="4" scale="0" />
+            </key-property>
+            <key-property name="machineCode" type="java.lang.Short">
+                <column name="MachineCode" />
+            </key-property>
+            <key-property name="machineName" type="string">
+                <column name="MachineName" length="50" />
+            </key-property>
+            <key-property name="shift" type="string">
+                <column name="Shift" length="1" />
+            </key-property>
+            <key-property name="cutType" type="string">
+                <column name="CutType" length="1" />
+            </key-property>
+            <key-property name="reWork" type="java.lang.Boolean">
+                <column name="ReWork" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

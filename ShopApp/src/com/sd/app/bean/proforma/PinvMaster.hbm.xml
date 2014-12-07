@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:13:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.proforma.PinvMaster" table="PInvMaster">
+        <comment>PInvMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.proforma.PinvMasterId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="invNo" type="java.lang.Integer">
+                <column name="InvNo" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="deliveryAddress" type="string">
+                <column name="DeliveryAddress" length="0" />
+            </key-property>
+            <key-property name="deliveryPhoneNo" type="string">
+                <column name="DeliveryPhoneNo" length="15" />
+            </key-property>
+            <key-property name="packingDetails" type="string">
+                <column name="PackingDetails" length="50" />
+            </key-property>
+            <key-property name="packingAmount" type="java.lang.Float">
+                <column name="PackingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="showDiscount" type="java.lang.Boolean">
+                <column name="ShowDiscount" />
+            </key-property>
+            <key-property name="discountPer" type="java.lang.Float">
+                <column name="DiscountPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherDetails1" type="string">
+                <column name="OtherDetails1" length="50" />
+            </key-property>
+            <key-property name="otherAmount1" type="java.lang.Float">
+                <column name="OtherAmount1" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherDetails2" type="string">
+                <column name="OtherDetails2" length="50" />
+            </key-property>
+            <key-property name="otherAmount2" type="java.lang.Float">
+                <column name="OtherAmount2" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherDetails3" type="string">
+                <column name="OtherDetails3" length="50" />
+            </key-property>
+            <key-property name="otherAmount3" type="java.lang.Float">
+                <column name="OtherAmount3" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherDetails4" type="string">
+                <column name="OtherDetails4" length="50" />
+            </key-property>
+            <key-property name="otherAmount4" type="java.lang.Float">
+                <column name="OtherAmount4" precision="4" scale="0" />
+            </key-property>
+            <key-property name="freightDedDetails" type="string">
+                <column name="FreightDedDetails" length="50" />
+            </key-property>
+            <key-property name="freightDedAmount" type="java.lang.Float">
+                <column name="FreightDedAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="forEdstaxDetails" type="string">
+                <column name="ForEDStaxDetails" length="50" />
+            </key-property>
+            <key-property name="forEdStaxAmount" type="java.lang.Float">
+                <column name="ForEdStaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="itemGroup" type="java.lang.Integer">
+                <column name="ItemGroup" />
+            </key-property>
+            <key-property name="showExcise" type="java.lang.Boolean">
+                <column name="ShowExcise" />
+            </key-property>
+            <key-property name="excisePer" type="java.lang.Float">
+                <column name="ExcisePer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="addForEddetails" type="string">
+                <column name="AddForEDDetails" length="50" />
+            </key-property>
+            <key-property name="addForEdAmount" type="java.lang.Float">
+                <column name="AddForEdAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="basicForExcise" type="java.lang.Float">
+                <column name="BasicForExcise" precision="4" scale="0" />
+            </key-property>
+            <key-property name="exciseDetails" type="string">
+                <column name="ExciseDetails" length="50" />
+            </key-property>
+            <key-property name="exciseAmount" type="java.lang.Float">
+                <column name="ExciseAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="dedForEdDetails" type="string">
+                <column name="DedForEdDetails" length="50" />
+            </key-property>
+            <key-property name="dedForEdamount" type="java.lang.Float">
+                <column name="DedForEDAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxForm" type="string">
+                <column name="STaxForm" length="3" />
+            </key-property>
+            <key-property name="staxPer" type="java.lang.Float">
+                <column name="STaxPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="addForStaxDetails" type="string">
+                <column name="AddForSTaxDetails" length="50" />
+            </key-property>
+            <key-property name="addForStaxAmount" type="java.lang.Float">
+                <column name="AddForSTaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxDetails" type="string">
+                <column name="STaxDetails" length="50" />
+            </key-property>
+            <key-property name="staxAmount" type="java.lang.Float">
+                <column name="STaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxSurPer" type="java.lang.Float">
+                <column name="STaxSurPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxSurDetails" type="string">
+                <column name="STaxSurDetails" length="50" />
+            </key-property>
+            <key-property name="staxSurAmount" type="java.lang.Float">
+                <column name="STaxSurAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="dedForStaxDetails" type="string">
+                <column name="DedForSTaxDetails" length="50" />
+            </key-property>
+            <key-property name="dedForStaxAmount" type="java.lang.Float">
+                <column name="DedForSTaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="dedForEdstaxDetails" type="string">
+                <column name="DedForEDSTaxDetails" length="50" />
+            </key-property>
+            <key-property name="dedForEdstaxAmount" type="java.lang.Float">
+                <column name="DedForEDSTaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="insurancePer" type="java.lang.Float">
+                <column name="InsurancePer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="addForInsuranceDetails" type="string">
+                <column name="AddForInsuranceDetails" length="50" />
+            </key-property>
+            <key-property name="addForInsuranceAmount" type="java.lang.Float">
+                <column name="AddForInsuranceAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="insuranceDetails" type="string">
+                <column name="InsuranceDetails" length="50" />
+            </key-property>
+            <key-property name="insuranceAmount" type="java.lang.Float">
+                <column name="InsuranceAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="freightDetails" type="string">
+                <column name="FreightDetails" length="50" />
+            </key-property>
+            <key-property name="freightAmount" type="java.lang.Float">
+                <column name="FreightAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="handlingDetails" type="string">
+                <column name="HandlingDetails" length="50" />
+            </key-property>
+            <key-property name="handlingAmount" type="java.lang.Float">
+                <column name="HandlingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherAdditionDetails" type="string">
+                <column name="OtherAdditionDetails" length="50" />
+            </key-property>
+            <key-property name="otherAdditionAmount" type="java.lang.Float">
+                <column name="OtherAdditionAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherDeductionDetails" type="string">
+                <column name="OtherDeductionDetails" length="50" />
+            </key-property>
+            <key-property name="otherDeductionAmount" type="java.lang.Float">
+                <column name="OtherDeductionAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billAmount" type="java.lang.Float">
+                <column name="BillAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printOnInvoice" type="string">
+                <column name="PrintOnInvoice" length="0" />
+            </key-property>
+            <key-property name="basicForStax" type="java.lang.Float">
+                <column name="BasicForStax" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discount" type="java.lang.Float">
+                <column name="Discount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discountDetails" type="string">
+                <column name="DiscountDetails" length="50" />
+            </key-property>
+            <key-property name="discountAmount" type="java.lang.Float">
+                <column name="DiscountAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printingDetails" type="string">
+                <column name="PrintingDetails" length="50" />
+            </key-property>
+            <key-property name="printingAmount" type="java.lang.Float">
+                <column name="PrintingAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="compRefNo" type="string">
+                <column name="CompRefNo" length="100" />
+            </key-property>
+            <key-property name="staxTotDetails" type="string">
+                <column name="STaxTotDetails" length="50" />
+            </key-property>
+            <key-property name="staxTotAmount" type="java.lang.Double">
+                <column name="STaxTotAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="staxOnFreight" type="java.lang.Boolean">
+                <column name="STaxOnFreight" />
+            </key-property>
+            <key-property name="cessPer" type="java.lang.Float">
+                <column name="CessPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cessDetails" type="string">
+                <column name="CessDetails" length="50" />
+            </key-property>
+            <key-property name="cessAmount" type="java.lang.Float">
+                <column name="CessAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="diNos" type="string">
+                <column name="DiNos" length="30" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="20" />
+            </key-property>
+            <key-property name="transport" type="string">
+                <column name="Transport" length="20" />
+            </key-property>
+            <key-property name="jobWork" type="java.lang.Boolean">
+                <column name="JobWork" />
+            </key-property>
+            <key-property name="paymentMode" type="string">
+                <column name="PaymentMode" length="30" />
+            </key-property>
+            <key-property name="roadPermit" type="java.lang.Boolean">
+                <column name="RoadPermit" />
+            </key-property>
+            <key-property name="despEncloser" type="string">
+                <column name="DespEncloser" length="30" />
+            </key-property>
+            <key-property name="challanNo" type="string">
+                <column name="ChallanNo" length="40" />
+            </key-property>
+            <key-property name="custRefNo" type="string">
+                <column name="CustRefNo" length="40" />
+            </key-property>
+            <key-property name="rateDetails" type="string">
+                <column name="RateDetails" length="20" />
+            </key-property>
+            <key-property name="usedsheetsarea" type="java.lang.Float">
+                <column name="usedsheetsarea" precision="4" scale="0" />
+            </key-property>
+            <key-property name="wastesqms" type="java.lang.Float">
+                <column name="wastesqms" precision="4" scale="0" />
+            </key-property>
+            <key-property name="wasterate" type="java.lang.Float">
+                <column name="wasterate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="chargesqms" type="java.lang.Float">
+                <column name="chargesqms" precision="4" scale="0" />
+            </key-property>
+            <key-property name="wasteamount" type="java.lang.Float">
+                <column name="wasteamount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="wastedetails" type="string">
+                <column name="wastedetails" length="50" />
+            </key-property>
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+            <key-property name="preparedBy" type="string">
+                <column name="PreparedBy" length="20" />
+            </key-property>
+            <key-property name="authBy" type="string">
+                <column name="AuthBy" length="20" />
+            </key-property>
+            <key-property name="currency" type="string">
+                <column name="Currency" length="20" />
+            </key-property>
+            <key-property name="serTaxonfreightdetails" type="string">
+                <column name="SerTaxonfreightdetails" length="50" />
+            </key-property>
+            <key-property name="serTaxonFreightAmount" type="java.lang.Float">
+                <column name="SerTaxonFreightAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ecessOnSerTaxDetails" type="string">
+                <column name="EcessOnSerTaxDetails" length="50" />
+            </key-property>
+            <key-property name="ecessonSerTaxAmount" type="java.lang.Float">
+                <column name="EcessonSerTaxAmount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="contractor" type="string">
+                <column name="Contractor" length="50" />
+            </key-property>
+            <key-property name="quotNo" type="string">
+                <column name="QuotNo" length="10" />
+            </key-property>
+            <key-property name="otherdetails8" type="string">
+                <column name="otherdetails8" length="50" />
+            </key-property>
+            <key-property name="otheramount8" type="java.lang.Float">
+                <column name="otheramount8" precision="4" scale="0" />
+            </key-property>
+            <key-property name="otherdetails9" type="string">
+                <column name="otherdetails9" length="50" />
+            </key-property>
+            <key-property name="otheramount9" type="java.lang.Float">
+                <column name="otheramount9" precision="4" scale="0" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="scessPer" type="java.lang.Float">
+                <column name="SCessPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="scessDetails" type="string">
+                <column name="ScessDetails" length="50" />
+            </key-property>
+            <key-property name="scessAmount" type="java.lang.Float">
+                <column name="ScessAmount" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

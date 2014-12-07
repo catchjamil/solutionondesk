@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.Grouplist" table="Grouplist">
+        <comment>SELECT responsible FROM reworkorders GROUP BY responsible ORDER BY responsible;</comment>
+        <id name="responsible" type="string">
+            <column name="Responsible" length="50" />
+            <generator class="assigned" />
+        </id>
+    </class>
+</hibernate-mapping>

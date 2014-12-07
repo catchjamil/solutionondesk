@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:15:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.ratetables.StandardItems" table="StandardItems">
+        <comment>StandardItems</comment>
+        <composite-id name="id" class="com.sd.app.bean.ratetables.StandardItemsId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="productionDetails" type="string">
+                <column name="ProductionDetails" length="50" />
+            </key-property>
+            <key-property name="invoiceDetails" type="string">
+                <column name="InvoiceDetails" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="taper" type="java.lang.Short">
+                <column name="Taper" />
+            </key-property>
+            <key-property name="grinding" type="string">
+                <column name="Grinding" length="4" />
+            </key-property>
+            <key-property name="frosting" type="java.lang.Short">
+                <column name="Frosting" />
+            </key-property>
+            <key-property name="beveling" type="java.lang.Short">
+                <column name="Beveling" />
+            </key-property>
+            <key-property name="printing" type="java.lang.Short">
+                <column name="Printing" />
+            </key-property>
+            <key-property name="oddShape" type="java.lang.Short">
+                <column name="OddShape" />
+            </key-property>
+            <key-property name="holeType1" type="java.lang.Short">
+                <column name="HoleType1" />
+            </key-property>
+            <key-property name="holeNos1" type="java.lang.Short">
+                <column name="HoleNos1" />
+            </key-property>
+            <key-property name="holeDia1" type="java.lang.Short">
+                <column name="HoleDia1" />
+            </key-property>
+            <key-property name="holeType2" type="java.lang.Short">
+                <column name="HoleType2" />
+            </key-property>
+            <key-property name="holeNos2" type="java.lang.Short">
+                <column name="HoleNos2" />
+            </key-property>
+            <key-property name="holeDia2" type="java.lang.Short">
+                <column name="HoleDia2" />
+            </key-property>
+            <key-property name="cutOutType1" type="java.lang.Short">
+                <column name="CutOutType1" />
+            </key-property>
+            <key-property name="cutOutNos1" type="java.lang.Short">
+                <column name="CutOutNos1" />
+            </key-property>
+            <key-property name="cutOutType2" type="java.lang.Short">
+                <column name="CutOutType2" />
+            </key-property>
+            <key-property name="cutOutNos2" type="java.lang.Short">
+                <column name="CutOutNos2" />
+            </key-property>
+            <key-property name="shape" type="string">
+                <column name="Shape" length="5" />
+            </key-property>
+            <key-property name="r1" type="java.lang.Short">
+                <column name="R1" />
+            </key-property>
+            <key-property name="r2" type="java.lang.Short">
+                <column name="R2" />
+            </key-property>
+            <key-property name="r3" type="java.lang.Short">
+                <column name="R3" />
+            </key-property>
+            <key-property name="r4" type="java.lang.Short">
+                <column name="R4" />
+            </key-property>
+            <key-property name="itcode" type="string">
+                <column name="ITCode" length="8" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="decorative" type="java.lang.Boolean">
+                <column name="Decorative" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

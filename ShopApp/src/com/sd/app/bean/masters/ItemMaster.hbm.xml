@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.ItemMaster" table="ItemMaster">
+        <comment>ItemMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.ItemMasterId">
+            <key-property name="itemIdNo" type="java.lang.Integer">
+                <column name="ItemIdNo" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" length="50" />
+            </key-property>
+            <key-property name="exCode" type="string">
+                <column name="ExCode" length="4" />
+            </key-property>
+            <key-property name="glass" type="java.lang.Boolean">
+                <column name="Glass" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="5" />
+            </key-property>
+            <key-property name="tariff" type="string">
+                <column name="Tariff" length="20" />
+            </key-property>
+            <key-property name="groupIdNo" type="java.lang.Integer">
+                <column name="GroupIdNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:50:36 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.challan.ExciseChallan" table="ExciseChallan">
+        <comment>ExciseChallan</comment>
+        <composite-id name="id" class="com.sd.app.bean.challan.ExciseChallanId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="challanNo" type="java.lang.Integer">
+                <column name="ChallanNo" />
+            </key-property>
+            <key-property name="challanDate" type="timestamp">
+                <column name="ChallanDate" length="20" />
+            </key-property>
+            <key-property name="time" type="timestamp">
+                <column name="Time" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="transporter" type="string">
+                <column name="Transporter" length="30" />
+            </key-property>
+            <key-property name="vehicleNo" type="string">
+                <column name="VehicleNo" length="15" />
+            </key-property>
+            <key-property name="grNo" type="string">
+                <column name="GrNo" length="6" />
+            </key-property>
+            <key-property name="authBy" type="java.lang.Integer">
+                <column name="AuthBy" />
+            </key-property>
+            <key-property name="glass" type="java.lang.Boolean">
+                <column name="Glass" />
+            </key-property>
+            <key-property name="printed" type="java.lang.Boolean">
+                <column name="Printed" />
+            </key-property>
+            <key-property name="gpNo" type="java.lang.Integer">
+                <column name="GpNo" />
+            </key-property>
+            <key-property name="tariff" type="string">
+                <column name="Tariff" length="10" />
+            </key-property>
+            <key-property name="prepBy" type="string">
+                <column name="PrepBy" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

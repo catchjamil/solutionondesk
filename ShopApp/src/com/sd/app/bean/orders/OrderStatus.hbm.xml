@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:10:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.orders.OrderStatus" table="OrderStatus">
+        <comment>OrderStatus</comment>
+        <composite-id name="id" class="com.sd.app.bean.orders.OrderStatusId">
+            <key-property name="orderIdNo" type="java.lang.Integer">
+                <column name="OrderIdNo" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="orderDate" type="timestamp">
+                <column name="OrderDate" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="packing" type="string">
+                <column name="Packing" length="1" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="40" />
+            </key-property>
+            <key-property name="planDate" type="timestamp">
+                <column name="PlanDate" length="20" />
+            </key-property>
+            <key-property name="reviDate" type="timestamp">
+                <column name="ReviDate" length="20" />
+            </key-property>
+            <key-property name="quick" type="string">
+                <column name="Quick" length="1" />
+            </key-property>
+            <key-property name="action" type="string">
+                <column name="Action" length="1" />
+            </key-property>
+            <key-property name="bpcs" type="java.lang.Short">
+                <column name="BPcs" />
+            </key-property>
+            <key-property name="weight" type="java.lang.Integer">
+                <column name="Weight" />
+            </key-property>
+            <key-property name="peremeter" type="java.lang.Float">
+                <column name="Peremeter" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jobIdNo" type="java.lang.Short">
+                <column name="JobIdNo" />
+            </key-property>
+            <key-property name="controlNo" type="java.lang.Short">
+                <column name="ControlNo" />
+            </key-property>
+            <key-property name="noted" type="java.lang.Boolean">
+                <column name="Noted" />
+            </key-property>
+            <key-property name="acStatus" type="string">
+                <column name="AcStatus" length="2" />
+            </key-property>
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+            <key-property name="entryTime" type="timestamp">
+                <column name="EntryTime" length="20" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="dealby" type="string">
+                <column name="Dealby" length="3" />
+            </key-property>
+            <key-property name="tag" type="java.lang.Boolean">
+                <column name="Tag" />
+            </key-property>
+            <key-property name="controlBy" type="string">
+                <column name="ControlBy" length="3" />
+            </key-property>
+            <key-property name="cutting" type="java.lang.Integer">
+                <column name="Cutting" />
+            </key-property>
+            <key-property name="grinding" type="java.lang.Integer">
+                <column name="Grinding" />
+            </key-property>
+            <key-property name="temparing" type="java.lang.Integer">
+                <column name="Temparing" />
+            </key-property>
+            <key-property name="insulating" type="java.lang.Integer">
+                <column name="Insulating" />
+            </key-property>
+            <key-property name="cuttingDate" type="string">
+                <column name="CuttingDate" length="8" />
+            </key-property>
+            <key-property name="grindingDate" type="string">
+                <column name="GrindingDate" length="8" />
+            </key-property>
+            <key-property name="temparingDate" type="string">
+                <column name="TemparingDate" length="8" />
+            </key-property>
+            <key-property name="insulatingDate" type="string">
+                <column name="InsulatingDate" length="8" />
+            </key-property>
+            <key-property name="holeEtcDate" type="string">
+                <column name="HoleEtcDate" length="8" />
+            </key-property>
+            <key-property name="ready" type="java.lang.Short">
+                <column name="Ready" />
+            </key-property>
+            <key-property name="grind" type="string">
+                <column name="Grind" length="4" />
+            </key-property>
+            <key-property name="beveling" type="java.lang.Short">
+                <column name="Beveling" />
+            </key-property>
+            <key-property name="frosting" type="java.lang.Short">
+                <column name="Frosting" />
+            </key-property>
+            <key-property name="printing" type="java.lang.Short">
+                <column name="Printing" />
+            </key-property>
+            <key-property name="holes" type="java.lang.Short">
+                <column name="Holes" />
+            </key-property>
+            <key-property name="cutOuts" type="java.lang.Short">
+                <column name="CutOuts" />
+            </key-property>
+            <key-property name="application" type="java.lang.Short">
+                <column name="Application" />
+            </key-property>
+            <key-property name="sqMt" type="java.lang.Float">
+                <column name="SqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="dpcs" type="java.lang.Short">
+                <column name="DPcs" />
+            </key-property>
+            <key-property name="hold" type="string">
+                <column name="Hold" length="1" />
+            </key-property>
+            <key-property name="reviDateDetails" type="string">
+                <column name="ReviDateDetails" length="0" />
+            </key-property>
+            <key-property name="reviDatesEditDetails" type="string">
+                <column name="ReviDatesEditDetails" length="0" />
+            </key-property>
+            <key-property name="cpcs" type="java.lang.Short">
+                <column name="CPcs" />
+            </key-property>
+            <key-property name="bevlPcs" type="java.lang.Float">
+                <column name="BevlPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="frostPcs" type="java.lang.Float">
+                <column name="FrostPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printPcs" type="java.lang.Float">
+                <column name="PrintPcs" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

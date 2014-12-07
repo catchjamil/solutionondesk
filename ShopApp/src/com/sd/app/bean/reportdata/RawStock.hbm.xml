@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.RawStock" table="RawStock">
+        <comment>RawStock</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.RawStockId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" length="50" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Float">
+                <column name="Sheets" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sqMs" type="java.lang.Double">
+                <column name="SqMs" precision="20" scale="0" />
+            </key-property>
+            <key-property name="reverved" type="java.lang.Short">
+                <column name="Reverved" />
+            </key-property>
+            <key-property name="ordered" type="java.lang.Short">
+                <column name="Ordered" />
+            </key-property>
+            <key-property name="damaged" type="java.lang.Short">
+                <column name="Damaged" />
+            </key-property>
+            <key-property name="reserved" type="java.lang.Short">
+                <column name="Reserved" />
+            </key-property>
+            <key-property name="reserveNotes" type="string">
+                <column name="ReserveNotes" length="200" />
+            </key-property>
+            <key-property name="minStock" type="java.lang.Short">
+                <column name="MinStock" />
+            </key-property>
+            <key-property name="reOrder" type="java.lang.Short">
+                <column name="ReOrder" />
+            </key-property>
+            <key-property name="maxStock" type="java.lang.Short">
+                <column name="MaxStock" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

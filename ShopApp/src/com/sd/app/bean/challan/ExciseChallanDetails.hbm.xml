@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:50:36 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.challan.ExciseChallanDetails" table="ExciseChallanDetails">
+        <comment>ExciseChallanDetails</comment>
+        <composite-id name="id" class="com.sd.app.bean.challan.ExciseChallanDetailsId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="challanNo" type="java.lang.Integer">
+                <column name="ChallanNo" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="5" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="taper" type="java.lang.Short">
+                <column name="Taper" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Float">
+                <column name="Qty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sqMs" type="java.lang.Float">
+                <column name="SqMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="0" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="balQty" type="java.lang.Float">
+                <column name="BalQty" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

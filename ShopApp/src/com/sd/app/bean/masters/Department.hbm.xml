@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.Department" table="Department">
+        <comment>Department</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.DepartmentId">
+            <key-property name="dpcode" type="string">
+                <column name="DPCode" length="2" />
+            </key-property>
+            <key-property name="department" type="string">
+                <column name="DEPARTMENT" length="30" />
+            </key-property>
+            <key-property name="srNo" type="java.lang.Short">
+                <column name="SrNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:09:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.optimization.OptHead" table="OptHead">
+        <comment>OptHead</comment>
+        <composite-id name="id" class="com.sd.app.bean.optimization.OptHeadId">
+            <key-property name="orderDescription" type="string">
+                <column name="OrderDescription" length="32" />
+            </key-property>
+            <key-property name="orderDate" type="timestamp">
+                <column name="OrderDate" length="20" />
+            </key-property>
+            <key-property name="flag" type="string">
+                <column name="Flag" length="8" />
+            </key-property>
+            <key-property name="orderQty" type="java.lang.Float">
+                <column name="OrderQty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="constant" type="string">
+                <column name="Constant" length="2" />
+            </key-property>
+            <key-property name="orderLines" type="java.lang.Short">
+                <column name="OrderLines" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

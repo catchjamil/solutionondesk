@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.ReWorkOrders" table="ReWorkOrders">
+        <comment>ReWorkOrders</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.ReWorkOrdersId">
+            <key-property name="reWorkNo" type="java.lang.Integer">
+                <column name="ReWorkNo" />
+            </key-property>
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="width" type="java.lang.Float">
+                <column name="Width" precision="4" scale="0" />
+            </key-property>
+            <key-property name="height" type="java.lang.Float">
+                <column name="Height" precision="4" scale="0" />
+            </key-property>
+            <key-property name="taper" type="java.lang.Float">
+                <column name="Taper" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="100" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="sqMt" type="java.lang.Float">
+                <column name="SqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="retSqMt" type="java.lang.Float">
+                <column name="RetSqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="lossSqMt" type="java.lang.Float">
+                <column name="LossSqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="reasonForBreakage" type="string">
+                <column name="ReasonForBreakage" length="250" />
+            </key-property>
+            <key-property name="breakageduring" type="string">
+                <column name="Breakageduring" length="50" />
+            </key-property>
+            <key-property name="remedicalAction" type="string">
+                <column name="RemedicalAction" length="0" />
+            </key-property>
+            <key-property name="department" type="string">
+                <column name="Department" length="30" />
+            </key-property>
+            <key-property name="bridNo" type="java.lang.Float">
+                <column name="BRIdNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="printed" type="java.lang.Boolean">
+                <column name="Printed" />
+            </key-property>
+            <key-property name="dndate" type="timestamp">
+                <column name="DNDate" length="20" />
+            </key-property>
+            <key-property name="responsible" type="string">
+                <column name="Responsible" length="50" />
+            </key-property>
+            <key-property name="shift" type="string">
+                <column name="Shift" length="1" />
+            </key-property>
+            <key-property name="bpcs" type="java.lang.Float">
+                <column name="BPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="gpcs" type="java.lang.Float">
+                <column name="GPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="tpcs" type="java.lang.Float">
+                <column name="TPcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="Status" length="50" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Double">
+                <column name="Amount" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

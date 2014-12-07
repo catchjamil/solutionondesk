@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:15:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.ratetables.ExtraRtables" table="ExtraRTables">
+        <comment>ExtraRTables</comment>
+        <composite-id name="id" class="com.sd.app.bean.ratetables.ExtraRtablesId">
+            <key-property name="exTable" type="string">
+                <column name="ExTable" length="3" />
+            </key-property>
+            <key-property name="master" type="string">
+                <column name="Master" length="12" />
+            </key-property>
+            <key-property name="code" type="java.lang.Integer">
+                <column name="Code" />
+            </key-property>
+            <key-property name="strCode" type="string">
+                <column name="StrCode" length="4" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="50" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rangeFrom" type="java.lang.Float">
+                <column name="RangeFrom" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rangeTo" type="java.lang.Float">
+                <column name="RangeTo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rateType" type="string">
+                <column name="RateType" length="1" />
+            </key-property>
+            <key-property name="rtIdNo" type="java.lang.Integer">
+                <column name="RtIdNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

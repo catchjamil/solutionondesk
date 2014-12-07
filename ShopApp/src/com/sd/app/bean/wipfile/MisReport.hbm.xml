@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.MisReport" table="MisReport">
+        <comment>MisReport</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.MisReportId">
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Float">
+                <column name="Pcode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" length="50" />
+            </key-property>
+            <key-property name="sqMt" type="java.lang.Float">
+                <column name="SqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="department" type="string">
+                <column name="Department" length="30" />
+            </key-property>
+            <key-property name="breakageduring" type="string">
+                <column name="Breakageduring" length="30" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Float">
+                <column name="Pcs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="shift" type="string">
+                <column name="Shift" length="1" />
+            </key-property>
+            <key-property name="retSqMt" type="java.lang.Float">
+                <column name="RetSqMt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="lossSqMt" type="java.lang.Float">
+                <column name="LossSqMt" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

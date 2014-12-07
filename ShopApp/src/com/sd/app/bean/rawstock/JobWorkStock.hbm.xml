@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:16:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.rawstock.JobWorkStock" table="JobWorkStock">
+        <comment>JobWorkStock</comment>
+        <composite-id name="id" class="com.sd.app.bean.rawstock.JobWorkStockId">
+            <key-property name="stockIdNo" type="java.lang.Integer">
+                <column name="StockIdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="Width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="Height" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Integer">
+                <column name="Sheets" />
+            </key-property>
+            <key-property name="sqms" type="java.lang.Float">
+                <column name="SQMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="damaged" type="java.lang.Short">
+                <column name="Damaged" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="opening" type="java.lang.Short">
+                <column name="Opening" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:19:44 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.sfa.Enquiry" table="Enquiry">
+        <comment>Enquiry</comment>
+        <composite-id name="id" class="com.sd.app.bean.sfa.EnquiryId">
+            <key-property name="yy" type="string">
+                <column name="YY" length="4" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="enquiryNo" type="java.lang.Float">
+                <column name="EnquiryNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="thick1" type="java.lang.Float">
+                <column name="Thick1" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode1" type="string">
+                <column name="ICode1" length="8" />
+            </key-property>
+            <key-property name="bend1" type="string">
+                <column name="Bend1" length="2" />
+            </key-property>
+            <key-property name="sqMtr1" type="java.lang.Float">
+                <column name="SqMtr1" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate1" type="java.lang.Double">
+                <column name="Rate1" precision="20" scale="0" />
+            </key-property>
+            <key-property name="amount1" type="java.lang.Double">
+                <column name="Amount1" precision="20" scale="0" />
+            </key-property>
+            <key-property name="tough1" type="string">
+                <column name="Tough1" length="1" />
+            </key-property>
+            <key-property name="thick2" type="java.lang.Float">
+                <column name="Thick2" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode2" type="string">
+                <column name="Icode2" length="8" />
+            </key-property>
+            <key-property name="tough2" type="string">
+                <column name="Tough2" length="1" />
+            </key-property>
+            <key-property name="bend2" type="string">
+                <column name="Bend2" length="2" />
+            </key-property>
+            <key-property name="sqMtr2" type="java.lang.Float">
+                <column name="SqMtr2" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate2" type="java.lang.Double">
+                <column name="Rate2" precision="20" scale="0" />
+            </key-property>
+            <key-property name="amount2" type="java.lang.Double">
+                <column name="Amount2" precision="20" scale="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="Notes" length="0" />
+            </key-property>
+            <key-property name="netAmount" type="java.lang.Double">
+                <column name="NetAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="media" type="string">
+                <column name="Media" length="2" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="3" />
+            </key-property>
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="material1" type="string">
+                <column name="Material1" />
+            </key-property>
+            <key-property name="material2" type="string">
+                <column name="Material2" />
+            </key-property>
+            <key-property name="dealByName" type="string">
+                <column name="DealByName" length="30" />
+            </key-property>
+            <key-property name="newCustomer" type="string">
+                <column name="NewCustomer" length="1" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:07:53 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.misreport1.RawMaterialSummary" table="RawMaterialSummary">
+        <comment>RawMaterialSummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.misreport1.RawMaterialSummaryId">
+            <key-property name="month" type="java.lang.Float">
+                <column name="Month" precision="4" scale="0" />
+            </key-property>
+            <key-property name="year" type="java.lang.Float">
+                <column name="Year" precision="4" scale="0" />
+            </key-property>
+            <key-property name="purSqMtr" type="java.lang.Double">
+                <column name="PurSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="issSqMtr" type="java.lang.Double">
+                <column name="IssSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="saleSqMtr" type="java.lang.Double">
+                <column name="SaleSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="ordSqMtr" type="java.lang.Double">
+                <column name="OrdSqMtr" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

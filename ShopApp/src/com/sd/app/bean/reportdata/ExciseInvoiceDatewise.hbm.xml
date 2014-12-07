@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.ExciseInvoiceDatewise" table="ExciseInvoiceDatewise">
+        <comment>ExciseInvoiceDatewise</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.ExciseInvoiceDatewiseId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="sqMt" type="java.lang.Float">
+            <column name="SqMt" precision="4" scale="0">
+                <comment>SqMt</comment>
+            </column>
+        </property>
+        <property name="basicForExcise" type="java.lang.Double">
+            <column name="BasicForExcise" precision="20" scale="0">
+                <comment>BasicForExcise</comment>
+            </column>
+        </property>
+        <property name="exciseAmount" type="java.lang.Float">
+            <column name="ExciseAmount" precision="4" scale="0">
+                <comment>ExciseAmount</comment>
+            </column>
+        </property>
+        <property name="ecessOnDuty" type="java.lang.Float">
+            <column name="ECessOnDuty" precision="4" scale="0">
+                <comment>ECessOnDuty</comment>
+            </column>
+        </property>
+        <property name="staxAmount" type="java.lang.Float">
+            <column name="STaxAmount" precision="4" scale="0">
+                <comment>STaxAmount</comment>
+            </column>
+        </property>
+        <property name="freightAmount" type="java.lang.Float">
+            <column name="FreightAmount" precision="4" scale="0">
+                <comment>FreightAmount</comment>
+            </column>
+        </property>
+        <property name="serviceTaxAmount" type="java.lang.Float">
+            <column name="ServiceTaxAmount" precision="4" scale="0">
+                <comment>ServiceTaxAmount</comment>
+            </column>
+        </property>
+        <property name="ecessOnServiceTax" type="java.lang.Float">
+            <column name="ECessOnServiceTax" precision="4" scale="0">
+                <comment>ECessOnServiceTax</comment>
+            </column>
+        </property>
+        <property name="insuranceAmount" type="java.lang.Float">
+            <column name="InsuranceAmount" precision="4" scale="0">
+                <comment>InsuranceAmount</comment>
+            </column>
+        </property>
+        <property name="rawMaterialAmount" type="java.lang.Float">
+            <column name="RawMaterialAmount" precision="4" scale="0">
+                <comment>RawMaterialAmount</comment>
+            </column>
+        </property>
+        <property name="billAmount" type="java.lang.Double">
+            <column name="BillAmount" precision="20" scale="0">
+                <comment>BillAmount</comment>
+            </column>
+        </property>
+        <property name="billAmountExport" type="java.lang.Double">
+            <column name="BillAmountExport" precision="20" scale="0">
+                <comment>BillAmountExport</comment>
+            </column>
+        </property>
+        <property name="handlingAmount" type="java.lang.Float">
+            <column name="HandlingAmount" precision="4" scale="0">
+                <comment>HandlingAmount</comment>
+            </column>
+        </property>
+        <property name="totAmount" type="java.lang.Float">
+            <column name="TotAmount" precision="4" scale="0">
+                <comment>TotAmount</comment>
+            </column>
+        </property>
+        <property name="vatamount" type="java.lang.Double">
+            <column name="VATAmount" precision="20" scale="0">
+                <comment>VATAmount</comment>
+            </column>
+        </property>
+        <property name="otherdetails3" type="string">
+            <column name="Otherdetails3" length="50">
+                <comment>Otherdetails3</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

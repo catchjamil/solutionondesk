@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:57:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.gatepass.GateSub" table="GateSub">
+        <comment>GateSub</comment>
+        <composite-id name="id" class="com.sd.app.bean.gatepass.GateSubId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="gpNo" type="java.lang.Float">
+                <column name="GpNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="docType" type="string">
+                <column name="DocType" length="10" />
+            </key-property>
+            <key-property name="docNo" type="java.lang.Integer">
+                <column name="DocNo" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="Uom" length="5" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Float">
+                <column name="Qty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="pkGs" type="java.lang.Integer">
+                <column name="PkGs" />
+            </key-property>
+            <key-property name="packing" type="string">
+                <column name="Packing" length="1" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="30" />
+            </key-property>
+            <key-property name="noted" type="java.lang.Boolean">
+                <column name="Noted" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="Icode" length="8" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

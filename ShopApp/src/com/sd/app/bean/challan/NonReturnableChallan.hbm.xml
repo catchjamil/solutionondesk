@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:50:36 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.challan.NonReturnableChallan" table="NonReturnableChallan">
+        <comment>NonReturnableChallan</comment>
+        <composite-id name="id" class="com.sd.app.bean.challan.NonReturnableChallanId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="challanNo" type="java.lang.Integer">
+                <column name="ChallanNo" />
+            </key-property>
+            <key-property name="challanDate" type="timestamp">
+                <column name="ChallanDate" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="transporter" type="string">
+                <column name="Transporter" length="25" />
+            </key-property>
+            <key-property name="vehicleNo" type="string">
+                <column name="VehicleNo" length="12" />
+            </key-property>
+            <key-property name="grNo" type="string">
+                <column name="GrNo" length="8" />
+            </key-property>
+            <key-property name="authBy" type="java.lang.Integer">
+                <column name="AuthBy" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="Uom" length="5" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Float">
+                <column name="Qty" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rate" type="java.lang.Float">
+                <column name="Rate" precision="4" scale="0" />
+            </key-property>
+            <key-property name="amount" type="java.lang.Float">
+                <column name="Amount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="gpNo" type="java.lang.Integer">
+                <column name="GpNo" />
+            </key-property>
+            <key-property name="receiptsBy" type="string">
+                <column name="ReceiptsBy" length="15" />
+            </key-property>
+            <key-property name="prepBy" type="string">
+                <column name="PrepBy" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

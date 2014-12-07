@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:15:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.ratetables.SizeTables" table="SizeTables">
+        <comment>SizeTables</comment>
+        <composite-id name="id" class="com.sd.app.bean.ratetables.SizeTablesId">
+            <key-property name="stable" type="string">
+                <column name="STable" length="4" />
+            </key-property>
+            <key-property name="size" type="java.lang.Float">
+                <column name="Size" precision="4" scale="0" />
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description" length="50" />
+            </key-property>
+            <key-property name="rtIdNo" type="java.lang.Integer">
+                <column name="RtIdNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

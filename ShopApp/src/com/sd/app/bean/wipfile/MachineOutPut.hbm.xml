@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:20:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.wipfile.MachineOutPut" table="MachineOutPut">
+        <comment>MachineOutPut</comment>
+        <composite-id name="id" class="com.sd.app.bean.wipfile.MachineOutPutId">
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="machineCode" type="java.lang.Short">
+                <column name="MachineCode" />
+            </key-property>
+        </composite-id>
+        <property name="operator" type="java.lang.Short">
+            <column name="Operator">
+                <comment>Operator</comment>
+            </column>
+        </property>
+        <property name="startAt" type="string">
+            <column name="StartAt" length="8">
+                <comment>StartAt</comment>
+            </column>
+        </property>
+        <property name="closeAt" type="string">
+            <column name="CloseAt" length="8">
+                <comment>CloseAt</comment>
+            </column>
+        </property>
+        <property name="prodHrs" type="java.lang.Short">
+            <column name="ProdHrs">
+                <comment>ProdHrs</comment>
+            </column>
+        </property>
+        <property name="prodMinuties" type="java.lang.Float">
+            <column name="ProdMinuties" precision="4" scale="0">
+                <comment>ProdMinuties</comment>
+            </column>
+        </property>
+        <property name="nonProdHrs" type="java.lang.Short">
+            <column name="NonProdHrs">
+                <comment>NonProdHrs</comment>
+            </column>
+        </property>
+        <property name="nonProdMinuites" type="java.lang.Float">
+            <column name="NonProdMinuites" precision="4" scale="0">
+                <comment>NonProdMinuites</comment>
+            </column>
+        </property>
+        <property name="nonProdHrsDetails" type="string">
+            <column name="NonProdHrsDetails" length="0">
+                <comment>NonProdHrsDetails</comment>
+            </column>
+        </property>
+        <property name="machineName" type="string">
+            <column name="MachineName" length="50">
+                <comment>MachineName</comment>
+            </column>
+        </property>
+        <property name="operatorName" type="string">
+            <column name="OperatorName" length="15">
+                <comment>OperatorName</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

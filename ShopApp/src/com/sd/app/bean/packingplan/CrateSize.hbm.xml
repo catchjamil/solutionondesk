@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:11:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.packingplan.CrateSize" table="CrateSize">
+        <comment>SELECT packingplan.packno,packingplan.crno,sum(packingplan.pcs) AS pcs,sum(packingplan.thick*packingplan.pcs)+75 AS crthick,max(packingplan.width)+75 AS
+        crwidth,max(packingplan.height)+75 AS crheight,sum(packingplan.weight) AS Weight,count(packingplan.pcs) AS nofitem FROM packingplan GROUP BY
+        packingplan.packno,packingplan.crno ORDER BY 100000-packingplan.packno,packingplan.crno;</comment>
+        <composite-id name="id" class="com.sd.app.bean.packingplan.CrateSizeId">
+            <key-property name="packNo" type="java.lang.Integer">
+                <column name="PackNo" />
+            </key-property>
+            <key-property name="crNo" type="java.lang.Short">
+                <column name="CrNo" />
+            </key-property>
+            <key-property name="pcs" type="long">
+                <column name="pcs" />
+            </key-property>
+            <key-property name="crthick" type="big_decimal">
+                <column name="crthick" precision="16" scale="4" />
+            </key-property>
+            <key-property name="crwidth" type="int">
+                <column name="crwidth" />
+            </key-property>
+            <key-property name="crheight" type="int">
+                <column name="crheight" />
+            </key-property>
+            <key-property name="weight" type="long">
+                <column name="Weight" />
+            </key-property>
+            <key-property name="nofitem" type="int">
+                <column name="nofitem" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

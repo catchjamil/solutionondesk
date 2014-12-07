@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:49:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.company.CompanyTables" table="CompanyTables">
+        <comment>CompanyTables</comment>
+        <composite-id name="id" class="com.sd.app.bean.company.CompanyTablesId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Float">
+                <column name="Pcode" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sno" type="java.lang.Short">
+                <column name="Sno" />
+            </key-property>
+            <key-property name="staxForm" type="string">
+                <column name="STaxForm" length="3" />
+            </key-property>
+            <key-property name="rtable" type="string">
+                <column name="RTable" length="3" />
+            </key-property>
+            <key-property name="stable" type="string">
+                <column name="STable" length="4" />
+            </key-property>
+            <key-property name="exTable" type="string">
+                <column name="ExTable" length="3" />
+            </key-property>
+            <key-property name="discount" type="java.lang.Float">
+                <column name="Discount" precision="4" scale="0" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="application" type="java.lang.Float">
+                <column name="Application" precision="4" scale="0" />
+            </key-property>
+            <key-property name="regular" type="string">
+                <column name="Regular" length="1" />
+            </key-property>
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

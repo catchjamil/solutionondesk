@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.ExciseItem" table="ExciseItem">
+        <comment>ExciseItem</comment>
+        <id name="idNo" type="java.lang.Integer">
+            <column name="IdNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="exCode" type="string">
+            <column name="ExCode" length="2">
+                <comment>ExCode</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="50">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="glass" type="java.lang.Boolean">
+            <column name="Glass">
+                <comment>Glass</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

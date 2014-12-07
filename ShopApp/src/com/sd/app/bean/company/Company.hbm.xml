@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:49:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.company.Company" table="Company">
+        <comment>Company</comment>
+        <composite-id name="id" class="com.sd.app.bean.company.CompanyId">
+            <key-property name="compIdNo" type="java.lang.Integer">
+                <column name="CompIdNo" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="initial" type="string">
+                <column name="Initial" length="5" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="50" />
+            </key-property>
+            <key-property name="customer" type="java.lang.Boolean">
+                <column name="Customer" />
+            </key-property>
+            <key-property name="supplier" type="java.lang.Boolean">
+                <column name="Supplier" />
+            </key-property>
+            <key-property name="glassSupplier" type="java.lang.Boolean">
+                <column name="GlassSupplier" />
+            </key-property>
+            <key-property name="class_" type="string">
+                <column name="Class" length="20" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="20" />
+            </key-property>
+            <key-property name="phonetype1" type="string">
+                <column name="Phonetype1" length="12" />
+            </key-property>
+            <key-property name="zone" type="string">
+                <column name="Zone" length="1" />
+            </key-property>
+            <key-property name="phone1" type="string">
+                <column name="Phone1" length="15" />
+            </key-property>
+            <key-property name="phone2" type="string">
+                <column name="Phone2" length="15" />
+            </key-property>
+            <key-property name="phoneType2" type="string">
+                <column name="PhoneType2" length="12" />
+            </key-property>
+            <key-property name="phone3" type="string">
+                <column name="Phone3" length="15" />
+            </key-property>
+            <key-property name="phone4" type="string">
+                <column name="Phone4" length="15" />
+            </key-property>
+            <key-property name="phoneType3" type="string">
+                <column name="PhoneType3" length="12" />
+            </key-property>
+            <key-property name="phone5" type="string">
+                <column name="phone5" length="15" />
+            </key-property>
+            <key-property name="phone6" type="string">
+                <column name="phone6" length="15" />
+            </key-property>
+            <key-property name="phoneType4" type="string">
+                <column name="PhoneType4" length="12" />
+            </key-property>
+            <key-property name="email1" type="string">
+                <column name="Email1" length="35" />
+            </key-property>
+            <key-property name="phoneType5" type="string">
+                <column name="PhoneType5" length="12" />
+            </key-property>
+            <key-property name="email2" type="string">
+                <column name="Email2" length="35" />
+            </key-property>
+            <key-property name="phoneType6" type="string">
+                <column name="PhoneType6" length="12" />
+            </key-property>
+            <key-property name="webSite" type="string">
+                <column name="WebSite" length="35" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="Address" length="0" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="City" length="25" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="State" length="25" />
+            </key-property>
+            <key-property name="pin" type="string">
+                <column name="Pin" length="8" />
+            </key-property>
+            <key-property name="crAddress" type="string">
+                <column name="CrAddress" length="0" />
+            </key-property>
+            <key-property name="crCity" type="string">
+                <column name="CrCity" length="25" />
+            </key-property>
+            <key-property name="crState" type="string">
+                <column name="CrState" length="25" />
+            </key-property>
+            <key-property name="crPin" type="string">
+                <column name="CrPin" length="8" />
+            </key-property>
+            <key-property name="country" type="string">
+                <column name="Country" length="25" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="10" />
+            </key-property>
+            <key-property name="sdealBy" type="string">
+                <column name="SDealBy" length="10" />
+            </key-property>
+            <key-property name="staxForm" type="string">
+                <column name="STaxForm" length="3" />
+            </key-property>
+            <key-property name="cstNo" type="string">
+                <column name="CstNo" length="50" />
+            </key-property>
+            <key-property name="lstNo" type="string">
+                <column name="LstNo" length="50" />
+            </key-property>
+            <key-property name="eccNo" type="string">
+                <column name="EccNo" length="50" />
+            </key-property>
+            <key-property name="exRegNo" type="string">
+                <column name="ExRegNo" length="50" />
+            </key-property>
+            <key-property name="location" type="string">
+                <column name="Location" length="6" />
+            </key-property>
+            <key-property name="fileName" type="string">
+                <column name="FileName" length="20" />
+            </key-property>
+            <key-property name="acstatus" type="string">
+                <column name="Acstatus" length="1" />
+            </key-property>
+            <key-property name="creditLimit" type="java.lang.Integer">
+                <column name="CreditLimit" />
+            </key-property>
+            <key-property name="creditDays" type="java.lang.Short">
+                <column name="CreditDays" />
+            </key-property>
+            <key-property name="active" type="java.lang.Boolean">
+                <column name="Active" />
+            </key-property>
+            <key-property name="regular" type="java.lang.Boolean">
+                <column name="Regular" />
+            </key-property>
+            <key-property name="confidential" type="java.lang.Boolean">
+                <column name="Confidential" />
+            </key-property>
+            <key-property name="insurance" type="java.lang.Boolean">
+                <column name="Insurance" />
+            </key-property>
+            <key-property name="intimation" type="java.lang.Boolean">
+                <column name="Intimation" />
+            </key-property>
+            <key-property name="showDiscount" type="java.lang.Boolean">
+                <column name="ShowDiscount" />
+            </key-property>
+            <key-property name="showExcise" type="java.lang.Boolean">
+                <column name="ShowExcise" />
+            </key-property>
+            <key-property name="remDate" type="timestamp">
+                <column name="RemDate" length="20" />
+            </key-property>
+            <key-property name="reminder" type="string">
+                <column name="Reminder" length="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="Notes" length="0" />
+            </key-property>
+            <key-property name="supervisorNotes" type="string">
+                <column name="SupervisorNotes" length="0" />
+            </key-property>
+            <key-property name="productionNotes" type="string">
+                <column name="ProductionNotes" length="0" />
+            </key-property>
+            <key-property name="documentationNotes" type="string">
+                <column name="DocumentationNotes" length="0" />
+            </key-property>
+            <key-property name="printOnInvoice" type="string">
+                <column name="PrintOnInvoice" length="0" />
+            </key-property>
+            <key-property name="groupCompany" type="java.lang.Boolean">
+                <column name="GroupCompany" />
+            </key-property>
+            <key-property name="gcode" type="java.lang.Integer">
+                <column name="Gcode" />
+            </key-property>
+            <key-property name="spcode" type="java.lang.Integer">
+                <column name="SPcode" />
+            </key-property>
+            <key-property name="designation" type="string">
+                <column name="Designation" length="20" />
+            </key-property>
+            <key-property name="entryDate" type="timestamp">
+                <column name="EntryDate" length="20" />
+            </key-property>
+            <key-property name="modifyDate" type="timestamp">
+                <column name="ModifyDate" length="20" />
+            </key-property>
+            <key-property name="freight" type="string">
+                <column name="Freight" length="1" />
+            </key-property>
+            <key-property name="supNotes" type="string">
+                <column name="SupNotes" length="0" />
+            </key-property>
+            <key-property name="supRemDate" type="timestamp">
+                <column name="SupRemDate" length="20" />
+            </key-property>
+            <key-property name="supReminder" type="string">
+                <column name="SupReminder" length="0" />
+            </key-property>
+            <key-property name="supRemTime" type="string">
+                <column name="SupRemTime" length="5" />
+            </key-property>
+            <key-property name="remTime" type="string">
+                <column name="RemTime" length="5" />
+            </key-property>
+            <key-property name="newLetter" type="java.lang.Boolean">
+                <column name="NewLetter" />
+            </key-property>
+            <key-property name="priceList" type="java.lang.Boolean">
+                <column name="PriceList" />
+            </key-property>
+            <key-property name="diwaliGift" type="java.lang.Boolean">
+                <column name="DiwaliGift" />
+            </key-property>
+            <key-property name="greeting" type="java.lang.Boolean">
+                <column name="Greeting" />
+            </key-property>
+            <key-property name="glassInfo" type="java.lang.Boolean">
+                <column name="GlassInfo" />
+            </key-property>
+            <key-property name="introduction" type="java.lang.Boolean">
+                <column name="Introduction" />
+            </key-property>
+            <key-property name="tag" type="java.lang.Boolean">
+                <column name="Tag" />
+            </key-property>
+            <key-property name="printTag" type="java.lang.Boolean">
+                <column name="PrintTag" />
+            </key-property>
+            <key-property name="roadPermit" type="java.lang.Boolean">
+                <column name="RoadPermit" />
+            </key-property>
+            <key-property name="entryBy" type="string">
+                <column name="EntryBy" length="10" />
+            </key-property>
+            <key-property name="modifyBy" type="string">
+                <column name="ModifyBy" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

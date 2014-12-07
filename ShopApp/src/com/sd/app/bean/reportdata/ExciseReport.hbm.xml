@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.ExciseReport" table="ExciseReport">
+        <comment>ExciseReport</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.ExciseReportId">
+            <key-property name="icode" type="string">
+                <column name="Icode" length="4" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="proddeco" type="java.lang.Float">
+                <column name="proddeco" precision="4" scale="0" />
+            </key-property>
+            <key-property name="prodPlain" type="java.lang.Float">
+                <column name="ProdPlain" precision="4" scale="0" />
+            </key-property>
+            <key-property name="totalprod" type="java.lang.Float">
+                <column name="Totalprod" precision="4" scale="0" />
+            </key-property>
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="edate" type="timestamp">
+                <column name="EDate" length="20" />
+            </key-property>
+            <key-property name="unit" type="string">
+                <column name="Unit" length="2" />
+            </key-property>
+            <key-property name="despdeco" type="java.lang.Float">
+                <column name="Despdeco" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despdecoamt" type="java.lang.Float">
+                <column name="Despdecoamt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despDecoExc" type="java.lang.Float">
+                <column name="DespDecoExc" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despPlain" type="java.lang.Float">
+                <column name="DespPlain" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despPlainAmt" type="java.lang.Float">
+                <column name="DespPlainAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despPlainExc" type="java.lang.Float">
+                <column name="DespPlainExc" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jobWork" type="string">
+                <column name="JobWork" length="10" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="Material" />
+            </key-property>
+            <key-property name="despEcess" type="java.lang.Float">
+                <column name="DespECess" precision="4" scale="0" />
+            </key-property>
+            <key-property name="despHecess" type="java.lang.Float">
+                <column name="DespHECess" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:16:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.rawstock.RvmasterGlass" table="RVMasterGlass">
+        <comment>RVMasterGlass</comment>
+        <composite-id name="id" class="com.sd.app.bean.rawstock.RvmasterGlassId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="rvNo" type="java.lang.Short">
+                <column name="RvNo" />
+            </key-property>
+            <key-property name="rvDate" type="timestamp">
+                <column name="RvDate" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="vehNo" type="string">
+                <column name="VehNo" length="20" />
+            </key-property>
+            <key-property name="grNo" type="string">
+                <column name="GrNo" length="10" />
+            </key-property>
+            <key-property name="transport" type="string">
+                <column name="Transport" length="25" />
+            </key-property>
+            <key-property name="billNo" type="string">
+                <column name="BillNo" length="20" />
+            </key-property>
+            <key-property name="billDate" type="timestamp">
+                <column name="BillDate" length="20" />
+            </key-property>
+            <key-property name="basicAmt" type="java.lang.Float">
+                <column name="BasicAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxAmt" type="java.lang.Float">
+                <column name="STaxAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="insurAmt" type="java.lang.Float">
+                <column name="InsurAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="excAmt" type="java.lang.Float">
+                <column name="ExcAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="freiamt" type="java.lang.Float">
+                <column name="Freiamt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discPer" type="java.lang.Float">
+                <column name="DiscPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="discAmt" type="java.lang.Float">
+                <column name="DiscAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="othAdd" type="java.lang.Float">
+                <column name="OthAdd" precision="4" scale="0" />
+            </key-property>
+            <key-property name="othDed" type="java.lang.Float">
+                <column name="OthDed" precision="4" scale="0" />
+            </key-property>
+            <key-property name="recAmt" type="java.lang.Float">
+                <column name="RecAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="paidAmt" type="java.lang.Float">
+                <column name="PaidAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="chqNo" type="string">
+                <column name="ChqNo" length="20" />
+            </key-property>
+            <key-property name="chqDate" type="timestamp">
+                <column name="ChqDate" length="20" />
+            </key-property>
+            <key-property name="thDiscPer" type="java.lang.Float">
+                <column name="ThDiscPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="billAmt" type="java.lang.Float">
+                <column name="BillAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="Notes" length="0" />
+            </key-property>
+            <key-property name="final_" type="java.lang.Boolean">
+                <column name="Final" />
+            </key-property>
+            <key-property name="prepBy" type="java.lang.Integer">
+                <column name="PrepBy" />
+            </key-property>
+            <key-property name="ecessAmt" type="java.lang.Float">
+                <column name="ECessAmt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="form31no" type="string">
+                <column name="Form31No" length="30" />
+            </key-property>
+            <key-property name="serTaxOnFreight" type="java.lang.Float">
+                <column name="SerTaxOnFreight" precision="4" scale="0" />
+            </key-property>
+            <key-property name="ecessOnSerTax" type="java.lang.Float">
+                <column name="ECessOnSerTax" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

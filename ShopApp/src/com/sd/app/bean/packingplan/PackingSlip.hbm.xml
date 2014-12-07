@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:11:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.packingplan.PackingSlip" table="PackingSlip">
+        <comment>PackingSlip</comment>
+        <composite-id name="id" class="com.sd.app.bean.packingplan.PackingSlipId">
+            <key-property name="packNo" type="java.lang.Integer">
+                <column name="PackNo" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" length="50" />
+            </key-property>
+            <key-property name="size" type="string">
+                <column name="Size" length="30" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Short">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="weight" type="java.lang.Short">
+                <column name="Weight" />
+            </key-property>
+            <key-property name="crSize" type="string">
+                <column name="CrSize" length="50" />
+            </key-property>
+            <key-property name="crNo" type="java.lang.Short">
+                <column name="CrNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

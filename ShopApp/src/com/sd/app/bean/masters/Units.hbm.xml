@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.Units" table="Units">
+        <comment>Units</comment>
+        <id name="coCode" type="string">
+            <column name="CoCode" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="idNo" type="java.lang.Integer">
+            <column name="IdNo">
+                <comment>IdNo</comment>
+            </column>
+        </property>
+        <property name="shortName" type="string">
+            <column name="ShortName" length="15">
+                <comment>ShortName</comment>
+            </column>
+        </property>
+        <property name="fullName" type="string">
+            <column name="FullName" length="50">
+                <comment>FullName</comment>
+            </column>
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="25">
+                <comment>City</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="State" length="25">
+                <comment>State</comment>
+            </column>
+        </property>
+        <property name="pin" type="string">
+            <column name="Pin" length="8">
+                <comment>Pin</comment>
+            </column>
+        </property>
+        <property name="country" type="string">
+            <column name="Country" length="25">
+                <comment>Country</comment>
+            </column>
+        </property>
+        <property name="phone" type="string">
+            <column name="Phone" length="250">
+                <comment>Phone</comment>
+            </column>
+        </property>
+        <property name="fax" type="string">
+            <column name="Fax" length="250">
+                <comment>Fax</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="EMail">
+                <comment>EMail</comment>
+            </column>
+        </property>
+        <property name="cstno" type="string">
+            <column name="CSTNo" length="0">
+                <comment>CSTNo</comment>
+            </column>
+        </property>
+        <property name="webSite" type="string">
+            <column name="WebSite">
+                <comment>WebSite</comment>
+            </column>
+        </property>
+        <property name="upstno" type="string">
+            <column name="UPSTNO" length="0">
+                <comment>UPSTNO</comment>
+            </column>
+        </property>
+        <property name="eccno" type="string">
+            <column name="ECCNo" length="0">
+                <comment>ECCNo</comment>
+            </column>
+        </property>
+        <property name="exciseRegNo" type="string">
+            <column name="ExciseRegNo" length="0">
+                <comment>ExciseRegNo</comment>
+            </column>
+        </property>
+        <property name="range" type="string">
+            <column name="Range" length="0">
+                <comment>Range</comment>
+            </column>
+        </property>
+        <property name="division" type="string">
+            <column name="Division" length="0">
+                <comment>Division</comment>
+            </column>
+        </property>
+        <property name="unit" type="string">
+            <column name="Unit" length="10">
+                <comment>Unit</comment>
+            </column>
+        </property>
+        <property name="address" type="string">
+            <column name="Address">
+                <comment>Address</comment>
+            </column>
+        </property>
+        <property name="notificationNo" type="string">
+            <column name="NotificationNo" length="50">
+                <comment>NotificationNo</comment>
+            </column>
+        </property>
+        <property name="quotchar" type="string">
+            <column name="quotchar" length="1">
+                <comment>quotchar</comment>
+            </column>
+        </property>
+        <property name="orderChar" type="string">
+            <column name="OrderChar" length="1">
+                <comment>OrderChar</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

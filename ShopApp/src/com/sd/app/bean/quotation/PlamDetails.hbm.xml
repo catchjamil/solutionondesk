@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:14:29 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.quotation.PlamDetails" table="PLamDetails">
+        <comment>PLamDetails</comment>
+        <composite-id name="id" class="com.sd.app.bean.quotation.PlamDetailsId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="invNo" type="java.lang.Integer">
+                <column name="InvNo" />
+            </key-property>
+            <key-property name="product" type="string">
+                <column name="Product" length="6" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+            <key-property name="class_" type="string">
+                <column name="Class" length="30" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="30" />
+            </key-property>
+            <key-property name="glId" type="java.lang.Short">
+                <column name="GlId" />
+            </key-property>
+            <key-property name="grinding" type="string">
+                <column name="Grinding" length="4" />
+            </key-property>
+            <key-property name="frosting" type="java.lang.Short">
+                <column name="Frosting" />
+            </key-property>
+            <key-property name="beveling" type="java.lang.Short">
+                <column name="Beveling" />
+            </key-property>
+            <key-property name="printing" type="java.lang.Short">
+                <column name="Printing" />
+            </key-property>
+            <key-property name="oddShape" type="java.lang.Short">
+                <column name="OddShape" />
+            </key-property>
+            <key-property name="holeType1" type="java.lang.Short">
+                <column name="HoleType1" />
+            </key-property>
+            <key-property name="holeNos1" type="java.lang.Float">
+                <column name="HoleNos1" precision="4" scale="0" />
+            </key-property>
+            <key-property name="holeDia1" type="java.lang.Short">
+                <column name="HoleDia1" />
+            </key-property>
+            <key-property name="holeType2" type="java.lang.Short">
+                <column name="HoleType2" />
+            </key-property>
+            <key-property name="holeNos2" type="java.lang.Float">
+                <column name="HoleNos2" precision="4" scale="0" />
+            </key-property>
+            <key-property name="holeDia2" type="java.lang.Short">
+                <column name="HoleDia2" />
+            </key-property>
+            <key-property name="cutouttype1" type="java.lang.Short">
+                <column name="Cutouttype1" />
+            </key-property>
+            <key-property name="cutoutNos1" type="java.lang.Float">
+                <column name="CutoutNos1" precision="4" scale="0" />
+            </key-property>
+            <key-property name="cutouttype2" type="java.lang.Short">
+                <column name="Cutouttype2" />
+            </key-property>
+            <key-property name="cutoutNos2" type="java.lang.Float">
+                <column name="CutoutNos2" precision="4" scale="0" />
+            </key-property>
+            <key-property name="edgeType" type="string">
+                <column name="EdgeType" length="4" />
+            </key-property>
+            <key-property name="bevlwidth" type="java.lang.Float">
+                <column name="Bevlwidth" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

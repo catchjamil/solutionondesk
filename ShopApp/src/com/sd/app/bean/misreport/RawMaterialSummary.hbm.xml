@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:06:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.misreport.RawMaterialSummary" table="RawMaterialSummary">
+        <comment>RawMaterialSummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.misreport.RawMaterialSummaryId">
+            <key-property name="month" type="java.lang.Float">
+                <column name="Month" precision="4" scale="0" />
+            </key-property>
+            <key-property name="year" type="java.lang.Float">
+                <column name="Year" precision="4" scale="0" />
+            </key-property>
+            <key-property name="purSqMtr" type="java.lang.Double">
+                <column name="PurSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="issSqMtr" type="java.lang.Double">
+                <column name="IssSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="saleSqMtr" type="java.lang.Double">
+                <column name="SaleSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="ordSqMtr" type="java.lang.Double">
+                <column name="OrdSqMtr" precision="20" scale="0" />
+            </key-property>
+            <key-property name="srNo" type="java.lang.Float">
+                <column name="SrNo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="monthName" type="string">
+                <column name="MonthName" length="15" />
+            </key-property>
+            <key-property name="opSqMtr" type="java.lang.Float">
+                <column name="OpSqMtr" precision="4" scale="0" />
+            </key-property>
+            <key-property name="clSqMtr" type="java.lang.Float">
+                <column name="ClSqMtr" precision="4" scale="0" />
+            </key-property>
+            <key-property name="analysis" type="java.lang.Float">
+                <column name="Analysis" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

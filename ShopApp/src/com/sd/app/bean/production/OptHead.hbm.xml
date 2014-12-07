@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:12:39 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.production.OptHead" table="OptHead">
+        <comment>OptHead</comment>
+        <composite-id name="id" class="com.sd.app.bean.production.OptHeadId">
+            <key-property name="head" type="string">
+                <column name="Head" length="1" />
+            </key-property>
+            <key-property name="nitm" type="java.lang.Float">
+                <column name="Nitm" precision="4" scale="0" />
+            </key-property>
+            <key-property name="nopt" type="java.lang.Float">
+                <column name="Nopt" precision="4" scale="0" />
+            </key-property>
+            <key-property name="gtyp" type="string">
+                <column name="GTyp" length="20" />
+            </key-property>
+            <key-property name="artnr" type="string">
+                <column name="Artnr" length="8" />
+            </key-property>
+            <key-property name="jobid" type="string">
+                <column name="Jobid" length="8" />
+            </key-property>
+            <key-property name="ntext" type="java.lang.Float">
+                <column name="NText" precision="4" scale="0" />
+            </key-property>
+            <key-property name="kvalue" type="java.lang.Float">
+                <column name="KValue" precision="4" scale="0" />
+            </key-property>
+            <key-property name="jobDesc" type="string">
+                <column name="JobDesc" length="20" />
+            </key-property>
+            <key-property name="append" type="string">
+                <column name="Append" length="1" />
+            </key-property>
+            <key-property name="para" type="string">
+                <column name="Para" length="4" />
+            </key-property>
+            <key-property name="ftype" type="string">
+                <column name="FType" length="1" />
+            </key-property>
+            <key-property name="seqMo" type="java.lang.Float">
+                <column name="SeqMo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="rackMo" type="java.lang.Float">
+                <column name="RackMo" precision="4" scale="0" />
+            </key-property>
+            <key-property name="maxRack" type="java.lang.Float">
+                <column name="MaxRack" precision="4" scale="0" />
+            </key-property>
+            <key-property name="free" type="string">
+                <column name="Free" length="5" />
+            </key-property>
+            <key-property name="xflag" type="string">
+                <column name="XFlag" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

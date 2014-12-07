@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:22:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.masters.ExtraMaster" table="ExtraMaster">
+        <comment>ExtraMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.masters.ExtraMasterId">
+            <key-property name="idNo" type="java.lang.Integer">
+                <column name="IdNo" />
+            </key-property>
+            <key-property name="master" type="string">
+                <column name="Master" length="10" />
+            </key-property>
+            <key-property name="code" type="java.lang.Integer">
+                <column name="Code" />
+            </key-property>
+            <key-property name="strCode" type="string">
+                <column name="StrCode" length="4" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="Name" length="100" />
+            </key-property>
+            <key-property name="srNo" type="java.lang.Short">
+                <column name="SrNo" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

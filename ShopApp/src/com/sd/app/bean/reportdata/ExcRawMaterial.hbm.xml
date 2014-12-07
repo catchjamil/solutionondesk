@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.ExcRawMaterial" table="ExcRawMaterial">
+        <comment>ExcRawMaterial</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.ExcRawMaterialId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="sdate" type="timestamp">
+                <column name="SDate" length="20" />
+            </key-property>
+            <key-property name="edate" type="timestamp">
+                <column name="EDate" length="20" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" length="200" />
+            </key-property>
+            <key-property name="billSheets" type="java.lang.Integer">
+                <column name="BillSheets" />
+            </key-property>
+            <key-property name="short_" type="java.lang.Integer">
+                <column name="Short" />
+            </key-property>
+            <key-property name="breakage" type="java.lang.Integer">
+                <column name="Breakage" />
+            </key-property>
+            <key-property name="sheets" type="java.lang.Integer">
+                <column name="Sheets" />
+            </key-property>
+            <key-property name="recSqms" type="java.lang.Double">
+                <column name="RecSqms" precision="20" scale="0" />
+            </key-property>
+            <key-property name="issueSheets" type="java.lang.Integer">
+                <column name="IssueSheets" />
+            </key-property>
+            <key-property name="issueSqMs" type="java.lang.Double">
+                <column name="IssueSqMs" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

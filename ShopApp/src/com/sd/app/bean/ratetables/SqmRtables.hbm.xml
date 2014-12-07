@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:15:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.ratetables.SqmRtables" table="SqmRTables">
+        <comment>SqmRTables</comment>
+        <composite-id name="id" class="com.sd.app.bean.ratetables.SqmRtablesId">
+            <key-property name="rtable" type="string">
+                <column name="RTable" length="3" />
+            </key-property>
+            <key-property name="thick" type="java.lang.Float">
+                <column name="Thick" precision="4" scale="0" />
+            </key-property>
+            <key-property name="icode" type="string">
+                <column name="ICode" length="8" />
+            </key-property>
+            <key-property name="bend" type="string">
+                <column name="Bend" length="2" />
+            </key-property>
+            <key-property name="tough" type="string">
+                <column name="Tough" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="invoiceDetails" type="string">
+            <column name="InvoiceDetails">
+                <comment>InvoiceDetails</comment>
+            </column>
+        </property>
+        <property name="productionDetails" type="string">
+            <column name="ProductionDetails" length="50">
+                <comment>ProductionDetails</comment>
+            </column>
+        </property>
+        <property name="rate" type="java.lang.Float">
+            <column name="Rate" precision="4" scale="0">
+                <comment>Rate</comment>
+            </column>
+        </property>
+        <property name="entryDate" type="timestamp">
+            <column name="EntryDate" length="20">
+                <comment>EntryDate</comment>
+            </column>
+        </property>
+        <property name="modifyDate" type="timestamp">
+            <column name="ModifyDate" length="20">
+                <comment>ModifyDate</comment>
+            </column>
+        </property>
+        <property name="itcode" type="string">
+            <column name="ITCode" length="8">
+                <comment>ITCode</comment>
+            </column>
+        </property>
+        <property name="rtIdNo" type="java.lang.Integer">
+            <column name="RtIdNo">
+                <comment>RtIdNo</comment>
+            </column>
+        </property>
+        <property name="material" type="string">
+            <column name="Material" length="250">
+                <comment>Material</comment>
+            </column>
+        </property>
+        <property name="addExcise" type="java.lang.Boolean">
+            <column name="AddExcise">
+                <comment>AddExcise</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

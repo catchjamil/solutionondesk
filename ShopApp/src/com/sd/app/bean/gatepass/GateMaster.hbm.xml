@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:57:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.gatepass.GateMaster" table="GateMaster">
+        <comment>GateMaster</comment>
+        <composite-id name="id" class="com.sd.app.bean.gatepass.GateMasterId">
+            <key-property name="gpNo" type="java.lang.Integer">
+                <column name="GpNo" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="Pcode" />
+            </key-property>
+            <key-property name="supervisorNote" type="string">
+                <column name="SupervisorNote" length="40" />
+            </key-property>
+            <key-property name="verified" type="java.lang.Boolean">
+                <column name="Verified" />
+            </key-property>
+            <key-property name="verfiedDate" type="timestamp">
+                <column name="VerfiedDate" length="20" />
+            </key-property>
+            <key-property name="noted" type="java.lang.Boolean">
+                <column name="Noted" />
+            </key-property>
+            <key-property name="checkReq" type="java.lang.Boolean">
+                <column name="CheckReq" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="time" type="timestamp">
+                <column name="Time" length="20" />
+            </key-property>
+            <key-property name="rgp" type="java.lang.Boolean">
+                <column name="RGP" />
+            </key-property>
+            <key-property name="glass" type="java.lang.Boolean">
+                <column name="Glass" />
+            </key-property>
+            <key-property name="verificationBy" type="string">
+                <column name="VerificationBy" length="3" />
+            </key-property>
+            <key-property name="party" type="string">
+                <column name="Party" length="30" />
+            </key-property>
+            <key-property name="sale" type="java.lang.Boolean">
+                <column name="Sale" />
+            </key-property>
+            <key-property name="despatchBy" type="string">
+                <column name="DespatchBy" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

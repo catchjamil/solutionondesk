@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 12:58:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.insurance.InsurancePolicies" table="InsurancePolicies">
+        <comment>InsurancePolicies</comment>
+        <composite-id name="id" class="com.sd.app.bean.insurance.InsurancePoliciesId">
+            <key-property name="policyNo" type="string">
+                <column name="PolicyNo" length="50" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="1" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="addPer" type="java.lang.Float">
+                <column name="AddPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="company" type="string">
+                <column name="Company" length="50" />
+            </key-property>
+            <key-property name="address1" type="string">
+                <column name="address1" length="50" />
+            </key-property>
+            <key-property name="address2" type="string">
+                <column name="Address2" length="50" />
+            </key-property>
+            <key-property name="address3" type="string">
+                <column name="Address3" length="50" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="City" length="30" />
+            </key-property>
+            <key-property name="pin" type="string">
+                <column name="Pin" length="8" />
+            </key-property>
+            <key-property name="heading" type="string">
+                <column name="Heading" length="0" />
+            </key-property>
+            <key-property name="body" type="string">
+                <column name="Body" length="0" />
+            </key-property>
+            <key-property name="terms" type="string">
+                <column name="Terms" length="0" />
+            </key-property>
+            <key-property name="balAmount" type="java.lang.Double">
+                <column name="BalAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="policyAmount" type="java.lang.Double">
+                <column name="PolicyAmount" precision="20" scale="0" />
+            </key-property>
+            <key-property name="policy" type="java.lang.Short">
+                <column name="Policy" />
+            </key-property>
+            <key-property name="gscName" type="string">
+                <column name="GscName" length="50" />
+            </key-property>
+            <key-property name="gscAddress" type="string">
+                <column name="GscAddress" length="0" />
+            </key-property>
+            <key-property name="gscPhone" type="string">
+                <column name="GscPhone" length="50" />
+            </key-property>
+            <key-property name="gscFax" type="string">
+                <column name="GscFax" length="50" />
+            </key-property>
+            <key-property name="gscEmail" type="string">
+                <column name="GscEmail" length="50" />
+            </key-property>
+            <key-property name="gscWebSite" type="string">
+                <column name="GscWebSite" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

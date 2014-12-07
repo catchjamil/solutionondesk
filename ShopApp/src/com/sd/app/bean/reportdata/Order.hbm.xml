@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.Order" table="Order">
+        <comment>Order</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.OrderId">
+            <key-property name="orderNo" type="string">
+                <column name="OrderNo" length="5" />
+            </key-property>
+            <key-property name="orderDate" type="timestamp">
+                <column name="OrderDate" length="20" />
+            </key-property>
+            <key-property name="sizeIn" type="string">
+                <column name="SizeIn" length="10" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="Type" length="5" />
+            </key-property>
+            <key-property name="application" type="string">
+                <column name="Application" length="50" />
+            </key-property>
+            <key-property name="customer" type="string">
+                <column name="Customer" length="50" />
+            </key-property>
+            <key-property name="delDate" type="timestamp">
+                <column name="DelDate" length="20" />
+            </key-property>
+            <key-property name="dealBy" type="string">
+                <column name="DealBy" length="10" />
+            </key-property>
+            <key-property name="pcs" type="java.lang.Integer">
+                <column name="Pcs" />
+            </key-property>
+            <key-property name="tsd" type="string">
+                <column name="TSD" length="3" />
+            </key-property>
+            <key-property name="holeNos1" type="java.lang.Short">
+                <column name="HoleNos1" />
+            </key-property>
+            <key-property name="holeDia1" type="java.lang.Short">
+                <column name="HoleDia1" />
+            </key-property>
+            <key-property name="holeType1" type="string">
+                <column name="HoleType1" length="50" />
+            </key-property>
+            <key-property name="holeNos2" type="java.lang.Short">
+                <column name="HoleNos2" />
+            </key-property>
+            <key-property name="holeDia2" type="java.lang.Short">
+                <column name="HoleDia2" />
+            </key-property>
+            <key-property name="holeType2" type="string">
+                <column name="HoleType2" length="50" />
+            </key-property>
+            <key-property name="cutOutNos1" type="java.lang.Short">
+                <column name="CutOutNos1" />
+            </key-property>
+            <key-property name="cutOutType1" type="string">
+                <column name="CutOutType1" length="50" />
+            </key-property>
+            <key-property name="cutOutNos2" type="java.lang.Short">
+                <column name="CutOutNos2" />
+            </key-property>
+            <key-property name="cutOutType2" type="string">
+                <column name="CutOutType2" length="50" />
+            </key-property>
+            <key-property name="frosting" type="string">
+                <column name="Frosting" length="50" />
+            </key-property>
+            <key-property name="beveling" type="string">
+                <column name="Beveling" length="50" />
+            </key-property>
+            <key-property name="oddShape" type="string">
+                <column name="OddShape" length="50" />
+            </key-property>
+            <key-property name="printing" type="string">
+                <column name="Printing" length="50" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="Remarks" length="50" />
+            </key-property>
+            <key-property name="itNo" type="java.lang.Short">
+                <column name="ItNo" />
+            </key-property>
+            <key-property name="particulars" type="string">
+                <column name="Particulars" />
+            </key-property>
+            <key-property name="prodInst" type="string">
+                <column name="ProdInst" length="0" />
+            </key-property>
+            <key-property name="documInst" type="string">
+                <column name="DocumInst" length="0" />
+            </key-property>
+            <key-property name="packing" type="string">
+                <column name="Packing" length="0" />
+            </key-property>
+            <key-property name="shape" type="string">
+                <column name="Shape" length="5" />
+            </key-property>
+            <key-property name="wt" type="java.lang.Short">
+                <column name="Wt" />
+            </key-property>
+            <key-property name="r1" type="java.lang.Short">
+                <column name="R1" />
+            </key-property>
+            <key-property name="r2" type="java.lang.Short">
+                <column name="R2" />
+            </key-property>
+            <key-property name="r3" type="java.lang.Short">
+                <column name="R3" />
+            </key-property>
+            <key-property name="r4" type="java.lang.Short">
+                <column name="R4" />
+            </key-property>
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="6" />
+            </key-property>
+            <key-property name="grinding" type="string">
+                <column name="Grinding" length="50" />
+            </key-property>
+            <key-property name="edgeType" type="string">
+                <column name="EdgeType" length="50" />
+            </key-property>
+            <key-property name="size" type="string">
+                <column name="Size" length="27" />
+            </key-property>
+            <key-property name="chlNo" type="string">
+                <column name="ChlNo" length="20" />
+            </key-property>
+            <key-property name="jobWork" type="java.lang.Boolean">
+                <column name="JobWork" />
+            </key-property>
+            <key-property name="chlType" type="string">
+                <column name="ChlType" length="20" />
+            </key-property>
+            <key-property name="custRefNo" type="string">
+                <column name="CustRefNo" length="20" />
+            </key-property>
+            <key-property name="sqMs" type="java.lang.Float">
+                <column name="SqMs" precision="4" scale="0" />
+            </key-property>
+            <key-property name="refNo" type="string">
+                <column name="RefNo" length="15" />
+            </key-property>
+            <key-property name="despatchAddress" type="string">
+                <column name="DespatchAddress" length="0" />
+            </key-property>
+            <key-property name="materialDetails" type="string">
+                <column name="MaterialDetails" length="0" />
+            </key-property>
+            <key-property name="grindCode" type="string">
+                <column name="GrindCode" length="4" />
+            </key-property>
+            <key-property name="prepBy" type="string">
+                <column name="PrepBy" length="20" />
+            </key-property>
+            <key-property name="quotNo" type="string">
+                <column name="QuotNo" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

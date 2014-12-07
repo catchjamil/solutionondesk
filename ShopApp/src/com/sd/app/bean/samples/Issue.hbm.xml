@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:18:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.samples.Issue" table="Issue">
+        <comment>Issue</comment>
+        <composite-id name="id" class="com.sd.app.bean.samples.IssueId">
+            <key-property name="coCode" type="string">
+                <column name="CoCode" length="2" />
+            </key-property>
+            <key-property name="issueNo" type="java.lang.Integer">
+                <column name="IssueNo" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="20" />
+            </key-property>
+            <key-property name="pcode" type="java.lang.Integer">
+                <column name="PCode" />
+            </key-property>
+            <key-property name="despAddress" type="string">
+                <column name="DespAddress" length="0" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="City" length="20" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="State" length="20" />
+            </key-property>
+            <key-property name="pin" type="string">
+                <column name="Pin" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

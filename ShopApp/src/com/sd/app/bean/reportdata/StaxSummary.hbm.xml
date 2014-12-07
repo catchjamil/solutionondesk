@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2014 1:17:37 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sd.app.bean.reportdata.StaxSummary" table="StaxSummary">
+        <comment>StaxSummary</comment>
+        <composite-id name="id" class="com.sd.app.bean.reportdata.StaxSummaryId">
+            <key-property name="staxForm" type="string">
+                <column name="StaxForm" length="3" />
+            </key-property>
+            <key-property name="staxBasic" type="java.lang.Double">
+                <column name="StaxBasic" precision="20" scale="0" />
+            </key-property>
+            <key-property name="staxPer" type="java.lang.Float">
+                <column name="StaxPer" precision="4" scale="0" />
+            </key-property>
+            <key-property name="staxAmt" type="java.lang.Double">
+                <column name="StaxAmt" precision="20" scale="0" />
+            </key-property>
+            <key-property name="sale" type="java.lang.Boolean">
+                <column name="Sale" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
