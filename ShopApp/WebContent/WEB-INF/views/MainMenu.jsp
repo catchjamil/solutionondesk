@@ -67,6 +67,7 @@
       <li><a href="employees.html">Expenses</a></li>
       <li><a href="items.html">Buy Items</a></li>
       <li><a href="sellItemList.html">Sell Items</a></li>
+      <li><a href="generateQuotation.html">Generate Quotation</a></li>
 		<%
 		// User user =(User)session.getAttribute("userDetails");
 		// out.println(user.getMenuList()); 

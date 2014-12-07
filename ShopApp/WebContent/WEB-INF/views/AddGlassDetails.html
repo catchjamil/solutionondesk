@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap 2 Form Builder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap-responsive.min.css"
+	rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/apple-touch-icon-114x114.png">
+</head>
+
+<body >
+
+	<form class="form-horizontal">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Add Glass Details</legend>
+<center>
+			<!-- Select Basic -->
+			<table border="1"  >
+				<tr>
+					<td>
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">							<label for="selectbasic">Thick</label>
+								<select id="selectbasic" name="selectbasic" class="input-large">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+								<label for="itCode">ITCode</label>
+								<input id="itCode" name="itCode" type="text" placeholder=""	class="input-mini">
+							</div>
+						</div>
+					</td>
+				
+					<td>
+						<!-- Text input-->
+						<div class="control-group">
+							<label class="control-label" for="frosting">Frosting</label>
+							<div class="controls">
+								<select id="frosting" name="frosting" class="input-large">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+				
+				</tr>
+				<tr>
+					<td>
+						<!-- Select Basic -->
+						<div class="control-group">
+							<label class="control-label" for="material">Material</label>
+							<div class="controls">
+								<select id="material" name="material" class="input-medium">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td>
+						<!-- Select Basic -->
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">	
+							<label  for="partyName"> Beveling</label>
+								<select id="partyName" name="partyName" class="input-xlarge">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							<label for="width"> Width</label>
+								<select id="width" name="width" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select> MM	
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="control-group">
+							<label class="control-label" for="process">Process</label>
+							<div class="controls">
+								<select id="process" name="process" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="control-group">
+							<label class="control-label" for="printing">Printing</label>
+							<div class="controls">
+								<select id="printing"
+									name="printing" class="input-medium">
+									<option>Option one</option>
+									<option>Option two</option>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr >
+					<td>
+						<label class="radio inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="FLAT" checked="checked">
+      FLAT
+    </label>
+    <label class="radio inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="BEND">
+      BEND
+    </label>
+					</td>
+					
+					<td>
+										
+						<div class="control-group">
+							<label class="control-label" for="oddShape">ODD Shape</label>
+							<div class="controls">
+								<select id="oddShape"
+									name="oddShape" class="input-medium">
+									<option>Option one</option>
+									<option>Option two</option>
+							</div>
+						</div>
+						
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="control-group">
+							<label class="control-label" for="sizeIn">Size In</label>
+							<div class="controls">
+								<select id="sizeIn" name="sizeIn" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td>
+										
+						<div class="control-group">
+							<label class="control-label" for="tmpSizDrg">TMP/SIZ/DRG</label>
+							<div class="controls">
+								<select id="tmpSizDrg"
+									name="tmpSizDrg" class="input-medium">
+									<option>Option one</option>
+									<option>Option two</option>
+							</div>
+						</div>
+						
+						
+					</td>
+					
+				</tr>
+				<tr>
+				<td colspan="2">Hole Details(If any) </td>
+				</tr>
+				
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">								
+							<label for="type1">Type</label>
+								<select id="type1" name="type1" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							<label for="nos1">NOS</label>
+								<input id="nos1" name="nos1" type="text" class="input-mini">
+							<label for="dia1">DIA</label>
+								<input id="dia1" name="dia1" type="text" class="input-mini">		
+							</div>
+							
+							<div class="control-group row-fluid form-inline">								
+								<select id="type2" name="type2" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							<label for="nos2">NOS</label>
+								<input id="nos2" name="nos2" type="text" class="input-mini">
+							<label for="dia2">DIA</label>
+								<input id="dia2" name="dia2" type="text" class="input-mini">		
+							</div>
+							
+							
+						</div>
+					</td>
+					<td>
+										
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">								
+							<label for="sizeInInch">Size in Inch</label> <p>
+							<label for="height">Height</label>	
+							<input id="height1" name="height" type="text" class="input-mini">
+							<input id="height2" name="height" type="text" class="input-mini">
+							/<input id="height3" name="height" type="text" class="input-mini">		
+							</div>
+							<div class="control-group row-fluid form-inline">								
+							<label for="width">Width</label>	
+							<input id="width1" name="width" type="text" class="input-mini">
+							<input id="width2" name="width" type="text" class="input-mini">
+							/<input id="width3" name="width" type="text" class="input-mini">		
+							</div>
+						</div>	
+						
+					</td>
+					
+				</tr>
+				
+				
+				
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">								
+							<label for="cutoutDetails">Cutout Details</label>
+								<select id="cutoutDetails1" name="cutoutDetails1" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							<label for="nos3">NOS</label>
+								<input id="nos3" name="nos3" type="text" class="input-mini">
+							</div>
+							
+							<div class="control-group row-fluid form-inline">								
+								<select id="cutoutDetails2" name="cutoutDetails2" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							<label for="nos4">NOS</label>
+								<input id="nos4" name="nos4" type="text" class="input-mini">
+							</div>
+							
+							
+						</div>
+					</td>
+					<td>
+										
+						<div class="form-horizontal">
+							<div class="control-group row-fluid form-inline">								
+							<label for="sizeInMM">Size in MM</label>
+							<input id="sizeInMM1" name="sizeInMM" type="text" class="input-mini">X
+							<input id="sizeInMM2" name="sizeInMM" type="text" class="input-mini">MM
+							
+							</div>
+							<div class="control-group row-fluid form-inline">								
+							<label for="pcs">PCS</label>	
+							<input id="pcs" name="pcs" type="text" class="input-mini">
+							<label for="rate">Rate</label>
+							<input id="rate" name="rate" type="text" class="input-mini">
+							</div>
+						</div>	
+						
+					</td>
+					
+				</tr>
+				
+				
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="control-group">
+							<label class="control-label" for="sizeIn">Grinding</label>
+							<div class="controls">
+								<select id="grinding" name="grinding" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td>
+										
+						<div class="control-group">
+							Item Ref No	<input id="itemRefNo" name="itemRefNo" type="text" class="input-medium">
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<!-- Textarea -->
+						<div class="control-group">
+							<label class="control-label" for="sizeIn">Edge Type</label>
+							<div class="controls">
+								<select id="edgeType" name="edgeType" class="input-small">
+									<option>Option one</option>
+									<option>Option two</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td>
+										
+						<div class="control-group">
+							Remarks	<input id="remarks" name="remarks" type="text" class="input-medium">
+						</div>
+					</td>
+				</tr>
+				</table>
+			</center>
+			
+		</fieldset>
+	</form>
+</body>
+</html>
